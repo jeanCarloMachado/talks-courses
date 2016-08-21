@@ -152,18 +152,21 @@ when compared to classical algorithms by Grovers.
 
 ## Biological Systems
 
-Systems biology focus on the interactions between biological
-networks. Has focused on DNA, RNA, proteins, lipids, carbohydrates
-and their building blocks.
-
-khon maps are a step forward in the creation of a programming
-language to describe biology. These maps are a graphical notation
-of molecular interactions.
-The mantra of synthetic biology is that one can understand only
-what one can build.
-
 In 1960 Jacob and Monad discovered mathematical logic in gene
 regulation.
+
+Systems biology focus on the interactions between biological networks.
+Research had focused on DNA, RNA, proteins, lipids, carbohydrates and
+their building blocks.
+
+Khon maps are a step forward in the creation of a programming
+language to describe biology. These maps are a graphical notation
+of molecular interactions.
+
+. . .
+
+The mantra of synthetic biology is that one can understand only
+what one can build.
 
 People already generated the synthetic genome of a virus in 14
 days by synthesized short DNA strands.
@@ -176,7 +179,14 @@ is another promissory field.
 Zuse and Fredkin in 1960 says that information is more fundamental than
 matter or energy.
 
+. . .
+
 What we know about computation can change by taking a look at nature
 information processing.
+
+. . .
+
+A good inspirational paper to show how much is already explored
+and to know how much is yet to be discovered.
 
 # Thanks
