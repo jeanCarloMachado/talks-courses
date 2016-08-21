@@ -8,7 +8,8 @@ If you are used to docker, an alternative is to use a script like
 the following
 
 ```bash
+cd presentation-name
 docker pull compufour/docker-doc-generator
 image=`docker images -q compufour/docker-doc-generator`
-docker run -v `pwd`:/Docs -w /Docs -it $image make
+docker run -v `pwd`:/presentation -w /presentation -it $image make
 ```
