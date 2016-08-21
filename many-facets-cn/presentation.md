@@ -1,10 +1,12 @@
-## The many facets of Natural Computing
+## The many facets of Natural Computing - Review
 
+Jean Carlo Machado e Renato Bustamante
+
+## Meta
 
 Lila Kari and Grzerog Rozemberg
 
 Communications of the ACMA, 2008
-
 
 ## General Subject
 
@@ -12,23 +14,28 @@ Natural computing introduction for Computer Scientists
 
 ## Specific Subjects
 
-Describes fields in which the natural phenomena is abstracted to solve
-human problems. Where these methods can be implemented. And looks
-to understand understand biology as information
-processing.
+Describes fields in which the natural phenomena is abstracted to solve human problems
 
 . . .
 
-The classical's:
+Where these methods can be implemented.
+
+. . .
+
+And looks to understand understand biology as information processing.
+
+
+## Classical use of CN
+
 - Cellular automata
 
 - Neural networks
 
 - Evolutionary computation
 
-. . .
 
-New areas:
+## New areas 
+
 - Swarm intelligence
 
 - Artificial immune systems
@@ -39,8 +46,6 @@ New areas:
 
 - Amorphous computing
 
-What we know about computation can change by taking a look at
-nature information processing.
 
 # Key points
 
@@ -168,7 +173,10 @@ is another promissory field.
 
 ## Conclusion
 
-Zuse and Fredkin in 1960 says that information is more fundamental
-than matter or energy.
+Zuse and Fredkin in 1960 says that information is more fundamental than
+matter or energy.
+
+What we know about computation can change by taking a look at nature
+information processing.
 
 # Thanks
