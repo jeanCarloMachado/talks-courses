@@ -14,15 +14,15 @@ and scope of applications, Indian Institute of Technology
 
 ## Tema geral
 
-Comparativos entre algorítmos de otimização baseados na natureza.
+Comparativos entre algoritmos de otimização baseados na natureza.
 
-## Popularidade de algorítmos
+## Popularidade de algoritmos
 
 
 Alguns algoritmos não tem um bom balanço entre busca global e
 busca local.
 
-Dentre os que tem bom balanço pode-se citar: pso, evolução
+Dentre os que tem bom balanço pode-se citar: PSO, evolução
 diferencial, busca do cuco, algoritmos de vaga-lume.
 
 Alguns bons algoritmos não foram adotados pela comunidade:
@@ -40,6 +40,8 @@ Existem várias forma de classificar algoritmos naturais
 
 ## Algoritmos de Abelha
 
+Bom para resolver problemas evolucionários.
+A intensificação é controlada por meios estocásticos e ávidos.
 
 ## Redes Neurais
 
@@ -47,6 +49,21 @@ A rede de perceptron é a implementação mais simples.
 Pode ser utilizado para problemas lineares e não lineares.
 
 ## Algoritmos Genéticos
+
+São bons para problemas combinatórios e não determinísticos.
+
+A eficiência para problemas com muitas dimensões tende a ser ruim.
+
+Já foi aplicado em agendamento de trabalhos, compressão de dados,
+gerenciamento econômico, teoria dos jogos, controle de
+satélite,etc.
+
+
+## Enxame de partículas (PSO)
+
+Relativamente simples de implementar.
+Foi utilizado em problemas de agendamento, e de
+maximização/minimização.
 
 
 ## Conclusão
