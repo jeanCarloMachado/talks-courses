@@ -18,9 +18,8 @@ Comparativos entre algoritmos de otimização baseados na natureza.
 
 ## Popularidade de algoritmos
 
-
-Alguns algoritmos não tem um bom balanço entre busca global e
-busca local.
+"A good balance between exploitation and exporation may lead to
+the global optimally achievement."
 
 Dentre os que tem bom balanço pode-se citar: PSO, evolução
 diferencial, busca do cuco, algoritmos de vaga-lume.
@@ -38,10 +37,52 @@ Existem várias forma de classificar algoritmos naturais
 
 # Algoritmos
 
-## Algoritmos de Abelha
+## Algoritmos de Abelha (2005)
 
 Bom para resolver problemas evolucionários.
+
 A intensificação é controlada por meios estocásticos e ávidos.
+
+Tem melhor performance do que algoritmos de Monte Carlo, Genéticos
+e ACO.
+
+Já foram utilizados em alocação de tarefas e distribuição de
+energia.
+
+### Acasalamento de abelhas
+
+tree-SAT problem optimization.
+
+utilizado em programação estocástica e dinamica.
+
+## Busca de alimentos bacterial 
+
+As bactérias se movem rotacionando-se e tombando.
+
+O objetivo da busca de alimentos pode ser racionalizado como:
+maximizar a entrada de energia por unidade de tempo procurando
+alimento.
+
+O algoritmo apresento baixa convergência em tarefas complexas.
+
+
+## Busca do Cuco
+
+Bom para problemas com restrições não lineares complexas.
+
+## Algoritmos de Morcego
+
+Serve para problemas contínuos.
+Bom para otimizações com restrições
+
+## Polinização de flores
+
+Bom para problemas de otimização global.
+
+## Vaga-lume
+
+Lida com funções multi modais mais eficientemente do que outros
+algoritmos de enxame.
 
 ## Redes Neurais
 
@@ -68,5 +109,8 @@ maximização/minimização.
 
 ## Conclusão
 
+O artigo de Arpan Kumar Kar pareceu ter sido feito por várias
+pessoas, com pontos chave sendo feitos repetidamente, como se
+recortados.
 
 # Obrigado
