@@ -35,6 +35,16 @@ Existem várias forma de classificar algoritmos naturais
 - Trajetória vs população
 
 
+## Complexidades dos problemas pelo tempo
+
+![Complexidades dos problemas pelo tempo](complexity-of-problems-over-time.png)
+
+## Utilização de algoritmos na comunidade científica
+
+![Utilização de algoritmos na comunidade científica
+](algorithms-usage-in-scientific-community.png)
+
+
 # Algoritmos
 
 ## Algoritmos de Abelha (2005)
