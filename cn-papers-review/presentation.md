@@ -55,6 +55,16 @@ tree-SAT problem optimization.
 
 utilizado em programação estocástica e dinamica.
 
+## Algoritmos Genéticos
+
+São bons para problemas combinatórios e não determinísticos.
+
+A eficiência para problemas com muitas dimensões tende a ser ruim.
+
+Já foi aplicado em agendamento de trabalhos, compressão de dados,
+gerenciamento econômico, teoria dos jogos, controle de
+satélite,etc.
+
 ## Busca de alimentos bacterial 
 
 As bactérias se movem rotacionando-se e tombando.
@@ -65,15 +75,23 @@ alimento.
 
 O algoritmo apresento baixa convergência em tarefas complexas.
 
-
 ## Busca do Cuco
 
 Bom para problemas com restrições não lineares complexas.
 
-## Algoritmos de Morcego
+## Algoritmos de Morcego (2010)
 
 Serve para problemas contínuos.
 Bom para otimizações com restrições
+
+Utilizado apenas uma vez, para o problema do caixeiro viajante.
+
+## Enxame de partículas (PSO)
+
+Relativamente simples de implementar.
+Foi utilizado em problemas de agendamento, e de
+maximização/minimização.
+
 
 ## Polinização de flores
 
@@ -89,22 +107,17 @@ algoritmos de enxame.
 A rede de perceptron é a implementação mais simples.
 Pode ser utilizado para problemas lineares e não lineares.
 
-## Algoritmos Genéticos
+## Slime mould
 
-São bons para problemas combinatórios e não determinísticos.
+Foi aplicado apenas no artigo original
 
-A eficiência para problemas com muitas dimensões tende a ser ruim.
+## Futuras pesquisas da CN
 
-Já foi aplicado em agendamento de trabalhos, compressão de dados,
-gerenciamento econômico, teoria dos jogos, controle de
-satélite,etc.
-
-
-## Enxame de partículas (PSO)
-
-Relativamente simples de implementar.
-Foi utilizado em problemas de agendamento, e de
-maximização/minimização.
+- Redução de parâmetros.
+ 
+- Co evolução
+ 
+- Novas inspirações
 
 
 ## Conclusão
@@ -112,5 +125,6 @@ maximização/minimização.
 O artigo de Arpan Kumar Kar pareceu ter sido feito por várias
 pessoas, com pontos chave sendo feitos repetidamente, como se
 recortados.
+
 
 # Obrigado
