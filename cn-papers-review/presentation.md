@@ -41,11 +41,26 @@ Existem várias forma de classificar algoritmos naturais
 
 ## Utilização de algoritmos na comunidade científica
 
-![Utilização de algoritmos na comunidade científica
-](algorithms-usage-in-scientific-community.png)
+![Utilização de algoritmos na comunidade científica](algorithms-usage-in-scientific-community.png)
 
 
 # Algoritmos
+
+## Algoritmos
+
+- Abelhas
+- Bactérias
+- Cuco
+- Flores
+- Formiga
+- Genéticos
+- Morcego
+- Partículas
+- Redes Neurais
+- Sapo
+- Slime mould
+- Vaga-lume
+
 
 ## Algoritmos de Abelha (2005)
 
@@ -75,7 +90,7 @@ Já foi aplicado em agendamento de trabalhos, compressão de dados,
 gerenciamento econômico, teoria dos jogos, controle de
 satélite,etc.
 
-## Busca de alimentos bacterial 
+## Busca de alimentos bacterial
 
 As bactérias se movem rotacionando-se e tombando.
 
@@ -84,6 +99,17 @@ maximizar a entrada de energia por unidade de tempo procurando
 alimento.
 
 O algoritmo apresento baixa convergência em tarefas complexas.
+
+## Algoritmos de formiga
+
+O tempo de resposta é razoável.
+
+## Salto do Sapo (2000)
+
+Combina os benefícios de algoritmos sociais e meméticos. Bom para
+encontrar ótimos locais predominantes.
+Especialmente bom quando a função local está afetada por
+ruídos locais.
 
 ## Busca do Cuco
 
@@ -137,4 +163,4 @@ pessoas, com pontos chave sendo feitos repetidamente, como se
 recortados.
 
 
-# Obrigado
+[[#]] Obrigado
