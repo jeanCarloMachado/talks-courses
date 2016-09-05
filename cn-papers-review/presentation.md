@@ -34,6 +34,8 @@ algoritmo de vespa(1991) e algoritmo do tubarão(1998).
 Existem várias forma de classificar algoritmos naturais
 
 - Trajetória vs população
+- Baseados em atração vs não baseados em atração
+- Baseados em regras vs baseados em equações
 
 
 ## Complexidades dos problemas pelo tempo
@@ -120,6 +122,11 @@ ruídos locais.
 
 Bom para problemas com restrições não lineares complexas.
 
+### Já aplicado em
+- Procura de heurística
+- Maximização de problemas opostos
+- Problemas de alocação multi objetivo
+
 ## Algoritmos de Morcego (2010)
 
 Serve para problemas contínuos.
@@ -133,10 +140,11 @@ Relativamente simples de implementar.
 Foi utilizado em problemas de agendamento, e de
 maximização/minimização.
 
-
 ## Polinização de flores
 
 Bom para problemas de otimização global.
+
+
 
 ## Vaga-lume
 
