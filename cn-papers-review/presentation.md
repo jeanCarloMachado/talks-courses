@@ -5,12 +5,13 @@ Jean Carlo Machado e Renato Bustamante
 ## Artigos
 
  - Iztok Fister Jr., Xin-She Yang - A Brief Review of Nature-Inspired Algorithms
-for Optimization, University of Maribor, 2000
+for Optimization, University of Maribor, 2000 [1]
 
- - Arpan Kumar Kar, 2016, io inspired computing - A review of algorithms
-and scope of applications, Indian Institute of Technology
+ - Arpan Kumar Kar, 2016, Bio inspired computing - A review of algorithms
+and scope of applications, Indian Institute of Technology [2]
 
- - R. S. Parpinelli, H. S. Lopes, 2011, New inspierations in swarm intelligence: a survey, Int. J. Bio-Inspired Computation
+ - R. S. Parpinelli, H. S. Lopes, 2011, New inspierations in swarm
+   intelligence: a survey, Int. J. Bio-Inspired Computation [3]
 
 ## Tema geral
 
@@ -25,7 +26,7 @@ Dentre os que tem bom balanço pode-se citar: PSO, evolução
 diferencial, busca do cuco, algoritmos de vaga-lume.
 
 Alguns bons algoritmos não foram adotados pela comunidade:
-algoritmo de vespa e algoritmo do tubarão.
+algoritmo de vespa(1991) e algoritmo do tubarão(1998).
 
 
 ## Classificação
@@ -38,6 +39,10 @@ Existem várias forma de classificar algoritmos naturais
 ## Complexidades dos problemas pelo tempo
 
 ![Complexidades dos problemas pelo tempo](complexity-of-problems-over-time.png)
+
+## Nível de desenvolvimento de algoritmos
+
+![Nível de desenvolvimento de algoritmos](areas-of-development.png)
 
 ## Utilização de algoritmos na comunidade científica
 
@@ -158,9 +163,10 @@ Foi aplicado apenas no artigo original
 
 ## Conclusão
 
-O artigo de Arpan Kumar Kar pareceu ter sido feito por várias
+O artigo [2] pareceu ter sido feito por várias
 pessoas, com pontos chave sendo feitos repetidamente, como se
-recortados.
+recortados. Mas aplicou uma metodologia interessante, selecionando
+algoritmos de otimização com pelo menos 15 referências.
 
 
-[[#]] Obrigado
+# Obrigado
