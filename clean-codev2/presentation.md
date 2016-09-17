@@ -1,4 +1,4 @@
-#Clean Code
+##  Clean Code
 
 > There’s no problem so simple that a bad developer can’t make it complicated.
 Steve Bohlen
@@ -6,46 +6,29 @@ Steve Bohlen
 > Programming is the art of telling another human what one wants the computer to do.
 Donald Knuth
 
-#Warning
 
-A quite not versed rhetorical presenter.
-
-. . .
-
-Feel free to interrupt me and ask when something is not clear.
-
-. . .
-
-Or something worth discussing.
-
-#What Clean Code stands for?
+##  What Clean Code stands for?
 
 Clean code is a reader-focused development style that produces software that's easy to write, read and maintain.
 
-#Why it matters?
+##  Why it matters?
 
-##[Broken windows theory](https://en.wikipedia.org/wiki/Broken_windows_theory)
+###  [Broken windows theory](https://en.wikipedia.org/wiki/Broken_windows_theory)
 
 One *broken window* is all it takes to start the decline.
 
-. . .
-
 It's too easy to slip into the mindset of "All the rest of this code is crap, I'll just follow suit."
-
-. . .
 
 It's the software entropy.
 
-. . .
-
-So called: “software rot.”
+So called: “software rot”.
 
 
-#The four characteristics of Rotting software
+## The four characteristics of Rotting software
 
 From the book *Design Principles and Design Patterns* de *Robert C. Martins*
 
-#1 - Rigidity
+## 1 - Rigidity
 
 It's hard to solve simple problems.
 
@@ -53,7 +36,7 @@ No one knows how long will take to solve them.
 
 Estimating is hard.
 
-#2 - Fragility
+## 2 - Fragility
 
 The software breaks too often.
 
@@ -61,48 +44,30 @@ A change in one unrelated part breaks others.
 
 Changes must be echoed in many places.
 
-#3 - Immobility
+## 3 - Immobility
 
 It's the inability of reusing software from other places.
 
-#4 - Viscosity
+## 4 - Viscosity
 
 Its easier to go to the *hacking mode* than to the *design preservation* mode.
 
-#Implications
+## Implications
 
 [O preço da gambiarra](http://jeancarlomachado.com.br/#!/post/37)
 
-. . .
-
 Software rot implies in frustrated developers.
 
-. . .
-
 Frustrated developers implies in more rotting.
-
-. . .
 
 Too much rooting implies in system rewrite.
 
 
-#Who's fault?
-
-Managers
-
-. . .
-
-NOPS
-
-. . .
-
-DEVELOPERS
-
-. . .
+## Who's fault?
 
 The clinical analogy
 
-#Solution?
+## Solution?
 
 Good practices.
 
@@ -112,7 +77,7 @@ Clean code!
 
 Anyone can write code a computer can understand, but professional developers write code *humans* can understand.
 
-#Literature
+## Literature
 
 
 1. Clean code: A hand book of Agile Software craftsmanship; Robert C. Martin.
@@ -125,7 +90,7 @@ Anyone can write code a computer can understand, but professional developers wri
 Jorge Agustin Nicolas Ruiz de Santayana y Borras
 
 
-#Some Principles
+## Some Principles
 
 Dear truth always deceiving simplicity. - John Green
 
@@ -135,31 +100,31 @@ Follow what suites you most.
 
 Obviously this is not an exhaustive list.
 
-#Principle - SOLID
+## Principle - SOLID
 
 Or the "first five principles" by Michael Feathers.
 
-#Single responsibility principle
+## Single responsibility principle
 
 If you can think of more than one motive for changing a class, then that class has more than one responsibility.
 
-#Open Close Principle
+## Open Close Principle
 
 The interface is closed to modification - and new implementation must, at least, implement that interface.
 
-#Liskov substitution principle
+## Liskov substitution principle
 
 It's possible to change subclasses without breaking the program.
 
-#Interface segregation principle
+## Interface segregation principle
 
 It's better more interfaces than less.
 
-#Dependency inversion
+## Dependency inversion
 
 One should depend only on abstractions.
 
-#Principle - Dry
+## Principle - Dry
 
 Don't Repeat Yourself
 
@@ -167,7 +132,7 @@ Don't Repeat Yourself
 
 Two or more things are *orthogonal* if changes in one do not affect any of the others
 
-#Benefits of Orthogonal Systems
+## Benefits of Orthogonal Systems
 
 - Eliminate effects between unrelated things.
 - Changes are localized.
@@ -177,7 +142,7 @@ Two or more things are *orthogonal* if changes in one do not affect any of the o
 - Better tested.
 - Not tightly to a particular vendor.
 
-#Principle - Law of Demeter
+## Principle - Law of Demeter
 
 You don't ever, ever play with your toy's toys.
 
@@ -191,11 +156,11 @@ Any method of an object should call only methods belonging to:
 - any parameters received;
 - any objects it creates and any directly held component objects.
 
-#Principle - Composite Reuse
+## Principle - Composite Reuse
 
 One should be build only upon interfaces.
 
-##Benefits
+### Benefits
 - Easier to maintain (no unexpected behaviours);
 - Performance gain;
 
@@ -220,7 +185,7 @@ class User
 
 ```
 
-#Principle - Design by contract
+## Principle - Design by contract
 
 Objects collaborate with each other on the basis of "mutual obligations and benefits". - Bertrand Meyer
 
@@ -236,7 +201,7 @@ Accept few and promise few.
 
 If your contract indicates that you'll accept anything and promise the world in return, then you've got a lot of code to write.
 
-#Principle - The scout rule
+## Principle - The scout rule
 
 Clean code is not about perfection.. It's about honesty.
 
@@ -244,11 +209,11 @@ Clean code is not about perfection.. It's about honesty.
 
 We made our best to leave the camp cleaner than we find it?
 
-#Practise
+## Practise
 
 Tips for applying the previous principles.
 
-#Functions Arguments
+## Functions Arguments
 
 The ideal number of arguments of a function is ZERO.
 
@@ -262,7 +227,7 @@ Flag arguments are ugly.
 
 They state a SRP violation.
 
-#Function Returns
+## Function Returns
 
 Output from function is not so good as well.
 
@@ -272,7 +237,7 @@ If functions must change a thing it must change itself.
 
 (Demeter Law)
 
-#Comments - Usage scenarios
+## Comments - Usage scenarios
 
 Put in the dock block at least the authors name.
 
@@ -284,7 +249,7 @@ Attaching responsibility and accountability to the source code does wonders in k
 
 Comments serves as well to discuss the purpose and trade-offs of implementations.
 
-#Comments - Avoid scenarios
+## Comments - Avoid scenarios
 
 The usual aim of comments is to express the code.
 
@@ -296,7 +261,7 @@ So, if they are necessary there's a grand chance that the design smells.
 
 Inaccurate comments are way worse than no comments at all.
 
-#Comments - A bad case
+## Comments - A bad case
 
 ```
 /**
@@ -313,13 +278,13 @@ public addCd($title, $author, int $tracks);
 Clearly a DRY violation
 
 
-#Documentation
+## Documentation
 
 Code and documentation are different views of the same underlying model.
 
 Two places to edit models? DRY violation.
 
-#Classes - Journal Metaphor (SRP)
+## Classes - Journal Metaphor (SRP)
 
 Classes should be like journal articles.
 
@@ -337,7 +302,7 @@ As you read down details increases.
 
 A journal is made of many little articles.
 
-#Objects vs Data structures
+## Objects vs Data structures
 
 In any good system the distinction of data structures and objects is clear.
 
@@ -349,7 +314,7 @@ Objects hide data and expose operations over it.
 
 Data structures expose data and have no meaningful operation.
 
-#Naming
+## Naming
 
 Long names are generally better and simple names.
 
@@ -364,14 +329,14 @@ Need to see the source for to know what a function does? Work on names!
 If there's an ``And`` in a function name it's violating SRP.
 
 
-#Conventions
+## Conventions
 
 Follow a coding standard, no matter which, but all the code must follow the chosen one.
 
-##Examples for php
+### Examples for php
 PSR2, Zend, Symphony, etc.
 
-#Many little classes vs Few big ones
+## Many little classes vs Few big ones
 
 Some fear to have to browser in many files till find the right piece of code.
 
@@ -393,7 +358,7 @@ So the question is:
 
 **Or only a compartment and all inside?**
 
-#Many little classes are always better than few big ones
+## Many little classes are always better than few big ones
 
 Any regular system will contain a vast quantity of logic
 
@@ -407,7 +372,7 @@ We want our systems to have many little classes - not few big ones.
 
 Relates to ISP.
 
-#Abuse of Namespaces
+## Abuse of Namespaces
 
 
 ``Inventory\Model\TradeStatusType.php``
@@ -442,7 +407,7 @@ Much better:
 
 ``Inventory\Model\Trade\Status\Type.php``
 
-#Remove is better than adding
+## Remove is better than adding
 
 > Perfection is attained not when there is nothing more to add, but when there is nothing more to remove.
 Antoine de Saint-Exupéry
@@ -462,7 +427,7 @@ It may impact project schedule.
 
 The assumption is that the impact will be less than the cost of not making the change.
 
-#Object Calisthenics
+## Object Calisthenics
 
 Seven code qualities premisses:
 
@@ -476,30 +441,30 @@ Seven code qualities premisses:
 
 [phpcs rules](https://github.com/object-calisthenics/phpcs-calisthenics-rules)
 
-#1 - One level of indentation per method;
+## 1 - One level of indentation per method;
 
-##Benefits
+### Benefits
 Finding bugs is much easier.
 
 If you have more than one indentation level you have more than one abstraction level.
 
-#2 - Don't use ELSE keyword;
+## 2 - Don't use ELSE keyword;
 
 Else's encourages the inclusion of more, intermediate, ifs.
 
 Use polymorphism instead.
 
-#3 - Wrap all primitives and Strings;
+## 3 - Wrap all primitives and Strings;
 
 Small objects make programs more maintainable.
 
 They serves as a container for logic that otherwise would be sparse.
 
-#4 - First class collections
+## 4 - First class collections
 
 Any class with a collection shouldn't contain other member variables.
 
-#5 - One dot per line;
+## 5 - One dot per line;
 
 Never:
 
@@ -520,7 +485,7 @@ this
 
 (Law of Demeter)
 
-#6 - Don't abbreviate;
+## 6 - Don't abbreviate;
 
 Abbreviation because of exhaustive use?
 
@@ -536,22 +501,22 @@ Too long names?
 
 Maybe a SRP problem.
 
-#7 - Keep all entities small;
+## 7 - Keep all entities small;
 
 No classes over 50 lines and no packages over 10 files.
 
-#8 - No classes with more than two instance variables.
+## 8 - No classes with more than two instance variables.
 
 A class *Name* with first, middle and last name might be decomposed to:
 
 A class *Name* with a *Surname* class and a *GivenNames* class.
 
-#9 - No getters/setters/properties
+## 9 - No getters/setters/properties
 
 
 When you have the enough quantity of encapsulation provided from the previous rules you will never need to do any operation on the getters/setters.
 
-#Testing clean code
+## Testing clean code
 
 Testing code use different pattens than production code.
 
@@ -565,7 +530,7 @@ Like memory and performance things.
 
 But never clarity things.
 
-#Meta programming
+## Meta programming
 
 > Civilization advances by extending the number of important operations we can perform without thinking.
 Alfred North Whitehead
@@ -597,7 +562,7 @@ How?
 
 Program for the general case, and put the specifics somewhere else - outside the code base.
 
-#Metrics
+## Metrics
 
 Nice things to measure:
 
@@ -606,7 +571,7 @@ Nice things to measure:
 - Inheritance fan-out (number of derived modules using this one as parent);
 - Class coupling ratios
 
-#No Magic
+## No Magic
 
 Never buy magic!
 
@@ -620,7 +585,7 @@ Do this by actually writing something simple that does the basics that you need.
 
 Make sure the magic all goes away.
 
-#Conclusion
+## Conclusion
 
 > Quality is a team issue.
 Andy hunt.
@@ -649,7 +614,17 @@ Robert Glass, [Facts and Fallacies of Software Engineering](http://www.amazon.co
 
 So there's always room for improvement.
 
-. . .
 
-Thanks for all!
+## References
+
+
+1. [Clean code: A hand book of Agile Software craftsmanship;
+   Robert C. Martin.](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
+2. [The pragmatical programmer; Andrew Hunt.](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X)
+3. [Code Complete;  Steve McConnell](https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670)
+
+
+# Thanks for all!
+
+[Clean Code](https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=Web&cd=1&cad=rja&uact=8&ved=0ahUKEwiC0fWOvZfPAhUFkZAKHesaCMoQFggcMAA&url=https%3A%2F%2Fwww.amazon.com%2FClean-Code-Handbook-Software-Craftsmanship%2Fdp%2F0132350882&usg=AFQjCNHJDnmWbqzqrhM5Lav_Z6k-PxQEKA&sig2=2zdT7GNzC9hoWPFz9OMhqQ&bvm=bv.133178914,d.Y2I)
 
