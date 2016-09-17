@@ -85,7 +85,7 @@ energia.
 
 tree-SAT problem optimization.
 
-utilizado em programação estocástica e dinamica.
+Utilizado em programação estocástica e dinamica.
 
 ## Algoritmos Genéticos
 
@@ -120,7 +120,7 @@ ruídos locais.
 
 ## Busca do Cuco
 
-Bom para problemas com restrições não lineares complexas.
+Bom para problemas com restrições não lineares complexos.
 
 ### Já aplicado em
 - Procura de heurística
