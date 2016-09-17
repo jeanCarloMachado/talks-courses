@@ -56,6 +56,13 @@ métodos se encaixam com determinadas heurísticas e outros não.
 
 ## Conclusão
 
+
+O assunto se relaciona com o teorema de "No-free-lunch" no sentido
+de que os novos algoritmos propostos na maioria das vezes não
+trazem benefícios reais para a área. São muitas vezes equivalentes
+em performance e na geração do resultados em média.
+
+
 ## Referências
 
 Metaheuristics the metaphor exposed
