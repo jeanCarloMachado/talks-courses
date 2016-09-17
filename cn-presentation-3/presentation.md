@@ -12,7 +12,7 @@ contribuição clara em uma nova insipação o que acontece é apenas
 uma troca de terminologia.
 Reiteração de conhecimento existente.
 
-# Exemplos de "novos" algoritmos:
+## Exemplos de "novos" algoritmos:
 
 - pulo do sapo
 - refração da luz
