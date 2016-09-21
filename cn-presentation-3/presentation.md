@@ -32,7 +32,7 @@ Criam uma visão ruim da área de conhecimento.
 
 - Não existe tanto foco em otimizar o antigo
 - O ambiente é diferente
-- Os testess de benchmark são limiados
+- Os testes de benchmark são limitados
 
 
 ## "Novas inspirações são sempre melhores que os antigos"
@@ -72,7 +72,7 @@ estrutura do problema e desenvolver métodos baseados nela.
 - Usar mais de uma estrutura para escapar de um ótimo local
 - Utilizar randomização em heurísticas greedy
 - Heurística piloto para calcular o custo e qualidade de heurísticas
-- Achar o melhor algorítmo para a melhor classe de problema. 
+- Achar o melhor algoritmo para a melhor classe de problema. 
 - Conseguir identificar por que determinados
 métodos se encaixam com determinadas heurísticas e outros não
 
