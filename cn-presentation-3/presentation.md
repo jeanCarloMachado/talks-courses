@@ -90,6 +90,10 @@ problemas é idêntica (até mesmo busca aleatória).
 Reforça-se a necessidade de uma seleção adequada de
 meta-heurísticas para cada problema.
 
+Ainda existe espaço para novas inspirações. Dado que existem
+algoritmos "tradicionais" em diversas áreas que talvez não se
+configurem a melhor forma de interagir com os problemas os quais a área
+lida.
 
 ## Referências
 
