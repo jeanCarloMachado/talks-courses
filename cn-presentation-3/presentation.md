@@ -1,14 +1,14 @@
-## Revisão de artigos 2
+## Revisão de artigos 3
 
 Jean Carlo Machado e Renato Bustamante
 
 ## Tema geral
 
-Argumenta que muitas novas insperações estão tirando o rigor
-científico da area de metaeurísticas.
+Argumenta que muitas novas inoperações estão tirando o rigor
+científico da área de meta eurísticas.
 
 Cria uma analogia para mostrar que: quando não há nenhuma
-contribuição clara em uma nova insipação o que acontece é apenas
+contribuição clara em uma nova inspiração o que acontece é apenas
 uma troca de terminologia.
 Reiteração de conhecimento existente.
 
@@ -35,7 +35,7 @@ Indução - derivar generalização de alguns exemplos
 Problema auxiliar - Existe algum problema menor que pode ajudar a
 solucionar esse?
 
-## Exemplos de metaheurísticas consolidaddas
+## Exemplos de meta-heurísticas consolidadas
 
 - busca tabu
 - algoritmos genéticos
@@ -48,7 +48,7 @@ solucionar esse?
 - Heurística piloto para calcular o custo e qualidade de
   heurísticas
 
-Em geral, o design de metaheurísticas devem se basear na estrutura
+Em geral, o design de meta-heurísticas devem se basear na estrutura
 do problema.
 
 Trabalho de valor seria conseguir identificar porquê determinados
@@ -70,7 +70,6 @@ Kenneth Sorensen 2012
 
 
 # Obrigado
-
 
 
 %% 16/09/2016 - Leitura e apresentação: Teorema No Free Lunch (NFL) e
