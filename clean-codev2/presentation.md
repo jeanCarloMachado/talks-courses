@@ -54,14 +54,11 @@ Its easier to go to the *hacking mode* than to the *design preservation* mode.
 
 ## Implications
 
-[O preço da gambiarra](http://jeancarlomachado.com.br/#!/post/37)
-
 Software rot implies in frustrated developers.
 
 Frustrated developers implies in more rotting.
 
 Too much rooting implies in system rewrite.
-
 
 ## Who's fault?
 
@@ -69,16 +66,12 @@ The clinical analogy
 
 ## Solution?
 
-Good practices.
 
-Software Wisdom.
+> Anyone can write code a computer can understand, but only professional developers write code *humans* can understand.
 
-Clean code!
-
-Anyone can write code a computer can understand, but professional developers write code *humans* can understand.
+Good practices, software craftsmanship, clean code.
 
 ## Literature
-
 
 1. Clean code: A hand book of Agile Software craftsmanship; Robert C. Martin.
 2. The pragmatical programmer; Andrew Hunt.
