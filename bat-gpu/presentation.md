@@ -20,6 +20,34 @@ Primeiramente separar a população paralelamente (DAO, 2015).
 
 Em um segundo passo tornar o processo de varredura paralelo?
 
+Algoritmos em GPU
+-----------------
+
+- Sim: Bactérias
+- Sim: Busca da harmonia
+- Sim: Celular automata
+- Sim: Computação de membrana
+- Sim: Cuco
+- Sim: Formiga (ACO)
+- Sim: Genéticos
+- Sim: Morcego
+- Sim: Partículas (PSO)
+- Sim: Procura por alimentos de abelhas (Bee foraging)
+- Sim: Pulo do Sapo
+- Sim: Redes Neurais
+- Sim: Vaga-lume (Firefly)
+- Sim: Acasalamento de abelhas (Bee mating)
+- Sim: Braimstorming process
+- Sim: CMAE-
+- Não: Tubarão (Não foi adotado pela comunidade)
+- Não: Vespa (Não foi adotado pela comunidade)
+- Não: Infestação de baratas
+- Não: Mosquito
+- Não: Polinização de Flores NC 
+- Não: Sistema Imunológico Artificial
+- Não: Slime mould
+
+
 Modelagem matemática
 ====================
 
@@ -31,6 +59,10 @@ Pseudo Código Original
 Pseudo Código Jelson's
 -----------------------
 ![pseudo-code-v2.png](pseudo-code-v2.png)
+
+
+Benchmarks
+==========
 
 Funções de Benchmarks
 --------------------
@@ -53,7 +85,7 @@ Griewank
 Rastrigin
 --------
 
-![rastringin.png](rastringin.png)
+![rastringin.jpg](rastringin.jpg)
 
 Sphere
 ------
