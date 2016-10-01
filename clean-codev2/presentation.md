@@ -1,19 +1,25 @@
 ##  Clean Code
 
 > There’s no problem so simple that a bad developer can’t make it complicated.
+
 Steve Bohlen
 
 > Programming is the art of telling another human what one wants the computer to do.
-Donald Knuth
 
+Donald Knuth
 
 ##  What Clean Code stands for?
 
-Clean code is a reader-focused development style that produces software that's easy to write, read and maintain.
+Clean code is a reader-focused development style that produces software that's easy to:
 
-##  Why it matters?
+- write
+- read
+- maintain
 
-###  [Broken windows theory](https://en.wikipedia.org/wiki/Broken_windows_theory)
+#  Why it matters?
+
+%% place a pic of Microsoft windows?
+##  [Broken windows theory](https://en.wikipedia.org/wiki/Broken_windows_theory)
 
 One *broken window* is all it takes to start the decline.
 
@@ -23,12 +29,11 @@ It's the software entropy.
 
 So called: “software rot”.
 
-
 ## The four characteristics of Rotting software
 
 From the book *Design Principles and Design Patterns* de *Robert C. Martins*
 
-## 1 - Rigidity
+## Rotting software 1 - Rigidity
 
 It's hard to solve simple problems.
 
@@ -36,7 +41,7 @@ No one knows how long will take to solve them.
 
 Estimating is hard.
 
-## 2 - Fragility
+## Rotting software 2 - Fragility
 
 The software breaks too often.
 
@@ -44,13 +49,13 @@ A change in one unrelated part breaks others.
 
 Changes must be echoed in many places.
 
-## 3 - Immobility
+## Rotting software 3 - Immobility
 
 It's the inability of reusing software from other places.
 
-## 4 - Viscosity
+## Rotting software 4 - Viscosity
 
-Its easier to go to the *hacking mode* than to the *design preservation* mode.
+It's easier to go to the *hacking mode* than to the *design preservation* mode.
 
 ## Implications
 
@@ -66,32 +71,35 @@ The clinical analogy
 
 ## Solution?
 
-
 > Anyone can write code a computer can understand, but only professional developers write code *humans* can understand.
 
-Good practices, software craftsmanship, clean code.
+- Good practices
+- Software craftsmanship
+- Clean code
 
 ## Literature
+
+> Those who do not remember the past are condemned to repeat it.
+
+Jorge Agustin Nicolas Ruiz de Santayana y Borras
+
 
 1. Clean code: A hand book of Agile Software craftsmanship; Robert C. Martin.
 2. The pragmatical programmer; Andrew Hunt.
 3. Code Complete
-... Lot's more
+
+# Principles
 
 
-> Those who do not remember the past are condemned to repeat it.
-Jorge Agustin Nicolas Ruiz de Santayana y Borras
+## Principles
 
+> Dear truth always deceiving simplicity.
 
-## Some Principles
+John Green
 
-Dear truth always deceiving simplicity. - John Green
+Not an exhaustive list.
 
-Follow what suites you most.
-
-. . .
-
-Obviously this is not an exhaustive list.
+Follow the ones what suites you most.
 
 ## Principle - SOLID
 
@@ -127,13 +135,13 @@ Two or more things are *orthogonal* if changes in one do not affect any of the o
 
 ## Benefits of Orthogonal Systems
 
-- Eliminate effects between unrelated things.
-- Changes are localized.
-- Promotes reuse.
-- Disease sections of code are isolated.
-- The result system is less fragile.
-- Better tested.
-- Not tightly to a particular vendor.
+- Eliminate effects between unrelated things
+- Changes are localized
+- Promotes reuse
+- Disease sections of code are isolated
+- The result system is less fragile
+- Better tested
+- Not tightly to a particular vendor
 
 ## Principle - Law of Demeter
 
@@ -154,67 +162,39 @@ Any method of an object should call only methods belonging to:
 One should be build only upon interfaces.
 
 ### Benefits
-- Easier to maintain (no unexpected behaviours);
+
+- Easier to maintain (no unexpected behaviors);
 - Performance gain;
 
 Works flawlessly with traits.
 
----
-
 ```
-//service user
-class User
-    implements AuthenticatedUserAwareInterface,
-    ClientAwareInterface,
-    ServiceLocatorAwareInterface,
-    EntityManagerAwareInterface,
-    PluginManagerAwareInterface
-{
-    use ClientAwareTrait;
-    use AuthenticatedUserAwareTrait;
-    use ServiceLocatorAwareTrait;
-    use EntityManagerAwareTrait;
-    use PluginManagerAwareTrait;
-
+abstract class AbstractPostgreSQLDriver implements
+Driver,
+ExceptionConverterDriver,
+VersionAwarePlatformDriver
 ```
 
 ## Principle - Design by contract
 
-Objects collaborate with each other on the basis of "mutual obligations and benefits". - Bertrand Meyer
+> Objects collaborate with each other on the basis of "mutual obligations and benefits".
+ Bertrand Meyer
 
-. . .
 
-Developing became the process of honoring contracts. :P
-
-. . .
+Developing became the process of honoring contracts.
 
 Accept few and promise few.
 
-. . .
-
 If your contract indicates that you'll accept anything and promise the world in return, then you've got a lot of code to write.
 
-## Principle - The scout rule
 
-Clean code is not about perfection.. It's about honesty.
-
-. . .
-
-We made our best to leave the camp cleaner than we find it?
-
-## Practise
-
-Tips for applying the previous principles.
+# Practise
 
 ## Functions Arguments
 
 The ideal number of arguments of a function is ZERO.
 
-. . .
-
 More than tree is unacceptable.
-
-. . .
 
 Flag arguments are ugly.
 
@@ -224,21 +204,14 @@ They state a SRP violation.
 
 Output from function is not so good as well.
 
-. . .
+If functions must change a thing it must change itself.  (Demeter Law)
 
-If functions must change a thing it must change itself.
-
-(Demeter Law)
 
 ## Comments - Usage scenarios
 
 Put in the dock block at least the authors name.
 
-. . .
-
 Attaching responsibility and accountability to the source code does wonders in keeping people honest.
-
-. . .
 
 Comments serves as well to discuss the purpose and trade-offs of implementations.
 
@@ -246,15 +219,11 @@ Comments serves as well to discuss the purpose and trade-offs of implementations
 
 The usual aim of comments is to express the code.
 
-. . .
-
 So, if they are necessary there's a grand chance that the design smells.
-
-. . .
 
 Inaccurate comments are way worse than no comments at all.
 
-## Comments - A bad case
+## Comments - DRY
 
 ```
 /**
@@ -266,10 +235,6 @@ Inaccurate comments are way worse than no comments at all.
 */
 public addCd($title, $author, int $tracks);
 ```
-. . .
-
-Clearly a DRY violation
-
 
 ## Documentation
 
@@ -281,17 +246,11 @@ Two places to edit models? DRY violation.
 
 Classes should be like journal articles.
 
-. . .
-
 In the header you get an general overview. 
 
 You are able to decide if you go further or not.
 
-. . .
-
 As you read down details increases.
-
-. . .
 
 A journal is made of many little articles.
 
@@ -299,11 +258,7 @@ A journal is made of many little articles.
 
 In any good system the distinction of data structures and objects is clear.
 
-. . .
-
 Objects hide data and expose operations over it.
-
-. . .
 
 Data structures expose data and have no meaningful operation.
 
@@ -313,11 +268,7 @@ Long names are generally better and simple names.
 
 Complex operations can be made simple when intermediate variables are used.
 
-. . .
-
 Need to see the source for to know what a function does? Work on names!
-
-. . .
 
 If there's an ``And`` in a function name it's violating SRP.
 
@@ -326,28 +277,23 @@ If there's an ``And`` in a function name it's violating SRP.
 
 Follow a coding standard, no matter which, but all the code must follow the chosen one.
 
-### Examples for php
-PSR2, Zend, Symphony, etc.
+### Examples for PHP
+
+- PSR2
+- Zend
+- Symphony
 
 ## Many little classes vs Few big ones
 
 Some fear to have to browser in many files till find the right piece of code.
 
-. . .
-
 Many classes does not imply in comprehension damage.
 
-. . .
-
 The Many and the Few approaches both have the same amount of business logic to care of.
-
-. . .
 
 So the question is:
 
 **You prefer your tools being organized in boxes with little compartments and good names?**
-
-. . .
 
 **Or only a compartment and all inside?**
 
@@ -355,11 +301,7 @@ So the question is:
 
 Any regular system will contain a vast quantity of logic
 
-. . .
-
 The first goal of managing complexity is organizing in a way developers know how to look for a certain thing, without having to worry about neighbour details.
-
-. . .
 
 We want our systems to have many little classes - not few big ones.
 
@@ -405,18 +347,11 @@ Much better:
 > Perfection is attained not when there is nothing more to add, but when there is nothing more to remove.
 Antoine de Saint-Exupéry
 
-
-Don't let existing code dictate future code.
-
-. . .
+*Don't let existing code dictate future code.*
 
 Be ready to refactor.
 
-. . .
-
 It may impact project schedule.
-
-. . .
 
 The assumption is that the impact will be less than the cost of not making the change.
 
@@ -437,6 +372,7 @@ Seven code qualities premisses:
 ## 1 - One level of indentation per method;
 
 ### Benefits
+
 Finding bugs is much easier.
 
 If you have more than one indentation level you have more than one abstraction level.
@@ -482,15 +418,9 @@ this
 
 Abbreviation because of exhaustive use?
 
-. . .
-
 DRY violation.
 
-. . .
-
 Too long names?
-
-. . .
 
 Maybe a SRP problem.
 
@@ -501,13 +431,13 @@ No classes over 50 lines and no packages over 10 files.
 ## 8 - No classes with more than two instance variables.
 
 A class *Name* with first, middle and last name might be decomposed to:
-
 A class *Name* with a *Surname* class and a *GivenNames* class.
 
 ## 9 - No getters/setters/properties
 
-
-When you have the enough quantity of encapsulation provided from the previous rules you will never need to do any operation on the getters/setters.
+When you have the enough quantity of encapsulation provided from
+the previous rules you will never need to do any operation on the
+getters/setters.
 
 ## Testing clean code
 
@@ -519,8 +449,6 @@ There things you will never do in production code that in testing code is allowe
 
 Like memory and performance things.
 
-. . .
-
 But never clarity things.
 
 ## Meta programming
@@ -530,28 +458,15 @@ Alfred North Whitehead
 
 What we want?
 
-
-. . .
-
 To go beyond using meta data for simple preferences.
-
-. . .
 
 We want to configure and drive the application via meta data as much as possible.
 
-. . .
-
 Our goal is to *think declaratively*.
-
-. . .
 
 And create highly dynamic and adaptable programs.
 
-. . .
-
 How?
-
-. . .
 
 Program for the general case, and put the specifics somewhere else - outside the code base.
 
@@ -566,39 +481,33 @@ Nice things to measure:
 
 ## No Magic
 
-Never buy magic!
+Never buy magic.
 
 Before you commit to a framework, make sure you could write it.
 
-. . .
-
 Do this by actually writing something simple that does the basics that you need.
-
-. . .
 
 Make sure the magic all goes away.
 
+
+
 ## Conclusion
 
-> Quality is a team issue.
-Andy hunt.
+> Quality is a team issue.  Andy hunt.
 
 Teams as a hole should not tolerate broken windows.
 
----
+Clean code is not about perfection.. It's about honesty.
 
-Obviously no one will ever do the hundred percent of what was here exposed.
+We made our best to leave the camp cleaner than we find it?
 
-But if we aim for the 80% where code needs the most.
-
-We are cool.
+But if we aim for the 80% where code needs the most.  We are cool.
 
 Parts not critical to performance must be clean - not optimized.
 
----
+## Conclusion
 
 Remember...
-
 
 > The best programmers are 28 times best than the worst ones.
 Robert Glass, [Facts and Fallacies of Software Engineering](http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425)
@@ -607,9 +516,7 @@ Robert Glass, [Facts and Fallacies of Software Engineering](http://www.amazon.co
 
 So there's always room for improvement.
 
-
 ## References
-
 
 1. [Clean code: A hand book of Agile Software craftsmanship;
    Robert C. Martin.](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
@@ -618,6 +525,4 @@ So there's always room for improvement.
 
 
 # Thanks for all!
-
-[Clean Code](https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=Web&cd=1&cad=rja&uact=8&ved=0ahUKEwiC0fWOvZfPAhUFkZAKHesaCMoQFggcMAA&url=https%3A%2F%2Fwww.amazon.com%2FClean-Code-Handbook-Software-Craftsmanship%2Fdp%2F0132350882&usg=AFQjCNHJDnmWbqzqrhM5Lav_Z6k-PxQEKA&sig2=2zdT7GNzC9hoWPFz9OMhqQ&bvm=bv.133178914,d.Y2I)
 
