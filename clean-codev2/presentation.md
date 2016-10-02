@@ -1,4 +1,5 @@
-##  Clean Code
+Clean Code
+----------
 
 > There’s no problem so simple that a bad developer can’t make it complicated.
 
@@ -8,7 +9,8 @@ Steve Bohlen
 
 Donald Knuth
 
-##  What Clean Code stands for?
+What Clean Code stands for?
+---------------------------
 
 Clean code is a reader-focused development style that produces software that's easy to:
 
@@ -16,24 +18,31 @@ Clean code is a reader-focused development style that produces software that's e
 - read
 - maintain
 
-#  Why it matters?
+Why it matters?
+---------------
 
-%% place a pic of Microsoft windows?
-##  [Broken windows theory](https://en.wikipedia.org/wiki/Broken_windows_theory)
+### [Broken windows theory](https://en.wikipedia.org/wiki/Broken_windows_theory)
 
 One *broken window* is all it takes to start the decline.
 
-It's too easy to slip into the mindset of "All the rest of this code is crap, I'll just follow suit."
+"All the rest of this code is crap, I'll just follow suit."
 
 It's the software entropy.
 
 So called: “software rot”.
 
-## The four characteristics of Rotting software
+The four characteristics of Rotting software
+--------------------------------------------
+
+- Rigidity
+- Fragility
+- Immobility
+- Viscosity
 
 From the book *Design Principles and Design Patterns* de *Robert C. Martins*
 
-## Rotting software 1 - Rigidity
+Rotting software 1 - Rigidity
+-----------------------------
 
 It's hard to solve simple problems.
 
@@ -41,7 +50,8 @@ No one knows how long will take to solve them.
 
 Estimating is hard.
 
-## Rotting software 2 - Fragility
+Rotting software 2 - Fragility
+------------------------------
 
 The software breaks too often.
 
@@ -49,15 +59,18 @@ A change in one unrelated part breaks others.
 
 Changes must be echoed in many places.
 
-## Rotting software 3 - Immobility
+Rotting software 3 - Immobility
+-------------------------------
 
 It's the inability of reusing software from other places.
 
-## Rotting software 4 - Viscosity
+Rotting software 4 - Viscosity
+------------------------------
 
 It's easier to go to the *hacking mode* than to the *design preservation* mode.
 
-## Implications
+Implications
+------------
 
 Software rot implies in frustrated developers.
 
@@ -77,63 +90,86 @@ The clinical analogy
 - Software craftsmanship
 - Clean code
 
-## Literature
 
-> Those who do not remember the past are condemned to repeat it.
+Clean coder skills
+------------------
 
-Jorge Agustin Nicolas Ruiz de Santayana y Borras
+![clean-coder-skills.jpg](clean-coder-skills.jpg)
 
+# Recommendations
 
-1. Clean code: A hand book of Agile Software craftsmanship; Robert C. Martin.
-2. The pragmatical programmer; Andrew Hunt.
-3. Code Complete
-
-# Principles
-
-
-## Principles
-
-> Dear truth always deceiving simplicity.
-
-John Green
-
-Not an exhaustive list.
+> Dear truth always deceiving simplicity.  John Green
 
 Follow the ones what suites you most.
 
-## Principle - SOLID
+SOLID
+-----------------
 
 Or the "first five principles" by Michael Feathers.
 
-## Single responsibility principle
+Single responsibility
+---------------------
 
 If you can think of more than one motive for changing a class, then that class has more than one responsibility.
 
-## Open Close Principle
+Open Close
+----------
 
 The interface is closed to modification - and new implementation must, at least, implement that interface.
 
-## Liskov substitution principle
+Liskov substitution
+-------------------
 
 It's possible to change subclasses without breaking the program.
 
-## Interface segregation principle
+Interface segregation
+---------------------
 
 It's better more interfaces than less.
 
-## Dependency inversion
+Dependency inversion
+--------------------
 
 One should depend only on abstractions.
 
-## Principle - Dry
+### For PHP:
+
+- https://github.com/container-interop/container-interop
+- https://github.com/auraphp/Aura.Dio
+- https://github.com/zendframework/zend-servicemanager
+
+DRY
+---------------
 
 Don't Repeat Yourself
 
-. . .
+```
+/**
+*
+* @param $title The title of the CD
+* @param $author The author of the CD
+* @param $tracks The number of tracks of the CD
+*
+*/
+public addCd($title, $author, int $tracks);
+```
 
-Two or more things are *orthogonal* if changes in one do not affect any of the others
+Dry on documentation
+--------------------
 
-## Benefits of Orthogonal Systems
+Code and documentation are different views of the same underlying model.
+
+Two places to edit models? DRY violation.
+
+
+Orthogonality
+-------------
+
+Two or more things are *orthogonal* if changes in one do not
+affect any of the others>
+
+Benefits of Orthogonal Systems
+------------------------------
 
 - Eliminate effects between unrelated things
 - Changes are localized
@@ -143,11 +179,10 @@ Two or more things are *orthogonal* if changes in one do not affect any of the o
 - Better tested
 - Not tightly to a particular vendor
 
-## Principle - Law of Demeter
+Law of Demeter
+--------------------------
 
 You don't ever, ever play with your toy's toys.
-
-. . .
 
 If you need to change an object's state, get the object to do it for you.
 
@@ -157,7 +192,8 @@ Any method of an object should call only methods belonging to:
 - any parameters received;
 - any objects it creates and any directly held component objects.
 
-## Principle - Composite Reuse
+Composite Reuse
+---------------
 
 One should be build only upon interfaces.
 
@@ -175,39 +211,39 @@ ExceptionConverterDriver,
 VersionAwarePlatformDriver
 ```
 
-## Principle - Design by contract
+Design by contract
+------------------
 
 > Objects collaborate with each other on the basis of "mutual obligations and benefits".
  Bertrand Meyer
-
 
 Developing became the process of honoring contracts.
 
 Accept few and promise few.
 
-If your contract indicates that you'll accept anything and promise the world in return, then you've got a lot of code to write.
-
-
-# Practise
-
-## Functions Arguments
+Functions Arguments
+-------------------
 
 The ideal number of arguments of a function is ZERO.
 
 More than tree is unacceptable.
 
-Flag arguments are ugly.
+### Flags
 
+Flag arguments are ugly.
 They state a SRP violation.
 
-## Function Returns
+Function Returns
+----------------
 
 Output from function is not so good as well.
-
 If functions must change a thing it must change itself.  (Demeter Law)
 
+Comments
+========
 
-## Comments - Usage scenarios
+Usage scenarios
+---------------
 
 Put in the dock block at least the authors name.
 
@@ -215,7 +251,8 @@ Attaching responsibility and accountability to the source code does wonders in k
 
 Comments serves as well to discuss the purpose and trade-offs of implementations.
 
-## Comments - Avoid scenarios
+Avoid scenarios
+---------------
 
 The usual aim of comments is to express the code.
 
@@ -223,26 +260,9 @@ So, if they are necessary there's a grand chance that the design smells.
 
 Inaccurate comments are way worse than no comments at all.
 
-## Comments - DRY
 
-```
-/**
-*
-* @param $title The title of the CD
-* @param $author The author of the CD
-* @param $tracks The number of tracks of the CD
-*
-*/
-public addCd($title, $author, int $tracks);
-```
-
-## Documentation
-
-Code and documentation are different views of the same underlying model.
-
-Two places to edit models? DRY violation.
-
-## Classes - Journal Metaphor (SRP)
+Classes - Journal Metaphor (SRP)
+--------------------------------
 
 Classes should be like journal articles.
 
@@ -254,7 +274,8 @@ As you read down details increases.
 
 A journal is made of many little articles.
 
-## Objects vs Data structures
+Objects vs Data structures
+--------------------------
 
 In any good system the distinction of data structures and objects is clear.
 
@@ -262,7 +283,8 @@ Objects hide data and expose operations over it.
 
 Data structures expose data and have no meaningful operation.
 
-## Naming
+Naming
+------
 
 Long names are generally better and simple names.
 
@@ -272,8 +294,8 @@ Need to see the source for to know what a function does? Work on names!
 
 If there's an ``And`` in a function name it's violating SRP.
 
-
-## Conventions
+Style Guides
+-----------
 
 Follow a coding standard, no matter which, but all the code must follow the chosen one.
 
@@ -283,7 +305,8 @@ Follow a coding standard, no matter which, but all the code must follow the chos
 - Zend
 - Symphony
 
-## Many little classes vs Few big ones
+Many little classes vs Few big ones
+-----------------------------------
 
 Some fear to have to browser in many files till find the right piece of code.
 
@@ -297,7 +320,8 @@ So the question is:
 
 **Or only a compartment and all inside?**
 
-## Many little classes are always better than few big ones
+Many little classes are always better than few big ones
+-------------------------------------------------------
 
 Any regular system will contain a vast quantity of logic
 
@@ -307,47 +331,13 @@ We want our systems to have many little classes - not few big ones.
 
 Relates to ISP.
 
-## Abuse of Namespaces
-
-
-``Inventory\Model\TradeStatusType.php``
-
-Imagine if we extend this for a long period?
-
----
-
-Hell!
-
-```
-Bonus.php
-BonusRepository.php
-BonusType.php
-Client.php
-ClientRepository.php
-ClientSellerLevel.php
-Payment.php
-PaymentFrequency.php
-PaymentMode.php
-PaymentStatus.php
-Privilege.php
-PrivilegeRepository.php
-PrivilegeType.php
-```
-
-And so on..
-
----
-
-Much better:
-
-``Inventory\Model\Trade\Status\Type.php``
-
-## Remove is better than adding
+Remove is better than adding
+-----------------------------
 
 > Perfection is attained not when there is nothing more to add, but when there is nothing more to remove.
 Antoine de Saint-Exupéry
 
-*Don't let existing code dictate future code.*
+Don't let existing code dictate future code.
 
 Be ready to refactor.
 
@@ -355,7 +345,12 @@ It may impact project schedule.
 
 The assumption is that the impact will be less than the cost of not making the change.
 
-## Object Calisthenics
+Object Calisthenics
+===================
+
+
+Object Calisthenics
+-------------------
 
 Seven code qualities premisses:
 
@@ -367,7 +362,7 @@ Seven code qualities premisses:
 - Readability;
 - Focus;
 
-[phpcs rules](https://github.com/object-calisthenics/phpcs-calisthenics-rules)
+[PHPCS rules for OC](https://github.com/object-calisthenics/phpcs-calisthenics-rules)
 
 ## 1 - One level of indentation per method;
 
@@ -451,10 +446,12 @@ Like memory and performance things.
 
 But never clarity things.
 
-## Meta programming
+## Automation
 
-> Civilization advances by extending the number of important operations we can perform without thinking.
-Alfred North Whitehead
+> Civilization advances by extending the number of important operations
+we can perform without thinking. Alfred North Whitehead
+
+## Meta programming
 
 What we want?
 
@@ -470,16 +467,8 @@ How?
 
 Program for the general case, and put the specifics somewhere else - outside the code base.
 
-## Metrics
-
-Nice things to measure:
-
-- Ciclomatic complexity;
-- Inheritance fan-in (number of base classes);
-- Inheritance fan-out (number of derived modules using this one as parent);
-- Class coupling ratios
-
-## No Magic
+No Magic
+--------
 
 Never buy magic.
 
@@ -489,9 +478,21 @@ Do this by actually writing something simple that does the basics that you need.
 
 Make sure the magic all goes away.
 
+Metrics
+=======
 
+Measure
+-------
 
-## Conclusion
+Nice things to measure:
+
+- Ciclomatic complexity;
+- Inheritance fan-in (number of base classes);
+- Inheritance fan-out (number of derived modules using this one as parent);
+- Class coupling ratios
+
+Conclusion
+----------
 
 > Quality is a team issue.  Andy hunt.
 
@@ -505,23 +506,26 @@ But if we aim for the 80% where code needs the most.  We are cool.
 
 Parts not critical to performance must be clean - not optimized.
 
-## Conclusion
-
-Remember...
+Conclusion
+----------
 
 > The best programmers are 28 times best than the worst ones.
 Robert Glass, [Facts and Fallacies of Software Engineering](http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425)
 
-. . .
 
-So there's always room for improvement.
+There's always room for improvement.
 
-## References
+Literature
+----------
 
-1. [Clean code: A hand book of Agile Software craftsmanship;
-   Robert C. Martin.](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
-2. [The pragmatical programmer; Andrew Hunt.](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X)
-3. [Code Complete;  Steve McConnell](https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670)
+> Those who do not remember the past are condemned to repeat it.
+
+Jorge Agustin Nicolas Ruiz de Santayana y Borras
+
+
+1. Clean code: A hand book of Agile Software craftsmanship; Robert C. Martin.
+2. The pragmatical programmer; Andrew Hunt.
+3. Code Complete
 
 
 # Thanks for all!
