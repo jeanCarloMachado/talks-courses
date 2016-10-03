@@ -27,9 +27,7 @@ One *broken window* is all it takes to start the decline.
 
 "All the rest of this code is crap, I'll just follow suit."
 
-It's the software entropy.
-
-So called: “software rot”.
+Software entropy, software rot.
 
 The four characteristics of Rotting software
 --------------------------------------------
@@ -78,9 +76,14 @@ Frustrated developers implies in more rotting.
 
 Too much rooting implies in system rewrite.
 
-The clinical analogy
+Implications
+------------
+
+![Features over time considering design quality](designStaminaGraph.gif)
 
 ## Solution?
+
+The clinical analogy
 
 > Anyone can write code a computer can understand, but only professional developers write code *humans* can understand.
 
@@ -93,7 +96,8 @@ Clean coder skills
 
 ![clean-coder-skills.jpg](clean-coder-skills.jpg)
 
-# Recommendations
+Recommendations
+---------------
 
 > Dear truth always deceiving simplicity.  John Green
 
@@ -104,25 +108,28 @@ SOLID
 
 Or the "first five principles" by Michael Feathers.
 
-Single responsibility
----------------------
+Single Responsibility Principle (SRP)
+-------------------------------------
 
 If you can think of more than one motive for changing a class, then that class has more than one responsibility.
 
-Open Close
+Open Close Principle (OC)
 ----------
 
 The interface is closed to modification - and new implementation must, at least, implement that interface.
 
-Liskov substitution
+Liskov substitution (LS)
 -------------------
 
 It's possible to change subclasses without breaking the program.
 
-Interface segregation
+Interface segregation Principle (ISP)
 ---------------------
 
 It's better more interfaces than less.
+
+Clients should not be forced to depend upon interfaces that they don't use.
+
 
 Dependency inversion
 --------------------
@@ -239,17 +246,13 @@ If functions must change a thing it must change itself.  (Demeter Law)
 Comments
 ========
 
-Usage scenarios
----------------
+### Usage scenarios
 
 Put in the dock block at least the authors name.
 
-Attaching responsibility and accountability to the source code does wonders in keeping people honest.
-
 Comments serves as well to discuss the purpose and trade-offs of implementations.
 
-Avoid scenarios
----------------
+### Avoid scenarios
 
 The usual aim of comments is to express the code.
 
@@ -328,6 +331,9 @@ We want our systems to have many little classes - not few big ones.
 
 Relates to ISP.
 
+KISS
+----
+
 Remove is better than adding
 -----------------------------
 
@@ -359,7 +365,6 @@ Seven code qualities premisses:
 - Readability;
 - Focus;
 
-[PHPCS rules for OC](https://github.com/object-calisthenics/phpcs-calisthenics-rules)
 
 1 - One level of indentation per method;
 ----------------------------------------
@@ -393,6 +398,7 @@ Any class with a collection shouldn't contain other member variables.
 ---------------------
 
 Bad:
+
 ```
 this
     myMemberObjectMemberObject
@@ -400,7 +406,8 @@ this
     ->doFoo();
 ```
 
-Good;
+Good:
+
 ```
 this
     myMemberObjectMemberObject
@@ -438,6 +445,10 @@ When you have the enough quantity of encapsulation provided from
 the previous rules you will never need to do any operation on the
 getters/setters.
 
+Calisthenics Enforcer
+---------------------
+
+[PHPCS rules for OC](https://github.com/object-calisthenics/phpcs-calisthenics-rules)
 
 Tests
 =====
@@ -455,22 +466,26 @@ Like memory and performance things.
 
 But never clarity things.
 
+Tests is the best way of documenting the system usage.
 
-## Meta programming
+Three virtues of a programmer
+-----------------------------
 
-What we want?
+- Laziness: The quality that makes you go to great effort to reduce
+overall energy expenditure. It makes you write labor-saving programs
+that other people will find useful and document what you wrote so you
+don't have to answer so many questions about it.
 
-To go beyond using meta data for simple preferences.
+- Impatience: The anger you feel when the computer is being lazy. This
+makes you write programs that don't just react to your needs, but
+actually anticipate them. Or at least pretend to.
 
-We want to configure and drive the application via meta data as much as possible.
+- Hubris: The quality that makes you write (and maintain) programs that
+other people won't want to say bad things about.
 
-Our goal is to *think declaratively*.
 
-And create highly dynamic and adaptable programs.
+Larry Wall
 
-How?
-
-Program for the general case, and put the specifics somewhere else - outside the code base.
 
 No Magic
 --------
@@ -500,6 +515,7 @@ Tools
 -----
 
 https://www.codacy.com/
+https://github.com/adoy/vim-php-refactoring-toolbox
 
 Conclusion
 ----------
@@ -533,8 +549,15 @@ Literature
 Jorge Agustin Nicolas Ruiz de Santayana y Borras
 
 
-1. Clean code: A hand book of Agile Software craftsmanship; Robert C. Martin.
-2. The pragmatical programmer; Andrew Hunt.
-3. Code Complete
+1. Clean code: A hand book of Agile Software craftsmanship; Robert C. Martin
+2. The pragmatical programmer; Andrew Hunt
+3. Code Complete; Steve McConnell
+4. Refactoring: Improving the Design of Existing Code;
+5. Release It!: Design and Deploy Production-Ready Software; Michael T. Nygard
 
-# Thanks for all!
+Plural sight course
+
+http://app.pluralsight.com/courses/writing-clean-code-humans
+
+Thanks for all!
+===============
