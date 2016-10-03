@@ -78,8 +78,6 @@ Frustrated developers implies in more rotting.
 
 Too much rooting implies in system rewrite.
 
-## Who's fault?
-
 The clinical analogy
 
 ## Solution?
@@ -89,7 +87,6 @@ The clinical analogy
 - Good practices
 - Software craftsmanship
 - Clean code
-
 
 Clean coder skills
 ------------------
@@ -103,7 +100,7 @@ Clean coder skills
 Follow the ones what suites you most.
 
 SOLID
------------------
+-----
 
 Or the "first five principles" by Michael Feathers.
 
@@ -139,7 +136,7 @@ One should depend only on abstractions.
 - https://github.com/zendframework/zend-servicemanager
 
 DRY
----------------
+---
 
 Don't Repeat Yourself
 
@@ -180,7 +177,7 @@ Benefits of Orthogonal Systems
 - Not tightly to a particular vendor
 
 Law of Demeter
---------------------------
+--------------
 
 You don't ever, ever play with your toy's toys.
 
@@ -364,7 +361,8 @@ Seven code qualities premisses:
 
 [PHPCS rules for OC](https://github.com/object-calisthenics/phpcs-calisthenics-rules)
 
-## 1 - One level of indentation per method;
+1 - One level of indentation per method;
+----------------------------------------
 
 ### Benefits
 
@@ -372,44 +370,47 @@ Finding bugs is much easier.
 
 If you have more than one indentation level you have more than one abstraction level.
 
-## 2 - Don't use ELSE keyword;
+2 - Don't use ELSE keyword;
+---------------------------
 
 Else's encourages the inclusion of more, intermediate, ifs.
 
 Use polymorphism instead.
 
-## 3 - Wrap all primitives and Strings;
+3 - Wrap all primitives and Strings;
+------------------------------------
 
 Small objects make programs more maintainable.
 
 They serves as a container for logic that otherwise would be sparse.
 
-## 4 - First class collections
+4 - First class collections
+---------------------------
 
 Any class with a collection shouldn't contain other member variables.
 
-## 5 - One dot per line;
+5 - One dot per line
+---------------------
 
-Never:
-
+Bad:
 ```
 this
-    ->myMemberObjectMemberObject
+    myMemberObjectMemberObject
     ->myMemberObjectMemberObject
     ->doFoo();
 ```
 
-Much better:
-
+Good;
 ```
 this
-    ->myMemberObjectMemberObject
+    myMemberObjectMemberObject
     ->functionThatDoFooToo();
 ```
 
-(Law of Demeter)
+Relates to Law of Demeter
 
-## 6 - Don't abbreviate;
+6 - Don't abbreviate;
+---------------------
 
 Abbreviation because of exhaustive use?
 
@@ -419,24 +420,32 @@ Too long names?
 
 Maybe a SRP problem.
 
-## 7 - Keep all entities small;
+7 - Keep all entities small;
+----------------------------
 
 No classes over 50 lines and no packages over 10 files.
 
-## 8 - No classes with more than two instance variables.
+8 - No classes with more than two instance variables.
+-----------------------------------------------------
 
 A class *Name* with first, middle and last name might be decomposed to:
 A class *Name* with a *Surname* class and a *GivenNames* class.
 
-## 9 - No getters/setters/properties
+9 - No getters/setters/properties
+---------------------------------
 
 When you have the enough quantity of encapsulation provided from
 the previous rules you will never need to do any operation on the
 getters/setters.
 
-## Testing clean code
 
-Testing code use different pattens than production code.
+Tests
+=====
+
+Tests
+-----
+
+Testing code use different patterns than production code.
 
 They have different constraints.
 
@@ -446,10 +455,6 @@ Like memory and performance things.
 
 But never clarity things.
 
-## Automation
-
-> Civilization advances by extending the number of important operations
-we can perform without thinking. Alfred North Whitehead
 
 ## Meta programming
 
@@ -491,6 +496,11 @@ Nice things to measure:
 - Inheritance fan-out (number of derived modules using this one as parent);
 - Class coupling ratios
 
+Tools
+-----
+
+https://www.codacy.com/
+
 Conclusion
 ----------
 
@@ -527,6 +537,4 @@ Jorge Agustin Nicolas Ruiz de Santayana y Borras
 2. The pragmatical programmer; Andrew Hunt.
 3. Code Complete
 
-
 # Thanks for all!
-

@@ -18,10 +18,9 @@ Algoritmos em GPU
 - Sim: Celular automata
 - Sim: Computação de membrana
 - Sim: Cuco
-- Sim: Formiga (ACO)
+- Sim: Formiga
 - Sim: Genéticos
-- Sim: Morcego
-- Sim: Partículas (PSO)
+- Sim: Partículas
 - Sim: Procura por alimentos de abelhas
 - Sim: Pulo do Sapo
 - Sim: Redes Neurais
@@ -29,12 +28,13 @@ Algoritmos em GPU
 - Sim: Acasalamento de abelhas
 - Sim: Braimstorming process
 - Sim: CMAE
-- Não: Tubarão
-- Não: Vespa 
-- Não: Infestação de baratas
-- Não: Mosquito
+- Não: Morcego
 - Não: Polinização de Flores NC
 - Não: Sistema Imunológico Artificial
+- Não: Mosquito
+- Não: Tubarão
+- Não: Vespa
+- Não: Infestação de baratas
 
 
 Modelagem
@@ -67,7 +67,7 @@ Variáveis
 
 - Frequência: aleatória (Varia as chances de intensificação e diversificação)
 - Taxa de pulso: Aumenta com o tempo (Aumenta as changes de busca local)
-- Amplitude: Aumenta conforme vai se aproximando de um valor
+- Amplitude: Diminui conforme vai se aproximando de um valor
   ótimo
 
 Regras
@@ -96,7 +96,8 @@ gbest utilizando a frequência gerada
   velocidade.
 - Conforme a taxa de emissão aumenta a probabilidade de fazer
   busca local é maior
-- Na busca local pode-se efetuar um random walk
+- Na busca local pode-se efetuar um random walk considerando a
+  média de amplitude dos agentes
 - Troca a posição do morcego se a temporária é melhor ou um fator
   estocástico é obedecido
 - Atualiza o melhor morcego
