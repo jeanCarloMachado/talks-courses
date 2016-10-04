@@ -18,6 +18,17 @@ Steve Bohlen
 
 Donald Knuth
 
+About Me
+--------
+
+Tech Lead at [Compufácil http://compufacil.com.br/](http://compufacil.com.br/)
+
+Github: [jeanCarlomachado](https://github.com/jeanCarloMachado)
+
+Twitter: [JeanCarloMachad](https://twitter.com/JeanCarloMachad)
+
+Researching nature inspired intelligence for optimization
+
 What Clean Code stands for?
 ---------------------------
 
@@ -50,8 +61,6 @@ The four characteristics of Rotting software
 - Fragility
 - Immobility
 - Viscosity
-
-From the book *Design Principles and Design Patterns* de *Robert C. Martins*
 
 Rotting software 1 - Rigidity
 -----------------------------
