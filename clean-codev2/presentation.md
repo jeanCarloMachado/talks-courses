@@ -281,7 +281,6 @@ public function useResultCache($bool, $lifetime = null/**...**/)
 
 ```
 
-
 Function Returns
 ----------------
 
@@ -507,25 +506,6 @@ Do this by actually writing something simple that does the basics that you need.
 
 Make sure the magic all goes away.
 
-
-Three virtues of a programmer
------------------------------
-
-- Laziness: The quality that makes you go to great effort to reduce
-overall energy expenditure. It makes you write labor-saving programs
-that other people will find useful and document what you wrote so you
-don't have to answer so many questions about it.
-
-- Impatience: The anger you feel when the computer is being lazy. This
-makes you write programs that don't just react to your needs, but
-actually anticipate them. Or at least pretend to.
-
-- Hubris: The quality that makes you write (and maintain) programs that
-other people won't want to say bad things about.
-
-
-Larry Wall
-
 Style Guides
 -----------
 
@@ -557,18 +537,10 @@ Nice things to measure:
 - Inheritance fan-out (number of derived modules using this one as parent);
 - Class coupling ratios
 
-PHP7 for the clean coder
-------------------------
-
-Anonymous classes as a way of mocking.
-
-
-
 Tools
 -----
 
 - Codacy: https://www.codacy.com/
-
 - PHP refactoring toolbox: https://github.com/adoy/vim-php-refactoring-toolbox
 
 Literature
