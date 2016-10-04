@@ -1,5 +1,14 @@
 All about Clean Code
 --------------------
+<!--
+IDEAS TO apply:
+
+Talk about measuring complexity
+Order the subjects by difficulty
+Create a "diagram of difficulty"
+More Images (maybe something fun like people drowning on a boat)
+Add my info on the second slide
+-->
 
 > There’s no problem so simple that a bad developer can’t make it complicated.
 
@@ -522,20 +531,8 @@ KISS
 
 Simplicity is different of easy.
 
-
 > UNIX is very simple, it just needs a genius to understand it's
 simplicity. Dennis Ritchie
-
-
-Measure
--------
-
-Nice things to measure:
-
-- Ciclomatic complexity;
-- Inheritance fan-in (number of base classes);
-- Inheritance fan-out (number of derived modules using this one as parent);
-- Class coupling ratios
 
 Tools
 -----
