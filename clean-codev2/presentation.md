@@ -206,6 +206,42 @@ Objects hide data and expose operations over it.
 
 Data structures expose data and have no meaningful operation.
 
+
+KISS
+----
+
+Simplicity is different of easy.
+
+> UNIX is very simple, it just needs a genius to understand it's
+simplicity. Dennis Ritchie
+
+Remove is better than adding
+-----------------------------
+
+Don't let existing code dictate future code.
+
+Be ready to refactor.
+
+It may impact project schedule.
+
+The assumption is that the impact will be less than the cost of not making the change.
+
+> Perfection is attained not when there is nothing more to add, but when there is nothing more to remove.
+Antoine de Saint-Exupéry
+
+
+No Magic
+--------
+
+Never buy magic.
+
+Before you commit to a framework, make sure you could write it.
+
+Do this by actually writing something simple that does the basics that you need.
+
+Make sure all the magic goes away.
+
+
 DRY
 ---
 
@@ -230,6 +266,31 @@ Code and documentation are different views of the same underlying model.
 Two places to edit models? DRY violation.
 
 [zendframework/ZendDeveloperTools generates diagrams of entities](https://github.com/zendframework/ZendDeveloperTools/blob/master/README.md)
+
+Composite Reuse
+---------------
+
+One should build upon interfaces.
+
+> OO languages replace function pointers with convenient polymorphism.
+Robert C. Martin
+
+
+### Benefits
+
+- Easier to maintain (no unexpected behaviors)
+- Performance gain
+- The inversion of source code and run time dependencies
+
+Design by contract
+------------------
+
+> Objects collaborate with each other on the basis of "mutual obligations and benefits".
+ Bertrand Meyer
+
+Developing became the process of honoring contracts.
+
+Accept few and promise few.
 
 Orthogonality
 -------------
@@ -260,31 +321,6 @@ Any method of an object should call only methods belonging to:
 - any parameters received;
 - any objects it creates and any directly held component objects.
 
-Composite Reuse
----------------
-
-One should build upon interfaces.
-
-> OO languages replace function pointers with convenient polymorphism.
-Robert C. Martin
-
-
-### Benefits
-
-- Easier to maintain (no unexpected behaviors)
-- Performance gain
-- The inversion of source code and run time dependencies
-
-Design by contract
-------------------
-
-> Objects collaborate with each other on the basis of "mutual obligations and benefits".
- Bertrand Meyer
-
-Developing became the process of honoring contracts.
-
-Accept few and promise few.
-
 
 Many little classes vs Few big ones
 -----------------------------------
@@ -311,20 +347,6 @@ The first goal of managing complexity is organizing in a way developers know how
 We want our systems to have many little classes - not few big ones.
 
 Relates to ISP.
-
-Remove is better than adding
------------------------------
-
-Don't let existing code dictate future code.
-
-Be ready to refactor.
-
-It may impact project schedule.
-
-The assumption is that the impact will be less than the cost of not making the change.
-
-> Perfection is attained not when there is nothing more to add, but when there is nothing more to remove.
-Antoine de Saint-Exupéry
 
 SOLID
 -----
@@ -486,56 +508,19 @@ Calisthenics Enforcer
 
 [PHPCS rules for OC: https://github.com/object-calisthenics/phpcs-calisthenics-rules](https://github.com/object-calisthenics/phpcs-calisthenics-rules)
 
-Tests
------
-
-Testing code use different patterns than production code.
-
-They have different constraints.
-
-There things you will never do in production code that in testing code is allowed.
-
-Like memory and performance things.
-
-But never clarity things.
-
-Tests is the best way of documenting the system usage.
-
-No Magic
---------
-
-Never buy magic.
-
-Before you commit to a framework, make sure you could write it.
-
-Do this by actually writing something simple that does the basics that you need.
-
-Make sure the magic all goes away.
-
-Style Guides
------------
-
-Follow a coding standard, no matter which, but all the code must follow the chosen one.
-
-### Examples for PHP
-
-- PSR2
-- Zend
-- Symphony
-
-KISS
-----
-
-Simplicity is different of easy.
-
-> UNIX is very simple, it just needs a genius to understand it's
-simplicity. Dennis Ritchie
-
 Tools
 -----
 
 - Codacy: https://www.codacy.com/
 - PHP refactoring toolbox: https://github.com/adoy/vim-php-refactoring-toolbox
+
+### Style Guides
+
+Follow a coding standard, no matter which, but all the code must follow the chosen one.
+
+- PSR2
+- Zend
+- Symphony
 
 Literature
 ----------
@@ -561,8 +546,6 @@ Conclusion
 > Quality is a team issue.  Andy hunt.
 
 Teams as a hole should not tolerate broken windows.
-
-
 
 Clean code is not about perfection.. It's about honesty.
 
