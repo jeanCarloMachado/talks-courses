@@ -1,5 +1,5 @@
-Clean Code
-----------
+All about Clean Code
+--------------------
 
 > There’s no problem so simple that a bad developer can’t make it complicated.
 
@@ -28,6 +28,11 @@ One *broken window* is all it takes to start the decline.
 "All the rest of this code is crap, I'll just follow suit."
 
 Software entropy, software rot.
+
+Why it matters?
+------------
+
+![Features over time considering design quality](designStaminaGraph.gif)
 
 The four characteristics of Rotting software
 --------------------------------------------
@@ -76,20 +81,17 @@ Frustrated developers implies in more rotting.
 
 Too much rooting implies in system rewrite.
 
-Implications
-------------
+Loss of money.
 
-![Features over time considering design quality](designStaminaGraph.gif)
+Loss of users.
 
 ## Solution?
-
-The clinical analogy
-
-> Anyone can write code a computer can understand, but only professional developers write code *humans* can understand.
 
 - Good practices
 - Software craftsmanship
 - Clean code
+
+> Anyone can write code a computer can understand, but only professional developers write code *humans* can understand.
 
 Clean coder skills
 ------------------
@@ -99,19 +101,42 @@ Clean coder skills
 Recommendations
 ---------------
 
-> Dear truth always deceiving simplicity.  John Green
+> Relatively simple things can tolerate a certain level of
+disorganization. However, as complexity increases, disorganization
+becomes suicidal.  Robert Martin
 
 Follow the ones what suites you most.
+
+> Dear truth always deceiving simplicity.  John Green
+
+<!-- Use Difficulty progression? -->
 
 SOLID
 -----
 
 Or the "first five principles" by Michael Feathers.
 
+To make systems that are: is easy to maintain and extend over time
+
 Single Responsibility Principle (SRP)
 -------------------------------------
 
 If you can think of more than one motive for changing a class, then that class has more than one responsibility.
+
+```php
+<?php
+interface UserInterface
+{
+    public function setId($id);
+    public function getId();
+    public function setName($name);
+    public function getName();
+    public function findById($id);
+    public function insert();
+    public function update();
+    public function delete();
+}
+```
 
 Open Close Principle (OC)
 ----------
@@ -130,6 +155,12 @@ It's better more interfaces than less.
 
 Clients should not be forced to depend upon interfaces that they don't use.
 
+```php
+abstract class AbstractPostgreSQLDriver implements
+Driver,
+ExceptionConverterDriver,
+VersionAwarePlatformDriver
+```
 
 Dependency inversion
 --------------------
@@ -147,7 +178,7 @@ DRY
 
 Don't Repeat Yourself
 
-```
+```php
 /**
 *
 * @param $title The title of the CD
@@ -165,15 +196,15 @@ Code and documentation are different views of the same underlying model.
 
 Two places to edit models? DRY violation.
 
+[zendframework/ZendDeveloperTools generates diagrams of entities](https://github.com/zendframework/ZendDeveloperTools/blob/master/README.md)
 
 Orthogonality
 -------------
 
 Two or more things are *orthogonal* if changes in one do not
-affect any of the others>
+affect any of the others.
 
-Benefits of Orthogonal Systems
-------------------------------
+### Benefits of Orthogonal Systems
 
 - Eliminate effects between unrelated things
 - Changes are localized
@@ -196,24 +227,22 @@ Any method of an object should call only methods belonging to:
 - any parameters received;
 - any objects it creates and any directly held component objects.
 
+Really important for testing.
+
 Composite Reuse
 ---------------
 
-One should be build only upon interfaces.
+One should build upon interfaces.
+
+> OO languages replace function pointers with convenient polymorphism.
+Robert C. Martin
+
 
 ### Benefits
 
-- Easier to maintain (no unexpected behaviors);
-- Performance gain;
-
-Works flawlessly with traits.
-
-```
-abstract class AbstractPostgreSQLDriver implements
-Driver,
-ExceptionConverterDriver,
-VersionAwarePlatformDriver
-```
+- Easier to maintain (no unexpected behaviors)
+- Performance gain
+- The inversion of source code and run time dependencies
 
 Design by contract
 ------------------
@@ -237,14 +266,30 @@ More than tree is unacceptable.
 Flag arguments are ugly.
 They state a SRP violation.
 
+
+```php
+public function useResultCache($bool, $lifetime = null/**...**/)
+{
+    if ($bool) {
+        $this->setResultCacheLifetime($lifetime);
+        $this->setResultCacheId($resultCacheId);
+
+        return $this;
+    }
+    //...
+}
+
+```
+
+
 Function Returns
 ----------------
 
 Output from function is not so good as well.
-If functions must change a thing it must change itself.  (Demeter Law)
+If functions must change a thing it must change itself.
 
 Comments
-========
+--------
 
 ### Usage scenarios
 
@@ -274,6 +319,7 @@ As you read down details increases.
 
 A journal is made of many little articles.
 
+
 Objects vs Data structures
 --------------------------
 
@@ -286,24 +332,16 @@ Data structures expose data and have no meaningful operation.
 Naming
 ------
 
-Long names are generally better and simple names.
-
-Complex operations can be made simple when intermediate variables are used.
+Long names are generally better than small names.
 
 Need to see the source for to know what a function does? Work on names!
 
 If there's an ``And`` in a function name it's violating SRP.
 
-Style Guides
------------
+Complex operations can be made simple when intermediate variables are used.
 
-Follow a coding standard, no matter which, but all the code must follow the chosen one.
+``testBuild_PRedBCWithDifference_whenCSOSN900AndICMSLessThan100Percent``
 
-### Examples for PHP
-
-- PSR2
-- Zend
-- Symphony
 
 Many little classes vs Few big ones
 -----------------------------------
@@ -331,14 +369,8 @@ We want our systems to have many little classes - not few big ones.
 
 Relates to ISP.
 
-KISS
-----
-
 Remove is better than adding
 -----------------------------
-
-> Perfection is attained not when there is nothing more to add, but when there is nothing more to remove.
-Antoine de Saint-Exupéry
 
 Don't let existing code dictate future code.
 
@@ -348,25 +380,24 @@ It may impact project schedule.
 
 The assumption is that the impact will be less than the cost of not making the change.
 
-Object Calisthenics
-===================
-
+> Perfection is attained not when there is nothing more to add, but when there is nothing more to remove.
+Antoine de Saint-Exupéry
 
 Object Calisthenics
 -------------------
 
 Seven code qualities premisses:
 
-- Cohesion;
-- Loose coupling;
-- No redundancy;
-- Encapsulation;
-- Testability;
-- Readability;
-- Focus;
+- Cohesion
+- Loose coupling
+- No redundancy
+- Encapsulation
+- Testability
+- Readability
+- Focus
 
 
-1 - One level of indentation per method;
+1 - One level of indentation per method
 ----------------------------------------
 
 ### Benefits
@@ -375,14 +406,16 @@ Finding bugs is much easier.
 
 If you have more than one indentation level you have more than one abstraction level.
 
-2 - Don't use ELSE keyword;
+2 - Don't use ELSE keyword
 ---------------------------
 
 Else's encourages the inclusion of more, intermediate, ifs.
 
+When possible avoid even if's.
+
 Use polymorphism instead.
 
-3 - Wrap all primitives and Strings;
+3 - Wrap all primitives and Strings
 ------------------------------------
 
 Small objects make programs more maintainable.
@@ -399,24 +432,22 @@ Any class with a collection shouldn't contain other member variables.
 
 Bad:
 
-```
-this
-    myMemberObjectMemberObject
+```php
+this->myMemberObject
     ->myMemberObjectMemberObject
     ->doFoo();
 ```
 
 Good:
 
-```
-this
-    myMemberObjectMemberObject
+```php
+this->myMemberObjectMemberObject
     ->functionThatDoFooToo();
 ```
 
 Relates to Law of Demeter
 
-6 - Don't abbreviate;
+6 - Don't abbreviate
 ---------------------
 
 Abbreviation because of exhaustive use?
@@ -427,7 +458,7 @@ Too long names?
 
 Maybe a SRP problem.
 
-7 - Keep all entities small;
+7 - Keep all entities small
 ----------------------------
 
 No classes over 50 lines and no packages over 10 files.
@@ -448,10 +479,7 @@ getters/setters.
 Calisthenics Enforcer
 ---------------------
 
-[PHPCS rules for OC](https://github.com/object-calisthenics/phpcs-calisthenics-rules)
-
-Tests
-=====
+[PHPCS rules for OC: https://github.com/object-calisthenics/phpcs-calisthenics-rules](https://github.com/object-calisthenics/phpcs-calisthenics-rules)
 
 Tests
 -----
@@ -467,6 +495,18 @@ Like memory and performance things.
 But never clarity things.
 
 Tests is the best way of documenting the system usage.
+
+No Magic
+--------
+
+Never buy magic.
+
+Before you commit to a framework, make sure you could write it.
+
+Do this by actually writing something simple that does the basics that you need.
+
+Make sure the magic all goes away.
+
 
 Three virtues of a programmer
 -----------------------------
@@ -486,20 +526,26 @@ other people won't want to say bad things about.
 
 Larry Wall
 
+Style Guides
+-----------
 
-No Magic
---------
+Follow a coding standard, no matter which, but all the code must follow the chosen one.
 
-Never buy magic.
+### Examples for PHP
 
-Before you commit to a framework, make sure you could write it.
+- PSR2
+- Zend
+- Symphony
 
-Do this by actually writing something simple that does the basics that you need.
+KISS
+----
 
-Make sure the magic all goes away.
+Simplicity is different of easy.
 
-Metrics
-=======
+
+> UNIX is very simple, it just needs a genius to understand it's
+simplicity. Dennis Ritchie
+
 
 Measure
 -------
@@ -511,35 +557,19 @@ Nice things to measure:
 - Inheritance fan-out (number of derived modules using this one as parent);
 - Class coupling ratios
 
+PHP7 for the clean coder
+------------------------
+
+Anonymous classes as a way of mocking.
+
+
+
 Tools
 -----
 
-https://www.codacy.com/
-https://github.com/adoy/vim-php-refactoring-toolbox
+- Codacy: https://www.codacy.com/
 
-Conclusion
-----------
-
-> Quality is a team issue.  Andy hunt.
-
-Teams as a hole should not tolerate broken windows.
-
-Clean code is not about perfection.. It's about honesty.
-
-We made our best to leave the camp cleaner than we find it?
-
-But if we aim for the 80% where code needs the most.  We are cool.
-
-Parts not critical to performance must be clean - not optimized.
-
-Conclusion
-----------
-
-> The best programmers are 28 times best than the worst ones.
-Robert Glass, [Facts and Fallacies of Software Engineering](http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425)
-
-
-There's always room for improvement.
+- PHP refactoring toolbox: https://github.com/adoy/vim-php-refactoring-toolbox
 
 Literature
 ----------
@@ -547,7 +577,6 @@ Literature
 > Those who do not remember the past are condemned to repeat it.
 
 Jorge Agustin Nicolas Ruiz de Santayana y Borras
-
 
 1. Clean code: A hand book of Agile Software craftsmanship; Robert C. Martin
 2. The pragmatical programmer; Andrew Hunt
@@ -559,5 +588,36 @@ Plural sight course
 
 http://app.pluralsight.com/courses/writing-clean-code-humans
 
-Thanks for all!
-===============
+
+Conclusion
+----------
+
+> Quality is a team issue.  Andy hunt.
+
+Teams as a hole should not tolerate broken windows.
+
+
+
+Clean code is not about perfection.. It's about honesty.
+
+We made our best to leave the camp cleaner than we find it?
+
+
+Conclusion
+----------
+
+But if we aim for the 80% where code needs the most. We are cool.
+
+Parts not critical to performance must be clean - not optimized.
+
+> The best programmers are 28 times best than the worst ones.
+Robert Glass, [Facts and Fallacies of Software Engineering](http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425)
+
+
+There's always room for improvement.
+
+
+Thanks. Questions?
+------------------
+
+Contact info: contato@jeancarlomachado.com.br
