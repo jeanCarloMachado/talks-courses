@@ -109,8 +109,6 @@ Loss of users.
 - Software craftsmanship
 - Clean code
 
-> Anyone can write code a computer can understand, but only professional developers write code *humans* can understand.
-
 Clean coder skills
 ------------------
 
@@ -136,8 +134,6 @@ Naming
 Long names are generally better than small names.
 
 Need to see the source for to know what a function does? Work on names!
-
-Complex operations can be made simple when intermediate variables are used.
 
 ``testBuild_PRedBCWithDifference_whenCSOSN900AndICMSLessThan100Percent``
 
@@ -525,20 +521,13 @@ Follow a coding standard, no matter which, but all the code must follow the chos
 Literature
 ----------
 
-> Those who do not remember the past are condemned to repeat it.
-
-Jorge Agustin Nicolas Ruiz de Santayana y Borras
-
 1. Clean code: A hand book of Agile Software craftsmanship; Robert C. Martin
 2. The pragmatical programmer; Andrew Hunt
 3. Code Complete; Steve McConnell
 4. Refactoring: Improving the Design of Existing Code;
 5. Release It!: Design and Deploy Production-Ready Software; Michael T. Nygard
-
-Plural sight course
-
-http://app.pluralsight.com/courses/writing-clean-code-humans
-
+ 
+> Those who do not remember the past are condemned to repeat it. Jorge Agustin Nicolas Ruiz de Santayana y Borras
 
 Conclusion
 ----------
