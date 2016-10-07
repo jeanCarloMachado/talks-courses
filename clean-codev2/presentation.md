@@ -18,12 +18,18 @@ Steve Bohlen
 
 Donald Knuth
 
-About Me
+Breadcrumbs
 --------
 
 Tech Lead at [Compufácil compufacil.com.br](http://compufacil.com.br/)
 
 Github: [jeanCarlomachado](https://github.com/jeanCarloMachado)
+
+Contributor of:
+
+- Doctrine
+- Zend Framework
+- PHPmd
 
 Twitter: [JeanCarloMachad](https://twitter.com/JeanCarloMachad)
 
@@ -131,11 +137,12 @@ Follow the ones what suites you most.
 Naming
 ------
 
-Long names are generally better than small names.
-
 Need to see the source for to know what a function does? Work on names!
 
-``testBuild_PRedBCWithDifference_whenCSOSN900AndICMSLessThan100Percent``
+Longer names are generally better than smaller one's.
+
+No `And` or `Or` in names.
+
 
 Comments
 --------
@@ -154,10 +161,35 @@ So, if they are necessary there's a grand chance that the design smells.
 
 Inaccurate comments are way worse than no comments at all.
 
-Functions Arguments
+DRY
+---
+
+Don't Repeat Yourself
+
+```php
+/**
+*
+* @param $title The title of the CD
+* @param $author The author of the CD
+* @param $tracks The number of tracks of the CD
+*
+*/
+public addCd($title, $author, int $tracks);
+```
+
+DRY on documentation
+--------------------
+
+Code and documentation are different views of the same underlying model.
+
+Two places to edit models? DRY violation.
+
+[zendframework/ZendDeveloperTools generates diagrams of entities](https://github.com/zendframework/ZendDeveloperTools/blob/master/README.md)
+
+Methods Arguments
 -------------------
 
-The ideal number of arguments of a function is ZERO.
+The ideal number of arguments of a method is ZERO.
 
 More than tree is unacceptable.
 
@@ -202,29 +234,23 @@ Objects hide data and expose operations over it.
 
 Data structures expose data and have no meaningful operation.
 
-
 KISS
 ----
 
-Simplicity is different of easy.
+Keep It Simple Stupid
+
+Simplicity is different of easy
+
+Simple is more related with few parts, few responsabilities
+
+Easy is more related with your current understandings (relative)
+
+There are systems which are easy but not simple
+
+Over time simplificy pays off easiness
 
 > UNIX is very simple, it just needs a genius to understand it's
 simplicity. Dennis Ritchie
-
-Remove is better than adding
------------------------------
-
-Don't let existing code dictate future code.
-
-Be ready to refactor.
-
-It may impact project schedule.
-
-The assumption is that the impact will be less than the cost of not making the change.
-
-> Perfection is attained not when there is nothing more to add, but when there is nothing more to remove.
-Antoine de Saint-Exupéry
-
 
 No Magic
 --------
@@ -237,56 +263,14 @@ Do this by actually writing something simple that does the basics that you need.
 
 Make sure all the magic goes away.
 
+Remove is better than adding
+-----------------------------
 
-DRY
----
+Take the time to go quick.
 
-Don't Repeat Yourself
+Don't let existing code dictate future code.
 
-```php
-/**
-*
-* @param $title The title of the CD
-* @param $author The author of the CD
-* @param $tracks The number of tracks of the CD
-*
-*/
-public addCd($title, $author, int $tracks);
-```
-
-DRY on documentation
---------------------
-
-Code and documentation are different views of the same underlying model.
-
-Two places to edit models? DRY violation.
-
-[zendframework/ZendDeveloperTools generates diagrams of entities](https://github.com/zendframework/ZendDeveloperTools/blob/master/README.md)
-
-Composite Reuse
----------------
-
-One should build upon interfaces.
-
-> OO languages replace function pointers with convenient polymorphism.
-Robert C. Martin
-
-
-### Benefits
-
-- Easier to maintain (no unexpected behaviors)
-- Performance gain
-- The inversion of source code and run time dependencies
-
-Design by contract
-------------------
-
-> Objects collaborate with each other on the basis of "mutual obligations and benefits".
- Bertrand Meyer
-
-Developing became the process of honoring contracts.
-
-Accept few and promise few.
+Be ready to refactor.
 
 Orthogonality
 -------------
@@ -296,13 +280,29 @@ affect any of the others.
 
 ### Benefits of Orthogonal Systems
 
-- Eliminate effects between unrelated things
 - Changes are localized
 - Promotes reuse
 - Disease sections of code are isolated
 - The result system is less fragile
 - Better tested
-- Not tightly to a particular vendor
+
+
+Tests
+-----
+
+TDD is a design process
+
+Prove the parts to prove the hole
+
+Use gateways
+
+Invert dependencies
+
+Tests are the best documentation
+
+What make testing harder is a bad in itself
+
+``testBuild_PRedBCWithDifference_whenCSOSN900AndICMSLessThan100Percent``
 
 Law of Demeter
 --------------
@@ -318,31 +318,43 @@ Any method of an object should call only methods belonging to:
 - any objects it creates and any directly held component objects.
 
 
+Composite Reuse
+---------------
+
+One should build upon interfaces.
+
+Inheritance is bad
+
+### Why?
+
+- Couples the code with other implementations
+
+
+Closure protocols and haskell type classe.
+
+> OO languages replace function pointers with convenient polymorphism.
+Robert C. Martin
+
+
+### Benefits
+
+- Easier to maintain (no unexpected behaviors)
+- Performance gain
+- The inversion of source code and run time dependencies
+
+
 Many little classes vs Few big ones
 -----------------------------------
 
-Some fear to have to browser in many files till find the right piece of code.
+Any regular system will contain a vast quantity of logic
 
-Many classes does not imply in comprehension damage.
-
-The Many and the Few approaches both have the same amount of business logic to care of.
-
-So the question is:
+The same amount of business logic to care of
 
 **You prefer your tools being organized in boxes with little compartments and good names?**
 
 **Or only a compartment and all inside?**
 
-Many little classes are always better than few big ones
--------------------------------------------------------
-
-Any regular system will contain a vast quantity of logic
-
 The first goal of managing complexity is organizing in a way developers know how to look for a certain thing, without having to worry about neighbour details.
-
-We want our systems to have many little classes - not few big ones.
-
-Relates to ISP.
 
 SOLID
 -----
@@ -354,7 +366,7 @@ To make systems that are: is easy to maintain and extend over time
 Single Responsibility Principle (SRP)
 -------------------------------------
 
-If you can think of more than one motive for changing a class, then that class has more than one responsibility.
+If you can think of more than one reason for changing a class, then that class has more than one **responsibility**.
 
 ```php
 <?php
@@ -381,6 +393,8 @@ Liskov substitution (LS)
 
 It's possible to change subclasses without breaking the program.
 
+Usually `instanceof` is a sign of code smell.
+
 Interface segregation Principle (ISP)
 ---------------------
 
@@ -403,7 +417,7 @@ One should depend only on abstractions.
 ### For PHP:
 
 - https://github.com/container-interop/container-interop
-- https://github.com/auraphp/Aura.Dio
+- https://github.com/auraphp/Aura.Di
 - https://github.com/zendframework/zend-servicemanager
 
 Object Calisthenics
@@ -555,7 +569,11 @@ Robert Glass, [Facts and Fallacies of Software Engineering](http://www.amazon.co
 There's always room for improvement.
 
 
-Thanks. Questions?
-------------------
+Questions?
+----------
 
 Contact info: contato@jeancarlomachado.com.br
+
+
+Thanks
+======
