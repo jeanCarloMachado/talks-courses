@@ -1,19 +1,5 @@
 Clean Code
---------------------
-<!--
-IDEAS TO apply:
-
-Talk about measuring complexity
-More Images (maybe something fun like people drowning on a boat)
--->
-
-> There’s no problem so simple that a bad developer can’t make it complicated
-
-Steve Bohlen
-
-> Programming is the art of telling another human what one wants the computer to do
-
-Donald Knuth
+==========
 
 Breadcrumbs
 --------
@@ -43,12 +29,12 @@ Produces software that's easy to:
 - read
 - maintain
 
+> Programming is the art of telling another human what one wants the computer to do Donald Knuth
+
 Why it matters?
 ---------------
 
 ### [Broken windows theory](https://en.wikipedia.org/wiki/Broken_windows_theory)
-
-One *broken window* is all it takes to start the decline.
 
 "All the rest of this code is crap, I'll just follow suit."
 
@@ -56,8 +42,6 @@ Software entropy, software rot.
 
 Why it matters?
 ------------
-
-Take the time to go quick.
 
 ![Features over time considering design quality](designStaminaGraph.gif)
 
@@ -139,13 +123,12 @@ Comments
 
 ### Usage scenarios
 
-Put in the dock block at least the authors name.
-
-Comments serves as well to discuss the purpose and trade-offs of implementations.
+- Authors name
+- Explain trade-offs of implementations
 
 ### Avoid scenarios
 
-The usual aim of comments is to express the code.
+- To express code
 
 Inaccurate comments are way worse than no comments at all.
 
@@ -215,9 +198,9 @@ Objects vs Data structures
 --------------------------
 
 
-Objects hide data and expose operations over it.
+Objects: hide data, expose operations over it
 
-Data structures expose data and have no meaningful operation.
+Data structures: expose data, no meaningful operation
 
 KISS - Keep It Simple Stupid
 ----
@@ -241,11 +224,9 @@ No Magic
 
 Before you commit to a framework, make sure you could write it
 
-Do this by actually writing something simple that does the basics that you need
+Simpler version
 
-Write some assembly
-
-Make sure all the magic goes away
+Some assembly
 
 Remove is better than adding
 -----------------------------
@@ -255,18 +236,6 @@ Don't let existing code dictate future code
 Be ready to refactor
 
 Build a *state of art* namespace
-
-Orthogonality
--------------
-
-Two or more things are *orthogonal* if changes in one do not affect any of the others
-
-### Benefits of Orthogonal Systems
-
-- Changes are localized
-- Disease sections of code are isolated
-- The result system is less fragile
-
 
 Tests
 -----
@@ -421,7 +390,7 @@ If you have more than one indentation level you have more than one abstraction l
 2 - Don't use ELSE keyword
 ---------------------------
 
-Else's encourages the inclusion of more, intermediate, if's
+Else's encourages the inclusion of more intermediate if's
 
 When possible avoid even if's
 
@@ -498,11 +467,20 @@ Tools
 
 ### Style Guides
 
-Follow a coding standard, no matter which, but all the code must follow the chosen one.
-
 - PSR2
 - Zend
 - Symphony
+
+More?
+-----
+
+- Orthogonality
+- Don't return nulls
+- Metrics
+- Code Review
+- Error Handling
+
+Much more.
 
 Literature
 ----------
@@ -512,8 +490,9 @@ Literature
 3. Code Complete; Steve McConnell
 4. Refactoring: Improving the Design of Existing Code;
 5. Release It!: Design and Deploy Production-Ready Software; Michael T. Nygard
- 
+
 > Those who do not remember the past are condemned to repeat it. Jorge Agustin Nicolas Ruiz de Santayana y Borras
+
 
 Conclusion
 ----------
