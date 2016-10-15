@@ -40,8 +40,8 @@ Why it matters?
 
 Software entropy, software rot.
 
-Why it matters?
-------------
+Good design pays off
+--------------------
 
 ![Features over time considering design quality](designStaminaGraph.gif)
 
