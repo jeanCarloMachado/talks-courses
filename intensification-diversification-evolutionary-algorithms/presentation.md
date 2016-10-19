@@ -1,16 +1,13 @@
 Diversificação e Intensificação em algoritmos evolutivos
 --------------------------------------------------------
 
-Jean Carlo Machado e Renato Bustamante
+Jean Carlo Machado
 
 Tema geral
 ----------
 
 Clarificar o papel de cada operador no processo de
 intensificação e diversificação.
-
-Argumenta que não é simples manter o balanço entre diversificação
-intensificação, principalmente porque o controle é indireto em EA's.
 
 Como os componentes de EA contribuem para diversificação e
 intensificação.
@@ -19,7 +16,10 @@ Quando e como diversificação e intensificação são controlados.
 
 Como o balanço entre diversificação e intensificação ocorre.
 
-EAs abordados
+Argumenta que não é simples manter o balanço entre diversificação
+intensificação, principalmente porque o controle é indireto em EA's.
+
+[[EAs]] abordados
 -------------
 
 - Algoritmos Genéticos (AG)
