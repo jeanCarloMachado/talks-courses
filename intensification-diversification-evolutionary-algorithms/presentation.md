@@ -6,18 +6,21 @@ Jean Carlo Machado e Renato Bustamante
 Tema geral
 ----------
 
-Não é simples manter o balanço, principalmente porque o controle
-de diversificação e intensificação é indireto em EA's.
-
-Serve para clarificar o papel de cada operador no processo de
+Clarificar o papel de cada operador no processo de
 intensificação e diversificação.
 
-- Como os componentes de EA contribuem para diversificação e
-intensificação.
-- Quando e como diversificação e intensificação são controlados
-- Como o balanço entre diversificação e intensificação ocorre?
+Argumenta que não é simples manter o balanço entre diversificação
+intensificação, principalmente porque o controle é indireto em EA's.
 
-EAs:
+Como os componentes de EA contribuem para diversificação e
+intensificação.
+
+Quando e como diversificação e intensificação são controlados.
+
+Como o balanço entre diversificação e intensificação ocorre.
+
+EAs abordados
+-------------
 
 - Algoritmos Genéticos (AG)
 - Estratégias evolucionárias (ES)
@@ -40,14 +43,14 @@ A linha entre exploração e intensificação não é clara.
 Tamanho da população e representação dos indivíduos tem grande
 impacto na diversificação e intensificação.
 
-Crossover uniforma é melhor para populações pequenas, já em
+Crossover uniforme é melhor para populações pequenas, já em
 populações grandes o oposto é verdadeiro.
 
 Parâmetros
 ----------
 
 Geralmente os parâmetros recomendados na literatura não levam as
-melhores soluções para casos particulares.
+melhores soluções para casos particulares (no free lunch).
 
 EA's sem parâmetros são mais robustos mas menos eficientes.
 
@@ -63,9 +66,9 @@ Classificações citadas
 Esquemas de controle de parâmetros
 ----------------------------------
 
-- Determinístico
-- Adaptativo: quando o fitness não melhorou por várias gerações
-- Automático online dependendo do estado do resultado atual
+- Determinístico: quando executar N gerações
+- Adaptativo: quando algum fator pre-determinado é alcançado, quando o fitness não melhorou por várias gerações
+- Automático: dependendo do estado do resultado atual
 
 Diversidade
 -----------
@@ -78,79 +81,76 @@ fenótipos próximos.
 Algoritmos eficientes tendem a ter uma alta localidade.
 
 
-### Medidas de diversidade de genótipo
+Medidas de diversidade de genótipo
+----------------------------------
 
-- Baseado na diferença
-- Baseado na distancia
-- Baseado em entropia
-- Baseado em probabilidade
-- Baseado em ancestrais
+- Baseado na diferença;
+- Baseado na distancia;
+- Baseado em entropia;
+- Baseado em probabilidade;
+- Baseado em ancestrais;
 
-### Medidas de diversidade de fenótipos
+Medidas de diversidade de fenótipos
+-----------------------------------
 
-- Baseado na diferença
-- Baseado na distancia
-- Baseado em entropia
-- Baseado em probabilidade
+- Baseado na diferença;
+- Baseado na distancia;
+- Baseado em entropia;
+- Baseado em probabilidade;
 
-Balanceando entre diversificação e intensificação.
---------------------------------------------------
+Balanceando entre diversificação e intensificação
+=================================================
 
-###  Manutenção de diversidade
+Manutenção de diversidade
+-------------------------
+
 Com e sem nichos. Com nichos é capaz de encontrar múltiplos
 ótimos.
 
-#### Métodos de nicho
+###  Métodos de nicho
 
-- Baseado em fitness
-[[-]] Baseado em troca
-- Baseado em preservação
-- Híbrido
+- Baseado em fitness;
+- Baseado em troca;
+- Baseado em preservação;
+- Híbrido;
 
-### Controle de diversidade
+Controle de diversidade
+-----------------------
 
-Difere da manutenção de diversidade poi leva em consideração o valor de fitness.
+Difere da manutenção de diversidade pois leva em consideração o valor de fitness.
 
-- Controle de diversidade através de seleção
-- Controle de diversidade através crossover e mutação
-- Controle de diversidade através de mudança na população
+- Controle de diversidade através de seleção;
+- Controle de diversidade através crossover e mutação;
+- Controle de diversidade através de mudança na população;
 
 ### Aprendizado de diversidade
 
 Leva em consideração todo o histórico da busca.
 
 
-### Outros métodos diretos
+Métodos diretos
+----------------
 
-####  Sub-populações para fases de otimização
+Possibilita  medir diretamente diversificação e
+intensificação.
 
-####  Troca de fases dada ocorrência de eventos
-
-EAs com busca local
-
-####  Baseado em ancestral 
-
-É a única forma de medir diretamente diversificação e
-intensificação
+- Sub-populações para fases de otimização
+- Troca de fases dada ocorrência de eventos
+- Baseado em ancestral
 
 
 Trabalhos futuros
 -----------------
 
-Definição formal que leva em consideraçõ as dependências do
-problema.
-Clarificar o papel dos operados em métodos multi-processo e único
-processo.
-
-Descobrir boas proporções entre exploração e intensificação.
-
-Clarificar os relacionamentos entre a representação do indivíduo.
-
+- Definições formais que levam em consideração as dependências dos
+problemas;
+- Clarificar o papel dos operados em métodos multi-processo e único
+processo;
+- Descobrir boas proporções entre exploração e intensificação;
+- Clarificar os relacionamentos entre a representação do indivíduo
+  e o processo de  intensificação e diversificação;
 
 Referências
 -----------
 
 - Exploration and Exploitation in Evolutionary Algorithms: A survery, Matej Crepinsek, 2013
-
-# Obrigado
-
