@@ -1,0 +1,43 @@
+Course
+======
+
+História
+--------
+    Centralizado vs descentralizado
+    Git vs Svn
+Inicializando
+-------------
+    init,config, status
+Commit 
+    Formatando commits
+    Renomeando
+    Desfazendo
+Aliases
+Branches 
+Git remoto
+----------
+Remote
+Fetch
+Pull requests
+Merge
+    Merge, rebase, patch
+    Resolução de conflitos
+Tags
+Hooks
+Fork
+Submodules
+Histórico & Debug
+-----------------
+    log, bisect,blame,grep
+Integração contínua no github
+    Codacy, build, jenkins, badge
+Ferramentas auxiliares
+    gitk
+Lidando com arquivos gigantes
+
+Git server?
+
+Good Material
+-------------
+
+- [Referência](https://git-scm.com/docs)
