@@ -19,7 +19,7 @@ Como o balanço entre diversificação e intensificação ocorre.
 Argumenta que não é simples manter o balanço entre diversificação
 intensificação, principalmente porque o controle é indireto em EA's.
 
-[[EAs]] abordados
+EA's abordados
 -------------
 
 - Algoritmos Genéticos (AG)
