@@ -4,8 +4,7 @@ Jean Carlo Machado e Renato Bustamante
 
 ## Artigos
 
- - Iztok Fister Jr., Xin-She Yang - A Brief Review of Nature-Inspired Algorithms
-for Optimization, University of Maribor, 2000 [1]
+ - Fister Jr, Iztok, et al. "A brief review of nature-inspired algorithms for optimization." arXiv preprint arXiv:1307.4186 (2013). https://arxiv.org/abs/1307.4186 
 
  - Arpan Kumar Kar, 2016, Bio inspired computing - A review of algorithms
 and scope of applications, Indian Institute of Technology [2]
