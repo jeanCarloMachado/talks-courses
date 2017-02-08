@@ -11,9 +11,6 @@ About
 
 [jeancarlomachado.com.br](http://jeancarlomachado.com.br/)
 
-[compufacil.com.br](http://compufacil.com.br/)
-
-
 Title
 -----
 
