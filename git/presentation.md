@@ -21,11 +21,9 @@ Sobre
 
 - Desenvolvedor de software com mais de 6 anos de experiência
 
-- Foco em infraestrutura e qualidade
+- Foco em HPC, infraestrutura e qualidade
 
 - Unix Fan
-
-- Desde o principio utilizando Git
 
 Ementa
 ------
