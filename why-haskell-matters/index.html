@@ -169,36 +169,24 @@ one's.
 Functional programs tend to be shorter (usually between 2 to 10
 times shorter)
 
-### Monads
-
 ---
 
-## Scientific oriented
 
-Bears concepts from lambda calculus, category theory, has strong resemblance with mathematical notation.
+## Type System
 
----
+Strong type system (no coercions)
 
-### Mathematical Notation
+Static type (bugs are caught at compile-time, rather than run-time).
 
-A variable in Haskell is a name that is bound to some value,
-rather than an abstraction of some low-level concept of a memory
-cell like in imperative languages.
-This determinism removes a whole class of bugs found in imperative
-programs.
+Types in Haskell are automatically inferred
 
-A function definition usually resembles the informal description of the
-function very closely. This is why I say that Haskell has a smaller
-semantic gap than other languages.
 
-The function definitions in Haskell explain what it computes, not how.
+```hs
+mySum(a,b) = a + b
 
-Often used modular functions can thus be proven correct by
-induction. Combining two functions that are proven to be correct,
-will also give the correct result. Often used modular functions can thus be proven correct
-by induction. Combining two functions that are proven to be
-correct, will also give the correct result (assuming the
-combination is correct).
+```
+
+he types guide development and can even write code for you—the programmer ends up with less to specify
 
 ---
 
@@ -253,7 +241,28 @@ intuitive system for handling polymorphism. You won't have to worry
 about inheriting in the correct hierarchical order or to make sure
 that the inheritance is even sensible. 
 
+Compare how you would do this in certain object oriented
+languages. To gain polymorphism you would have to use some base
+class, and then declare your variables as instances of subclasses
+to this base class. It all amounts to tons of extra work and
+ridiculously complex declarations just to proclaim the existence
+of a variable. Furthermore you would have to perform tons of type
+conversions via explicit casts - definitely not a particularly
+elegant solution. If you want to write a polymorphic function in
+these object oriented languages you would probably declare the
+parameters as an object of a global base class (like "Object" in
+Java), which essentially allows the programmer to send anything
+into the function, even objects which can't logically be passed to
+the function. The end result is that most functions you write in
+these languages are not general, they only work on a single data
+type. You're also moving the error checking from compile-time to
+run-time. In large systems where some of the functionality is
+rarely used, these bugs might never be caught until they cause a
+fatal crash at the worst possible time.
+
+
 ---
+
 
 
 ## Laziness
@@ -282,62 +291,21 @@ a file copy would do.
 
 ---
 
-## Type System
+## Tests
 
-Strong type system (no coercions).
-Types in Haskell are automatically inferred.
+Haskell programs can be prooved
 
+[QuickCheck](https://hackage.haskell.org/package/QuickCheck) is a
+library for random testing of program properties.
 
-Python has the notion of "duck typing", meaning "If it walks and
-talks like a duck, it's a duck!". You could argue that Haskell
-has a much better form of duck typing. If a value walks and talks
-like a duck, then it will be considered a duck through type
-inference, but unlike Python the compiler will also catch errors
-if later on it tries to bray like a donkey! So you get the
-benefits of strong typing (bugs are caught at compile-time,
-rather than run-time) without the hassle that comes with it in
-other languages
+The programmer provides a specification of the program, in the form of
+properties which functions should satisfy, and QuickCheck then tests
+that the properties hold in a large number of randomly generated cases.
 
-
-Compare how you would do this in certain object oriented
-languages. To gain polymorphism you would have to use some base
-class, and then declare your variables as instances of subclasses
-to this base class. It all amounts to tons of extra work and
-ridiculously complex declarations just to proclaim the existence
-of a variable. Furthermore you would have to perform tons of type
-conversions via explicit casts - definitely not a particularly
-elegant solution. If you want to write a polymorphic function in
-these object oriented languages you would probably declare the
-parameters as an object of a global base class (like "Object" in
-Java), which essentially allows the programmer to send anything
-into the function, even objects which can't logically be passed to
-the function. The end result is that most functions you write in
-these languages are not general, they only work on a single data
-type. You're also moving the error checking from compile-time to
-run-time. In large systems where some of the functionality is
-rarely used, these bugs might never be caught until they cause a
-fatal crash at the worst possible time.
-
-
-Because the types are known, there's an incredibly powerful testing
-framework called QuickCheck 
-
----
-
-## Concurrency
-
-Safe multithreading! Immutable data structures are not subject to data
-race conditions, and consequently don't have to be protected by locks.
-If you are always allocating new objects, rather than destructively
-manipulating existing ones, the locking can be hidden in the allocation
-and GarbageCollection system.
-
-with support for three distinct types of concurrency and parallelism.
-[It supports] lightweight threads, communicating through transactional
-memory; semi-implicit parallelism via "sparks"; and a new extension:
-nested-data parallel array programming. On top of these, a wealth of
-concurrency abstractions are implemented [such as] channels, actors,
-message passing, etc.”
+Specifications are expressed in Haskell, using combinators defined
+in the QuickCheck library. QuickCheck provides combinators to define
+properties, observe the distribution of test data, and define test data
+generators.
 
 ---
 
@@ -360,35 +328,90 @@ time is almost always more expensive than CPU time. We aren't
 writing applications in assembler anymore for the same reason we
 shouldn't be writing applications in C anymore.
 
+
+---
+
+## Concurrency
+
+Safe multithreading! Immutable data structures are not subject to data
+race conditions, and consequently don't have to be protected by locks.
+If you are always allocating new objects, rather than destructively
+manipulating existing ones, the locking can be hidden in the allocation
+and GarbageCollection system.
+
+with support for three distinct types of concurrency and parallelism.
+[It supports] lightweight threads, communicating through transactional
+memory; semi-implicit parallelism via "sparks"; and a new extension:
+nested-data parallel array programming. On top of these, a wealth of
+concurrency abstractions are implemented [such as] channels, actors,
+message passing, etc.”
+
+---
+
+## Scientific oriented
+
+Bears concepts from lambda calculus, category theory, has strong resemblance with mathematical notation.
+Can be mathematically proved.
+
+---
+
+
+### Mathematical Notation
+
+The function definitions in Haskell explain what it computes, not how.
+
+Often used modular functions can thus be proven correct by
+induction. Combining two functions that are proven to be correct,
+will also give the correct result. Often used modular functions can thus be proven correct
+by induction. Combining two functions that are proven to be
+correct, will also give the correct result (assuming the
+combination is correct).
+
+
+A function definition usually resembles the informal description of the
+function very closely.
+
+
+![Fib wikipedia](fib_math.png)
+
+
+```hs
+fib 0 = 0
+fib 1 = 1
+fib n = fib (n-1) + fib (n-2)
+```
+
+---
+
+### Mathematical Notaion
+
+A variable is a name bound to a value.
+
+There's no concept of "memory space" for a variable.
+
+This determinism removes a whole class of bugs found in imperative
+programs.
+
+.footnote[
+*In more advanced mathematics, a variable is a symbol that denotes a
+mathematical object, which could be a number, a vector, a matrix, or
+even a function. In this case, the original property of "variability" of
+a variable is not kept (except, sometimes, for informal explanations).*
+]
+
+
 ---
 
 ## Mind shift
 
-general, if you have more than one perspective on a problem, it
-makes you better enabled to reason about this problem, and switch
-viewpoints as necessary.
-
+You get another perspective of programs using Haskell.
+It's easier to swith viewpoints of hard problems.
 
 ---
 
-## how it isn't "mainstream"?
-
-. It is my belief that functional languages, almost by definition,
-are closer to the top of the power spectrum than imperative one's.
-So languages can actually limit a programmers frame of thought.
-
-Languages aren't just technology, it's a way of thinking.
-
-Rober Eric Raymon's  scale:
-
- - Python/Java
- - C
- - Lisp
-
----
 
 class: center, middle, inverse
-# Common questions
+# FAQ
 
 ---
 
@@ -400,13 +423,84 @@ class: center, middle, inverse
 
 ### How I setup a test unit?
 
+```hs
+module TestSafePrelude where
+
+import Test.HUnit
+import SafePrelude
+
+testSafeHeadForEmptyList :: Test
+testSafeHeadForEmptyList = 
+    TestCase $ assertEqual "Should return Nothing for empty list"
+                           Nothing (safeHead ([]::[Int]))
+
+testSafeHeadForNonEmptyList :: Test
+testSafeHeadForNonEmptyList =
+    TestCase $ assertEqual "Should return (Just head) for non empty list" (Just 1)
+               (safeHead ([1]::[Int]))
+
+main :: IO Counts
+main = runTestTT $ TestList [testSafeHeadForEmptyList, testSafeHeadForNonEmptyList]
+
+```
+
+---
+
 ### How I setup a cli?
+
+```hs
+    import System.Environment
+    import System.Exit
+
+    main = getArgs >>= parse >>= putStr . tac
+
+    tac  = unlines . reverse . lines
+
+    parse ["-h"] = usage   >> exit
+    parse ["-v"] = version >> exit
+    parse []     = getContents
+    parse fs     = concat `fmap` mapM readFile fs
+
+    usage   = putStrLn "Usage: tac [-vh] [file ..]"
+    version = putStrLn "Haskell tac 0.1"
+    exit    = exitWith ExitSuccess
+    die     = exitWith (ExitFailure 1)
+```
+
+---
 
 ### Can I run it on production?
 
+ - Intel - hs compiler for parallelism
+ - Facebook - tool for manipulating PHP ast
+ - Microsoft - Serialization system
+ - The New York Times - Image processing
+ - NVIDIA - home CLI
+ - Siemens - Space control systems, CLI
+
+---
+
 ### How is the community?
 
-"The #haskell IRC channel [on Freenode] averages about 650 users at a time, double what it was a year ago." That chat room is also more popular than those of Java and C# on the same IRC network. 
+The #haskell IRC channel on Freenode averages about 650 users at a time.
+
+More popular than those of Java and C# on the same IRC network.
+
+---
+
+### how it isn't "mainstream"?
+
+. It is my belief that functional languages, almost by definition,
+are closer to the top of the power spectrum than imperative one's.
+So languages can actually limit a programmers frame of thought.
+
+Languages aren't just technology, it's a way of thinking sometimes a religion.
+
+Rober Eric Raymon's  scale:
+
+ - Python/Java
+ - C
+ - Lisp
 
 ---
 
@@ -414,6 +508,11 @@ class: center, middle, inverse
 
 1. [Why Haskell Matters](https://wiki.haskell.org/Why_Haskell_matters)
 2. [Talking about Haskell](http://web.archive.org/web/20130203023724/http://www.sdtimes.com/blog/post/2009/07/27/Everyonee28099s-talking-about-Haskell.aspx)
+3. [Verifying Haskell Programs by Combining Testing and Proving](http://www.cse.chalmers.se/~peterd/papers/Dallas.pdf)
+4. [Variables](https://en.wikipedia.org/wiki/Variable_mathematics)
+5. [Type inferrence](http://wiki.c2.com/?TypeInference)
+6. [How to learn Haskell](https://github.com/bitemyapp/learnhaskell)
+7. [Haskell in industry](https://wiki.haskell.org/Haskell_in_industry)
 
 ---
 
