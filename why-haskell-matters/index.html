@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Why Haskell Matters</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: 'Droid Serif';
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .blue { color: blue; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: blue;
+        text-decoration: none;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 5em;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+
+# Why Haskell Matters
+
+---
+layout: false
+.left-column[
+# Haskell
+]
+.right-column[
+Standarlized languages, created in 1987, last specification (2010)
+
+ - Strong, static typing, inferred
+
+ - Type inferrence
+
+ - Lazy evaluated
+
+ - Functional
+
+ - Every function is curried
+
+ - Uses tail recursion
+]
+
+
+---
+layout: false
+# The problem with common programming languages
+
+ - Instead of sequential processing - evaluation of expressions.
+ - Can never go beyond sequencing.
+ - Too bound to computer concepts, variables bound to memory
+ - Too low level
+
+---
+class: center, middle, inverse
+# Advantages
+
+---
+
+## Functional
+
+Purely functional.
+
+Functional programs tend to have far fewer bugs than imperative
+one's.
+
+Functional programs tend to be shorter (usually between 2 to 10
+times shorter)
+
+### Monads
+
+---
+
+## Scientific oriented
+
+Bears concepts from lambda calculus, category theory, has strong resemblance with mathematical notation.
+
+---
+
+### Mathematical Notation
+
+A variable in Haskell is a name that is bound to some value,
+rather than an abstraction of some low-level concept of a memory
+cell like in imperative languages.
+This determinism removes a whole class of bugs found in imperative
+programs.
+
+A function definition usually resembles the informal description of the
+function very closely. This is why I say that Haskell has a smaller
+semantic gap than other languages.
+
+The function definitions in Haskell explain what it computes, not how.
+
+Often used modular functions can thus be proven correct by
+induction. Combining two functions that are proven to be correct,
+will also give the correct result. Often used modular functions can thus be proven correct
+by induction. Combining two functions that are proven to be
+correct, will also give the correct result (assuming the
+combination is correct).
+
+---
+
+## Haskell vs OO
+
+Haskell has **data encapsulation** and **polymorphism**.
+
+---
+
+### Data Encapsulation
+
+Data encapsulation is done in Haskell by declaring each data type
+in a separate module, from this module you only export the
+interface. Internally there might be a host of functions that
+touch the actual data, but the interface is all that's visible
+from outside of the module. Note that the data type and the
+functions that act upon the data type are not grouped into an
+"object", but they are (typically) grouped into the same module,
+so you can choose to only export certain functions (and not the
+constructors for the data type) thus making these functions the
+
+The only way to manipulate the data type - "hiding" the implementation
+from the interface.
+
+---
+
+### Polymorphism
+
+A class is just a class, and
+types that are instances of this class really don't have to share some
+parent-child inheritance relationship. If your data type fulfills the
+requirements of a class, then it can be instantiated in that class.
+
+
+Polymorphism is done by using something called type classes. Now, if
+you come from a C++ or Java background you might associate classes
+with something resembling a template for how to construct an object,
+but that's not what they mean in Haskell. A type class in Haskell is
+really just what it sounds like. It's a set of rules for determining
+whether a type is an instance of that class. So Haskell separates
+the class instantiation and the construction of the data type. You
+might declare a type "Porsche", to be an instance of the "Car" type
+class, say. All functions that can be applied onto any other member of
+the Car type class can then be applied to a Porsche as well. A class
+that's included with Haskell is the Show type class, for which a type
+can be instantiated by providing a show function, which converts the
+data type to a String. Consequently almost all types in Haskell can
+be printed onto the screen by applying show on them to convert them
+to a String, and then using the relevant IO action (more on IO in the
+tutorials). The Haskell system is a more
+intuitive system for handling polymorphism. You won't have to worry
+about inheriting in the correct hierarchical order or to make sure
+that the inheritance is even sensible. 
+
+---
+
+
+## Laziness
+
+Only what need to be evaluated will be
+
+```hs
+import System.Environment
+main = do
+         --read command-line arguments
+         [file1, file2] <- getArgs
+
+         --copy file contents
+         str <- readFile file1
+         writeFile file2 str
+```
+
+While the results are compiler-dependent, what will typically
+happen when you run the above program is this: the program reads a
+block (say 8KB) of the first file, then writes it to the second
+file, then reads another block from the first file, and writes it
+to the second file, and so on. (Try running strace on it!)
+
+... which looks a lot like what the efficient C implementation of
+a file copy would do.
+
+---
+
+## Type System
+
+Strong type system (no coercions).
+Types in Haskell are automatically inferred.
+
+
+Python has the notion of "duck typing", meaning "If it walks and
+talks like a duck, it's a duck!". You could argue that Haskell
+has a much better form of duck typing. If a value walks and talks
+like a duck, then it will be considered a duck through type
+inference, but unlike Python the compiler will also catch errors
+if later on it tries to bray like a donkey! So you get the
+benefits of strong typing (bugs are caught at compile-time,
+rather than run-time) without the hassle that comes with it in
+other languages
+
+
+Compare how you would do this in certain object oriented
+languages. To gain polymorphism you would have to use some base
+class, and then declare your variables as instances of subclasses
+to this base class. It all amounts to tons of extra work and
+ridiculously complex declarations just to proclaim the existence
+of a variable. Furthermore you would have to perform tons of type
+conversions via explicit casts - definitely not a particularly
+elegant solution. If you want to write a polymorphic function in
+these object oriented languages you would probably declare the
+parameters as an object of a global base class (like "Object" in
+Java), which essentially allows the programmer to send anything
+into the function, even objects which can't logically be passed to
+the function. The end result is that most functions you write in
+these languages are not general, they only work on a single data
+type. You're also moving the error checking from compile-time to
+run-time. In large systems where some of the functionality is
+rarely used, these bugs might never be caught until they cause a
+fatal crash at the worst possible time.
+
+
+Because the types are known, there's an incredibly powerful testing
+framework called QuickCheck 
+
+---
+
+## Concurrency
+
+Safe multithreading! Immutable data structures are not subject to data
+race conditions, and consequently don't have to be protected by locks.
+If you are always allocating new objects, rather than destructively
+manipulating existing ones, the locking can be hidden in the allocation
+and GarbageCollection system.
+
+with support for three distinct types of concurrency and parallelism.
+[It supports] lightweight threads, communicating through transactional
+memory; semi-implicit parallelism via "sparks"; and a new extension:
+nested-data parallel array programming. On top of these, a wealth of
+concurrency abstractions are implemented [such as] channels, actors,
+message passing, etc.”
+
+---
+
+## Speed
+
+There's an old rule in computer programming called the "80/20 rule". It
+states that 80% of the time is spent in 20% of the code. The consequence
+of this is that any given function in your system will likely be of
+minimal importance when it comes to optimizations for speed. There may
+be only a handful of functions important enough to optimize. These
+important functions could be written in C (using the excellent foreign
+function interface in Haskell). The role of C could, and probably will,
+take over the role of assembler programming - you use it for the really
+time-critical bits of your system, but not for the whole system itself.
+
+We should continue to move to higher levels of abstraction, just
+like we've done before. We should trade application speed for
+increased productivity, stability and maintainability. Programmer
+time is almost always more expensive than CPU time. We aren't
+writing applications in assembler anymore for the same reason we
+shouldn't be writing applications in C anymore.
+
+---
+
+## Mind shift
+
+general, if you have more than one perspective on a problem, it
+makes you better enabled to reason about this problem, and switch
+viewpoints as necessary.
+
+
+---
+
+## how it isn't "mainstream"?
+
+. It is my belief that functional languages, almost by definition,
+are closer to the top of the power spectrum than imperative one's.
+So languages can actually limit a programmers frame of thought.
+
+Languages aren't just technology, it's a way of thinking.
+
+Rober Eric Raymon's  scale:
+
+ - Python/Java
+ - C
+ - Lisp
+
+---
+
+class: center, middle, inverse
+# Common questions
+
+---
+
+### How I setup a webserver?
+
+[Setup a Haskell site](https://mavins.com.br/blog/crie-um-site-em-haskell-usando-o-heist-o-stack-e-o-docker)
+
+[Haskell on the web](https://wiki.haskell.org/Web)
+
+### How I setup a test unit?
+
+### How I setup a cli?
+
+### Can I run it on production?
+
+### How is the community?
+
+"The #haskell IRC channel [on Freenode] averages about 650 users at a time, double what it was a year ago." That chat room is also more popular than those of Java and C# on the same IRC network. 
+
+---
+
+# References
+
+1. [Why Haskell Matters](https://wiki.haskell.org/Why_Haskell_matters)
+2. [Talking about Haskell](http://web.archive.org/web/20130203023724/http://www.sdtimes.com/blog/post/2009/07/27/Everyonee28099s-talking-about-Haskell.aspx)
+
+---
+
+class: center, middle, inverse
+
+# Questions?
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
