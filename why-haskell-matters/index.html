@@ -148,26 +148,41 @@ Standarlized languages, created in 1987, last specification (2010)
 layout: false
 # The problem with common programming languages
 
- - Instead of sequential processing - evaluation of expressions.
- - Can never go beyond sequencing.
- - Too bound to computer concepts, variables bound to memory
- - Too low level
+ - Sequential processing instead of evaluation of expressions.
+ - Too bound to computer concepts, variables bound to memory (too low level)
 
 ---
 class: center, middle, inverse
-# Advantages
+# Haskell Advantages
 
 ---
 
 ## Functional
 
-Purely functional.
+Purely functional (forbidding changing-state and mutable data)
 
 Functional programs tend to have far fewer bugs than imperative
 one's.
 
 Functional programs tend to be shorter (usually between 2 to 10
 times shorter)
+
+
+### Curried by default
+
+All functions in Haskell take just one argument.
+
+```hs
+:t (+)
+(+) :: Num a => a -> a -> a
+
+
+sumTwoNumbers x  y = x + y
+tmp = sumTwoNumbers 1
+tmp 3 --returns 4
+
+```
+
 
 ---
 
@@ -186,7 +201,14 @@ mySum(a,b) = a + b
 
 ```
 
-he types guide development and can even write code for you—the programmer ends up with less to specify
+The types guide development and can even write code for you—the programmer ends up with less to specify
+
+
+```hs
+data Tree a  = Leaf a  |  Branch (Tree a ) (Tree a) --recursive type
+
+```
+
 
 ---
 
@@ -197,6 +219,22 @@ Haskell has **data encapsulation** and **polymorphism**.
 ---
 
 ### Data Encapsulation
+
+```hs
+module Bla.Internal where
+
+data Bla = Blu Int | Bli String
+
+-- ...
+
+module Bla (Bla, makeBla) where -- ONLY export the Bla type, not the constructors
+
+import Bla.Internal
+
+makeBla :: String -> Bla -- Some function only dealing with the opaque type
+makeBla = undefined
+
+```
 
 Data encapsulation is done in Haskell by declaring each data type
 in a separate module, from this module you only export the
@@ -215,52 +253,26 @@ from the interface.
 
 ### Polymorphism
 
-A class is just a class, and
-types that are instances of this class really don't have to share some
-parent-child inheritance relationship. If your data type fulfills the
-requirements of a class, then it can be instantiated in that class.
+Class really don't have to share some
+parent-child inheritance relationship.
+```hs
+class F a where
+    type Out a :: * 
+    f :: a -> Out a
 
+instance F String where  
+    type Out String = String
+    f = show . length
 
-Polymorphism is done by using something called type classes. Now, if
-you come from a C++ or Java background you might associate classes
-with something resembling a template for how to construct an object,
-but that's not what they mean in Haskell. A type class in Haskell is
-really just what it sounds like. It's a set of rules for determining
-whether a type is an instance of that class. So Haskell separates
-the class instantiation and the construction of the data type. You
-might declare a type "Porsche", to be an instance of the "Car" type
-class, say. All functions that can be applied onto any other member of
-the Car type class can then be applied to a Porsche as well. A class
-that's included with Haskell is the Show type class, for which a type
-can be instantiated by providing a show function, which converts the
-data type to a String. Consequently almost all types in Haskell can
-be printed onto the screen by applying show on them to convert them
-to a String, and then using the relevant IO action (more on IO in the
-tutorials). The Haskell system is a more
-intuitive system for handling polymorphism. You won't have to worry
-about inheriting in the correct hierarchical order or to make sure
-that the inheritance is even sensible. 
+instance F Int where 
+    type Out Int = String 
+    f = show 
 
-Compare how you would do this in certain object oriented
-languages. To gain polymorphism you would have to use some base
-class, and then declare your variables as instances of subclasses
-to this base class. It all amounts to tons of extra work and
-ridiculously complex declarations just to proclaim the existence
-of a variable. Furthermore you would have to perform tons of type
-conversions via explicit casts - definitely not a particularly
-elegant solution. If you want to write a polymorphic function in
-these object oriented languages you would probably declare the
-parameters as an object of a global base class (like "Object" in
-Java), which essentially allows the programmer to send anything
-into the function, even objects which can't logically be passed to
-the function. The end result is that most functions you write in
-these languages are not general, they only work on a single data
-type. You're also moving the error checking from compile-time to
-run-time. In large systems where some of the functionality is
-rarely used, these bugs might never be caught until they cause a
-fatal crash at the worst possible time.
+instance F Float where 
+    type Out Float = Float
+    f = id 
 
-
+```
 ---
 
 
@@ -280,14 +292,16 @@ main = do
          writeFile file2 str
 ```
 
-While the results are compiler-dependent, what will typically
-happen when you run the above program is this: the program reads a
-block (say 8KB) of the first file, then writes it to the second
-file, then reads another block from the first file, and writes it
-to the second file, and so on. (Try running strace on it!)
+The program reads a block 8KB of the first file, then writes it to the
+second file, then reads another block from the first file, and writes it
+to the second file.
 
-... which looks a lot like what the efficient C implementation of
-a file copy would do.
+### Infinite concepts
+
+```sh
+print [0,1..]
+print ( take 10 [0,1..])
+```
 
 ---
 
@@ -311,22 +325,9 @@ generators.
 
 ## Speed
 
-There's an old rule in computer programming called the "80/20 rule". It
-states that 80% of the time is spent in 20% of the code. The consequence
-of this is that any given function in your system will likely be of
-minimal importance when it comes to optimizations for speed. There may
-be only a handful of functions important enough to optimize. These
-important functions could be written in C (using the excellent foreign
-function interface in Haskell). The role of C could, and probably will,
-take over the role of assembler programming - you use it for the really
-time-critical bits of your system, but not for the whole system itself.
+80% of the time is spent in 20% of the code.
 
-We should continue to move to higher levels of abstraction, just
-like we've done before. We should trade application speed for
-increased productivity, stability and maintainability. Programmer
-time is almost always more expensive than CPU time. We aren't
-writing applications in assembler anymore for the same reason we
-shouldn't be writing applications in C anymore.
+![Speed](languages_performance.png)
 
 
 ---
@@ -339,8 +340,18 @@ If you are always allocating new objects, rather than destructively
 manipulating existing ones, the locking can be hidden in the allocation
 and GarbageCollection system.
 
-with support for three distinct types of concurrency and parallelism.
-[It supports] lightweight threads, communicating through transactional
+```hs
+import Control.Concurrent
+import Control.Monad
+import System.IO
+
+main = do
+  hSetBuffering stdout NoBuffering          
+  forkIO (replicateM_ 100000 (putChar 'A'))   
+  replicateM_ 100000 (putChar 'B')            
+
+```
+It supports lightweight threads, communicating through transactional
 memory; semi-implicit parallelism via "sparks"; and a new extension:
 nested-data parallel array programming. On top of these, a wealth of
 concurrency abstractions are implemented [such as] channels, actors,
@@ -420,6 +431,16 @@ class: center, middle, inverse
 [Setup a Haskell site](https://mavins.com.br/blog/crie-um-site-em-haskell-usando-o-heist-o-stack-e-o-docker)
 
 [Haskell on the web](https://wiki.haskell.org/Web)
+
+### Database
+
+```hs
+conn <- connectSqlite3 "test1.db"
+run conn "INSERT INTO test VALUES (?, ?)" [toSql 0, toSql "zero"]
+conn "SELECT * from test where id < 2" []
+```
+
+---
 
 ### How I setup a test unit?
 
@@ -502,6 +523,14 @@ Rober Eric Raymon's  scale:
  - C
  - Lisp
 
+Programmer time is almost always more expensive than CPU time.
+
+We should continue to move to higher levels of abstraction, just
+like we've done before. We should trade application speed for
+increased productivity, stability and maintainability.  We aren't
+writing applications in assembler anymore for the same reason we
+shouldn't be writing applications in C anymore.
+
 ---
 
 # References
@@ -513,7 +542,7 @@ Rober Eric Raymon's  scale:
 5. [Type inferrence](http://wiki.c2.com/?TypeInference)
 6. [How to learn Haskell](https://github.com/bitemyapp/learnhaskell)
 7. [Haskell in industry](https://wiki.haskell.org/Haskell_in_industry)
-
+8. [Haskell, the Language Most Likely to Change the Way you Think About Programming](http://www.huffingtonpost.com/aaroncontorer/haskell-the-language-most_b_4242119.html)
 ---
 
 class: center, middle, inverse
