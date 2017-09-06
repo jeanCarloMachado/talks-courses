@@ -1,8 +1,6 @@
-Clean Code
-==========
+# Clean Code
 
-Breadcrumbs
---------
+## Breadcrumbs
 
 Tech Lead at [Compufácil compufacil.com.br](http://compufacil.com.br/)
 
@@ -31,8 +29,7 @@ Produces software that's easy to:
 
 > Programming is the art of telling another human what one wants the computer to do Donald Knuth
 
-Why it matters?
----------------
+## Why it matters?
 
 ### [Broken windows theory](https://en.wikipedia.org/wiki/Broken_windows_theory)
 
@@ -40,28 +37,24 @@ Why it matters?
 
 Software entropy, software rot.
 
-Good design pays off
---------------------
+## Good design pays off
 
 ![Features over time considering design quality](designStaminaGraph.gif)
 
-The four characteristics of Rotting software
---------------------------------------------
+## The four characteristics of Rotting software
 
 - Rigidity
 - Fragility
 - Immobility
 - Viscosity
 
-Rotting software 1 - Rigidity
------------------------------
+## Rotting software 1 - Rigidity
 
 It's hard to solve simple problems.
 
 Estimating is hard.
 
-Rotting software 2 - Fragility
-------------------------------
+## Rotting software 2 - Fragility
 
 The software breaks too often.
 
@@ -69,13 +62,11 @@ A change in one unrelated part breaks others.
 
 Changes must be echoed in many places.
 
-Rotting software 3 - Immobility
--------------------------------
+## Rotting software 3 - Immobility
 
 It's the inability of reusing software from other places.
 
-Rotting software 4 - Viscosity
-------------------------------
+## Rotting software 4 - Viscosity
 
 It's easier to go to the *hacking mode* than to the *design preservation* mode.
 
