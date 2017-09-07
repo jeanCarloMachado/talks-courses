@@ -26,48 +26,37 @@ Twitter: [JeanCarloMachad](https://twitter.com/JeanCarloMachad)
 
 ----
 
-## Software sustentável
+## Nuvem
 
-Seria legal contar a história dos primórdios da internet?
-
-Tenho que vender a plataforma da compufácil. Fazer os clientes
-entenderem a proposta de API e dar exemplos práticos de como
-eles podem se beneficiar com isso.
-
-Analogia de ecossistema
-
-Nature doesn't custoize once, it replicates improved features
-across species incrementally & without chargin for them
-
-Ecossistemas tendem a compartilhar dados (dentro da ética)
-
-Argumento da sustentabilidade
- - servidores compartilhados
- - infraestrutura compartilhada
-     backups
-
-Conseguimos saber dos erros antes dos próprios clientes.
+Porque software em núvem é bom?
 
 
-Free upgrades
-Instant deployment
-
-Tenho que passar pelas funcionalidades que o compufácil já
-provê.
-
-O que é uma plataforma?
-O que é uma API?
-Como se beneficiar?
-
-Consimidores vão consumir somente o que eles precisam
+ - Conseguimos saber dos erros antes dos próprios clientes.
+ - Free upgrades
+ - Instant deployment
 
 ---
 
-## Plataforma de soluções
+## Software sustentável
 
+ - servidores compartilhados
+ - infraestrutura compartilhada backups
+
+---
+
+## O que você consegue fazer em uma plataforma?
+
+ - Integrar outros sistemas
 - Integrações a sistemas de terceiros
 - Aplicativos próprios
 - Aplicativos de terceiros
+ - Desenvolver novas funcionalidades
+
+---
+
+## Exemplos
+
+
 
 ---
 
@@ -88,6 +77,11 @@ Consimidores vão consumir somente o que eles precisam
 ---
 
 ![Controle estoque](/home/jean/projects/talks-courses/compufacil_ecossystem/controle_estoque.png)
+
+---
+
+
+![NFCE](/home/jean/projects/talks-courses/compufacil_ecossystem/nfce.png)
 
 ---
 
