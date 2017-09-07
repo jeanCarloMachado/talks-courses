@@ -1,15 +1,32 @@
+---
+title: "Ecossistema CompuFácil"
+width: 710px
+height: 460px
+colors:
+headerEmphasis: \#fe7c00
+---
+
 # CompuFácil
+
+## Ecossistema
+
+#### Jean Carlo Machado
+
+----
 
 ## /sobre
 
-Tech Lead at [Compufácil compufacil.com.br](http://compufacil.com.br/)
+Líder técnico na CompuFácil
 
-I care about science and humanism. Programmer, speaker, teacher, philanthropist.
+Programador, professor, filantropo
+
+Me importo com ciência e humanismo.
 
 Twitter: [JeanCarloMachad](https://twitter.com/JeanCarloMachad)
 
+----
 
-##  foo
+## Software sustentável
 
 Seria legal contar a história dos primórdios da internet?
 
@@ -44,25 +61,47 @@ Como se beneficiar?
 
 Consimidores vão consumir somente o que eles precisam
 
-### Plataforma de soluções
+---
 
-[](plataforma.png)
+## Plataforma de soluções
+
 - Integrações a sistemas de terceiros
 - Aplicativos próprios
 - Aplicativos de terceiros
 
+---
 
+## Nossos aplicativos
+
+---
+
+![Checkout Maquininha](/home/jean/projects/talks-courses/compufacil_ecossystem/maquininha_checkout.png)
+
+---
+
+![Relatórios Maquininha](/home/jean/projects/talks-courses/compufacil_ecossystem/maquininha_relatorios.png)
+
+---
+
+![Controle financeiro](/home/jean/projects/talks-courses/compufacil_ecossystem/android_financeiro.png)
+
+---
+
+![Controle estoque](/home/jean/projects/talks-courses/compufacil_ecossystem/controle_estoque.png)
+
+---
 
 ## Referências
 
-[Saas como um ecossistema](https://www.slideshare.net/saasu/saas-as-an-ecosystem-presentation)
-[The case of Adobe moving to the cloud](https://www.computerworld.com/article/3069711/software-as-a-service/transitioning-to-the-cloud-adobe-hits-it-out-of-the-park.html)
+1. [Saas como um ecossistema](https://www.slideshare.net/saasu/saas-as-an-ecosystem-presentation)
+2. [The case of Adobe moving to the cloud](https://www.computerworld.com/article/3069711/software-as-a-service/transitioning-to-the-cloud-adobe-hits-it-out-of-the-park.html)
 
-## Dúvidas?
+---
 
-### Entre em contato!
+## Dúvidas? {.fit}
 
-E-mail: contato@jeancarlomachado.com.br
+---
 
 # Obrigado
 
+Contato: contato@jeancarlomachado.com.br
