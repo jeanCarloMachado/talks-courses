@@ -47,3 +47,8 @@ carros da tesla virando uber nas horas vagas.
 Tenho que mostrar que isso tudo já está acontecendo agora.
 
 Gráficos de palavras chave, pesquisas de uso com imagens, etc.
+
+A maior empresa de carros não tem caros: uber.
+
+A maior loja de comercio eletronico do mundo não tem estoque:
+alibaba.

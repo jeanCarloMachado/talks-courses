@@ -29,35 +29,33 @@ Twitter: [JeanCarloMachad](https://twitter.com/JeanCarloMachad)
 
 ----
 
-# Sustentabilidade {.fit}
+# Sustentabilidade {.bit}
 
 ----
 
- - Acabou a era do computador pessoal
-. . .
- - servidores compartilhados
- - infraestrutura compartilhada, backups
+### Sustentabilidade = eficiência
 
-<!-- analogia spotify -->
+
+ - dados centralizados
+ - infraestrutura compartilhada, custo por demanda
+ - automatização (inclusive leiga)
 
 ---
 
 ## Nuvem
 
- - A núvem é um computador que não é seu
- - Conseguimos saber dos erros antes dos próprios clientes.
- - Free upgrades
- - Instant deployment
- - Acesso em qualquer lugar, qualquer dispostivo WEB
+---
+
+![Nuvem meu filho](/home/jean/projects/talks-courses/compufacil_ecossystem/nuvem_meu_filho.jpeg)
 
 ---
 
-## Serverless
+### Vantagens
 
-- Pague pelo que consome na núvem:
-- Precos acessíveis
-- Apenas um terminal burro
-
+ - Detectar erros antes dos próprios clientes
+ - Novas versões instantaneamente
+ - Rolling Release
+ - Acesso em qualquer lugar, qualquer dispositivo WEB
 
 ---
 
@@ -65,15 +63,21 @@ Twitter: [JeanCarloMachad](https://twitter.com/JeanCarloMachad)
 
 ---
 
-## Blockchain
+ - A maior empresa de carros do mundo não tem carros
+ - A maior empresa de imóveis do mundo não possui imóveis
+ - A maior empresa de comércio eletrônico do mundo não tem estoque
 
- - Dinheiro online
- - Sem poder centralizador
- - Novos negócios
- - Novos modelos de negócio
- - novas formas de se pensar sobre gestão financeira
- - Sem tarifas
- - Sem bancos
+---
+
+## Impressoras 3D
+
+---
+
+### Blockchain
+
+ - Dinheiro online, descentralizado, global
+ - Novos modelos de negócios
+ - Novas formas de se pensar sobre gestão financeira
 
 ---
 
@@ -83,36 +87,28 @@ Twitter: [JeanCarloMachad](https://twitter.com/JeanCarloMachad)
 
 ## Big Data
 
-- Dados centralizados (na núvem)
-- Mineração para extrair informações
+- Dados centralizados permitem a mineração
 
 
 ---
 
-## ML, AI
+## Inteligência Artificial
 
 - AI will be the new UI
-- Carros autonamos
+    10 anos de áudio em buscas em pt todos os dias
+
+- Carros autônomos
 - Advogados artificiais
 
 ---
 
-# E porque isso importa?
-
-----
-
-- Relevancia
-- Impacto
-
-----
-
-# Como ?
+# Integrações
 
 ---
 
-Ciencia
-Verdade
-Inclusividade
+O mundo já tem muitas ideias genias
+
+Pra ser mais eficiente precisamos juntar essas grandes soluções
 
 ---
 
@@ -123,6 +119,10 @@ Inclusividade
 - Aplicativos próprios
 - Aplicativos de terceiros
 - Desenvolver novas funcionalidades
+
+---
+
+![Integrations](/home/jean/projects/talks-courses/compufacil_ecossystem/integrations.svg)
 
 ---
 
@@ -157,8 +157,7 @@ Inclusividade
 
 ---
 
-
-![NFCE](/home/jean/projects/talks-courses/compufacil_ecossystem/nfce.png)
+![NFC-e](/home/jean/projects/talks-courses/compufacil_ecossystem/nfce.png)
 
 ---
 
@@ -166,6 +165,7 @@ Inclusividade
 
 1. [Saas como um ecossistema](https://www.slideshare.net/saasu/saas-as-an-ecosystem-presentation)
 2. [The case of Adobe moving to the cloud](https://www.computerworld.com/article/3069711/software-as-a-service/transitioning-to-the-cloud-adobe-hits-it-out-of-the-park.html)
+3. [10 anos de áudio em pt](http://revistagalileu.globo.com/Revista/Common/0,,EMI341118-17770,00-A+PESQUISA+POR+VOZ+SERA+ESSENCIAL+NA+INTERNET+DAS+COISAS.htmlk)
 
 ---
 
