@@ -39,7 +39,12 @@ Gráficos de palavras chave, pesquisas de uso com imagens, etc.
 
 
 Tenho que colocar algumas citações inteligentes na apresentação.
+
+É melhor eu assistir alguns TED talks no assunto pra ficar mais
+prolífico.
+
 ## Citações por fala
 
 Juízes tem tendência a fazer julgamentos mais pesados antes do
 almoço do que depois.
+
