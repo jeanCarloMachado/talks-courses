@@ -18,14 +18,25 @@ Líder técnico na CompuFácil
 
 Programador, professor, filantropo
 
-Me importo com ciência e humanismo.
+Maiores interesses: ciência e humanismo
 
 Twitter: [JeanCarloMachad](https://twitter.com/JeanCarloMachad)
 
+----
+
+# Futuro
+
+![Futuro](/home/jean/projects/talks-courses/compufacil_ecossystem/future.jpg)
+
+---
+
+Para Saber o futuro precisamos acompanhar o passado e a tendência do presente
+
+Estamos no período mais próspero da história da humanidade
 
 ----
 
-# Futuro {.fit}
+![World data](/home/jean/projects/talks-courses/compufacil_ecossystem/world_data.jpg)
 
 ----
 
@@ -35,9 +46,8 @@ Twitter: [JeanCarloMachad](https://twitter.com/JeanCarloMachad)
 
 ### Sustentabilidade = eficiência
 
-
- - infraestrutura compartilhada, custo por demanda
- - dados centralizados
+ - infraestrutura compartilhada
+ - custo por demanda
  - automatização (inclusive leiga)
 
 ---
@@ -52,6 +62,7 @@ Twitter: [JeanCarloMachad](https://twitter.com/JeanCarloMachad)
 
 ### Vantagens
 
+ - dados centralizados
  - Detectar erros antes dos próprios clientes
  - Novas versões instantaneamente
  - Rolling Release
@@ -59,9 +70,7 @@ Twitter: [JeanCarloMachad](https://twitter.com/JeanCarloMachad)
 
 ---
 
-# Economias Compartilhadas {.fit}
-
----
+## Economias Compartilhadas {.fit}
 
  - A maior empresa de carros do mundo não tem carros
  - A maior empresa de imóveis do mundo não possui imóveis
@@ -72,19 +81,7 @@ Twitter: [JeanCarloMachad](https://twitter.com/JeanCarloMachad)
 ---
 
 ![Uber + Telsa](/home/jean/projects/talks-courses/compufacil_ecossystem/uber-tesla.jpg)
-
 ---
-
-## IOT
-
-Computadores nos lugares menos esperados
-
-Amazon shop
-
-
----
-
-## Impressoras 3D
 
 ---
 
@@ -93,10 +90,22 @@ Amazon shop
  - Dinheiro online, descentralizado, global
  - Novos modelos de negócios
  - Novas formas de se pensar sobre gestão financeira
+ - Sistemas de votação
 
 ---
 
-# Inteligência
+## IOT
+
+Em 2015 existiam 4.9 milhões
+
+Em 2020 21 bilhões de dispositivos vão estar na internet
+
+Computadores nos lugares menos esperados
+
+[Amazon Go](https://www.youtube.com/watch?v=NrmMk1Myrxc)
+
+
+# Inteligênciassistentes pessoas (Alexa)
 
 ---
 
@@ -112,19 +121,22 @@ Amazon shop
 
 ## Inteligência Artificial
 
-- AI will be the new UI
-    1. 10 anos de áudio em buscas em pt todos os dias
+- *AI will be the new UI*
 - Carros autônomos
-- Advogados artificiais
-- Juizes artificiais sem biases
-
+- Detecção de humor
+- Advogados/Juízes artificiais
 
 ---
 
 ## O que mais?
 
  - Customização genética (CRYSPR)
- - Weareables
+ - Impressoras 3D
+ - Wearable's
+ - Drones
+ - Neuroscience
+ - Energia Solar
+ - Realidade virtual/aumentada
  - Medicina customizada
  - Assistentes pessoas (Alexa)
 
@@ -136,7 +148,7 @@ Amazon shop
 
 O mundo já tem muitas ideias genias
 
-Pra ser mais eficiente precisamos juntar essas grandes soluções
+Para criar mais valor precisamos juntar elas
 
 ---
 
@@ -150,7 +162,7 @@ Pra ser mais eficiente precisamos juntar essas grandes soluções
 
 ---
 
-![Integrations](/home/jean/projects/talks-courses/compufacil_ecossystem/integrations.svg)
+![Integrações](/home/jean/projects/talks-courses/compufacil_ecossystem/integrations.svg)
 
 ---
 
@@ -161,8 +173,15 @@ Pra ser mais eficiente precisamos juntar essas grandes soluções
 - Previsão de giro de estoque, vencimento de itens
 - Mineração de melhores datas para entrar em contato com os clientes finais
 - Checkout automático com RFID
+
+---
+
+## Exemplos
+
 - Pagamento direto sem necessidade de cartão com bitcoin
 - Ferramenta para análise do perfil do cliente oferecer promoções
+- Capturar informações de produtos como o RDstation para
+    qualificar leads e direcionar para os nossos parceiros.
 
 ---
 
@@ -192,13 +211,19 @@ Pra ser mais eficiente precisamos juntar essas grandes soluções
 
 ## Conclusão
 
-O futuro vai ser um lugar muito mais igualitario e justo.
-Vamos viver uma cultura muito mais racional e científica.
+O futuro vai ser um lugar muito mais dinâmico e próspero
 
-Existem várias tecnologias que vão ser a regra
+Temos que nos adaptar ou morrer
 
-Temos que nos adaptar ou morer.
+A tecnologia está muito mais democrática e nunca foi tão fácil
+revolucionar o mundo com ela
 
+Integrar todas essas tecnologias maravilhosas vai permitir
+criarmos muito mais valor do que pensávamos ser possível
+
+---
+
+# O que você vai fazer?
 
 ---
 
@@ -206,13 +231,11 @@ Temos que nos adaptar ou morer.
 
 1. [Saas como um ecossistema](https://www.slideshare.net/saasu/saas-as-an-ecosystem-presentation)
 2. [The case of Adobe moving to the cloud](https://www.computerworld.com/article/3069711/software-as-a-service/transitioning-to-the-cloud-adobe-hits-it-out-of-the-park.html)
-
 3. [10 anos de áudio em pt](http://revistagalileu.globo.com/Revista/Common/0,,EMI341118-17770,00-A+PESQUISA+POR+VOZ+SERA+ESSENCIAL+NA+INTERNET+DAS+COISAS.htmlk)
 4. [Things Big Data Can Do, and 3 Things It Can’t Do](http://data-informed.com/4-things-big-data-can-do-and-3-things-it-cant-do/)
-
----
-
-# Dúvidas? {.fit}
+5. [Lawyers and IA](https://www.cnbc.com/2017/02/17/lawyers-could-be-replaced-by-artificial-intelligence.html)
+6. [The future of the Internet of Things](https://us.norton.com/internetsecurity-iot-5-predictions-for-the-future-of-iot.html)
+7. [Technology and the future](https://www.youtube.com/watch?v=k0mHMVETt_o)
 
 ---
 
