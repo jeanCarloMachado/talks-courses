@@ -6,9 +6,9 @@ colors:
 headerEmphasis: \#fe7c00
 ---
 
-# CompuFácil e o Futuro
+# Futuro e a CompuFácil
 
-#### Jean Carlo Machado
+##### Jean Carlo Machado
 
 ----
 
@@ -16,7 +16,7 @@ headerEmphasis: \#fe7c00
 
 Líder técnico na CompuFácil
 
-Programador, professor, filantropo
+Programador, professor
 
 Maiores interesses: ciência e humanismo
 
@@ -26,17 +26,35 @@ Twitter: [JeanCarloMachad](https://twitter.com/JeanCarloMachad)
 
 # Futuro
 
-![Futuro](/home/jean/projects/talks-courses/compufacil_ecossystem/future.jpg)
+Para Saber o futuro precisamos acompanhar o passado e a tendência do presente
+
+-----
+
+# Distópico
+
+![Distópico](/home/jean/projects/talks-courses/compufacil_ecossystem/distopic_future.jpg)
+
+-----
+
+# Utópico
+
+![Utópico](/home/jean/projects/talks-courses/compufacil_ecossystem/utopic_future.jpg)
 
 ---
-
-Para Saber o futuro precisamos acompanhar o passado e a tendência do presente
 
 Estamos no período mais próspero da história da humanidade
 
 ----
 
-![World data](/home/jean/projects/talks-courses/compufacil_ecossystem/world_data.jpg)
+![Extrema Pobreza](/home/jean/projects/talks-courses/compufacil_ecossystem/extreme-poverty.png)
+
+----
+
+![Educação básica](/home/jean/projects/talks-courses/compufacil_ecossystem/basic_education.png)
+
+----
+
+![Mortalidade Infantil](/home/jean/projects/talks-courses/compufacil_ecossystem/child_mortality.png)
 
 ----
 
@@ -47,12 +65,21 @@ Estamos no período mais próspero da história da humanidade
 ### Sustentabilidade = eficiência
 
  - infraestrutura compartilhada
+ - não se vende computadores, vende-se computação
  - custo por demanda
- - automatização (inclusive leiga)
+ - facilidade de automatização *serverless*
+
+*Civilization advances by extending the number of important operations we can perform without thinking. ~  A. N. Whitehead*
 
 ---
 
-## Nuvem
+
+# Nuvem
+
+ - dados centralizados
+ - Detectar erros antes dos próprios clientes
+ - Novas versões instantaneamente
+ - Acesso em qualquer lugar, qualquer dispositivo WEB
 
 ---
 
@@ -60,17 +87,7 @@ Estamos no período mais próspero da história da humanidade
 
 ---
 
-### Vantagens
-
- - dados centralizados
- - Detectar erros antes dos próprios clientes
- - Novas versões instantaneamente
- - Rolling Release
- - Acesso em qualquer lugar, qualquer dispositivo WEB
-
----
-
-## Economias Compartilhadas {.fit}
+## Economias Compartilhadas
 
  - A maior empresa de carros do mundo não tem carros
  - A maior empresa de imóveis do mundo não possui imóveis
@@ -81,7 +98,6 @@ Estamos no período mais próspero da história da humanidade
 ---
 
 ![Uber + Telsa](/home/jean/projects/talks-courses/compufacil_ecossystem/uber-tesla.jpg)
----
 
 ---
 
@@ -94,20 +110,20 @@ Estamos no período mais próspero da história da humanidade
 
 ---
 
+# Inteligência
+
+---
+
 ## IOT
 
-Em 2015 existiam 4.9 milhões
+Em 2015 existiam 4.9 milhões de dispositivos conectados a internet
 
-Em 2020 21 bilhões de dispositivos vão estar na internet
-
-Computadores nos lugares menos esperados
+Em 2020 estimas-se 21 bilhões
 
 [Amazon Go](https://www.youtube.com/watch?v=NrmMk1Myrxc)
 
-
-# Inteligênciassistentes pessoas (Alexa)
-
 ---
+
 
 ## Big Data
 
@@ -116,29 +132,27 @@ Computadores nos lugares menos esperados
 - Relacionamentos inesperados de dados
 - Prevenção de problemas antes do acontecimento
 
-
 ---
 
 ## Inteligência Artificial
 
-- *AI will be the new UI*
 - Carros autônomos
 - Detecção de humor
 - Advogados/Juízes artificiais
+- *AI will be the new UI*
 
 ---
 
 ## O que mais?
 
- - Customização genética (CRYSPR)
  - Impressoras 3D
  - Wearable's
  - Drones
- - Neuroscience
  - Energia Solar
  - Realidade virtual/aumentada
- - Medicina customizada
- - Assistentes pessoas (Alexa)
+ - Mapeamento Genético
+ - Customização genética (CRISPR)
+ - Assistentes pessoais (Alexa)
 
 ---
 
@@ -166,25 +180,6 @@ Para criar mais valor precisamos juntar elas
 
 ---
 
-## Exemplos
-
-- Nota fiscal de serviço para alguns municípios
-- Integração com o Whatsapp para receber novidades, criar despesas, etc
-- Previsão de giro de estoque, vencimento de itens
-- Mineração de melhores datas para entrar em contato com os clientes finais
-- Checkout automático com RFID
-
----
-
-## Exemplos
-
-- Pagamento direto sem necessidade de cartão com bitcoin
-- Ferramenta para análise do perfil do cliente oferecer promoções
-- Capturar informações de produtos como o RDstation para
-    qualificar leads e direcionar para os nossos parceiros.
-
----
-
 ## Nossos aplicativos
 
 ---
@@ -209,11 +204,34 @@ Para criar mais valor precisamos juntar elas
 
 ---
 
-## Conclusão
+## Ideias
+
+- Nota fiscal de serviço para alguns municípios
+- Whatsapp para receber novidades sobre vendas e vencimentos
+- Criação automática de promoções baseada no vencimento de itens
+- Mineração de melhores datas para entrar em contato com os clientes
+- Checkout automático com RFID de produtos especiais
+- Importador de transações bancárias fazendo crawling
+
+---
+
+## Ideias
+
+- Pagamento direto sem necessidade de cartão com NFC ou Bitcoin
+- Ferramenta para análise do perfil do cliente oferecer promoções
+- Capturar informações de produtos como o RDstation para
+    qualificar leads e direcionar para os nossos parceiros.
+- Redução do estoque através da análise de comportamento dos
+    clientes por sazonalidade
+- Importador de histórico de estoque do Excel para a nossa API
+
+---
+
+## Resumindo
 
 O futuro vai ser um lugar muito mais dinâmico e próspero
 
-Temos que nos adaptar ou morrer
+Quem quiser ter impacto vai ter que se adaptar
 
 A tecnologia está muito mais democrática e nunca foi tão fácil
 revolucionar o mundo com ela
@@ -222,6 +240,14 @@ Integrar todas essas tecnologias maravilhosas vai permitir
 criarmos muito mais valor do que pensávamos ser possível
 
 ---
+
+
+*The difference between a successful person and others is not a
+lack of strength, not a lack of knowledge, but rather a lack in
+will.*
+
+~ Vince Lombardi Jr.
+
 
 # O que você vai fazer?
 
@@ -236,6 +262,8 @@ criarmos muito mais valor do que pensávamos ser possível
 5. [Lawyers and IA](https://www.cnbc.com/2017/02/17/lawyers-could-be-replaced-by-artificial-intelligence.html)
 6. [The future of the Internet of Things](https://us.norton.com/internetsecurity-iot-5-predictions-for-the-future-of-iot.html)
 7. [Technology and the future](https://www.youtube.com/watch?v=k0mHMVETt_o)
+
+8. [Our world in data](https://ourworldindata.org/)
 
 ---
 
