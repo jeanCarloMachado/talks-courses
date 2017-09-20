@@ -53,7 +53,47 @@ git format-patch
 
 ---
 
-# Recuperando Commits
+
+# Procurando
+
+----
+
+## Quando palavra foi introduzida
+
+```sh
+git log -S searchTerm
+```
+
+---
+
+## Quando uma linha foi introduzida
+
+```sh
+git blame -L 2,2 test.txt
+```
+---
+
+## Últimas alterações em um arquivo
+
+```sh
+git log -p --follow -2 foll
+```
+
+----
+
+## Procurar modificações em função
+
+```sh
+git log -L :try_merge_command:merge.c
+```
+
+---
+
+## Procurar modificações em função
+
+```sh
+git log -L '/function_name/',/\ \ \ \}/:fileName
+```
 
 ---
 
@@ -77,44 +117,16 @@ git rebase -i  HEAD~3
 
 ---
 
-# Procurando
+## Removendo itens do histórico
 
-----
-
-## Quando palavra foi introduzida
 
 ```sh
-git log -S searchTerm
+git filter-branch --tree-filter 'rm -rf passwords.txt' HEAD.
 ```
 
 ---
 
-## Quando uma linha foi introduzida
-
-```sh
-git blame -L 2,2 test.txt
-```
----
-
-## Últimas alterações em um arquivo
-
-git log -p --follow -2 Backend/module/Api/src/Api/Service/ErrorProcessor.php
-
-----
-
-## Procurar modificações em função
-
-```sh
-git log -L :try_merge_command:merge.c
-```
-
----
-
-## Procurar modificações em função
-
-```sh
-git log -L '/function_name/',/\ \ \ \}/:fileName
-```
+# Recuperando Commits
 
 ---
 
@@ -129,5 +141,5 @@ git log -L '/function_name/',/\ \ \ \}/:fileName
 
 # Obrigado
 
-## Dúvidas
+## Dúvidas?
 
