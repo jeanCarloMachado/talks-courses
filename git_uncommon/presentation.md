@@ -132,12 +132,13 @@ git filter-branch --tree-filter 'rm -rf passwords.txt' HEAD.
 
 ## O que mais?
 
-1. Fluxos de trabalho
-2. Hooks
-2. Pumbling
+- Fluxos de trabalho
+- Hooks
+- Parcial add
+- Pumbling
+- Git rerere
 
 ---
-
 
 # Obrigado
 
