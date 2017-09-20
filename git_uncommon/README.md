@@ -5,17 +5,7 @@ Git/Github que os desenvolvedores geralmente desconhecem.
 
 Duração: 40 minutos
 
-### Recuperando conteúdo perdido
-
-reflog
-
-### Reescrevendo histórico
-Amend
-Rebase
-
-
 ## Pontos para citar
-
 
 ```sh
 git log -L '/deleteUserFromClient/',/\ \ \ \}/:Backend/module/Application/src/Application/Service/Client/Client.php
