@@ -5,32 +5,23 @@ Git/Github que os desenvolvedores geralmente desconhecem.
 
 Duração: 40 minutos
 
-## Assuntos
-
-- Procurar no histórico
-- Recuperando conteúdo perdido
-- Reescrevendo histórico
-- Patches
-
-### Procurar no histórico
-
-Encontrar todas as modificações em uma função
-Encontrar de onde veio um bloco de código
-
-
 ### Recuperando conteúdo perdido
 
 reflog
 
-###  Reescrevendo histórico
-Rebase
+### Reescrevendo histórico
 Amend
-
-### Patches
-
-Criando patches a partir de um commit
-Usando patches para o deploy
-Alterando um commit 
+Rebase
 
 
 ## Pontos para citar
+
+
+```sh
+git log -L '/deleteUserFromClient/',/\ \ \ \}/:Backend/module/Application/src/Application/Service/Client/Client.php
+```
+
+Mencionar que muitos desenvolvedores temem reescrever histórico
+mas não tem problema.
+
+Procurar por mudanças de lugar de um bloco de código.

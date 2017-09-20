@@ -35,9 +35,9 @@ git commit --amend
 ## Customizando
 
 ```sh
-git show c0bb3da3faebb4f138792472bfe7a85dbd783a4e > ../computers.patch
-git show 999bf8a9209674de3a08d69f4aa99fa393cdd2fd >> ../computers.patch
-git show d2c08f7f55d4dbb568a7eadb2dece68e0fa6c6a8 >> ../computers.patch
+git show c0bb3 > ../computers.patch
+git show 999bf >> ../computers.patch
+git show d2c08 >> ../computers.patch
 git apply ../computers.patch
 ```
 
@@ -53,8 +53,6 @@ git format-patch
 
 ---
 
-git commit --amend
-
 # Recuperando Commits
 
 ---
@@ -63,17 +61,68 @@ git commit --amend
 
 ---
 
-
-# Procurar modificações em função
+## Amend
 
 ```sh
-git log -L '/deleteUserFromClient/',/\ \ \ \}/:\
-Backend/module/Application/src/Application/Service/Client/Client.php
+git commit --amend
+```
+
+---
+
+## Rebase
+
+```sh
+git rebase -i  HEAD~3
+```
+
+---
+
+# Procurando
+
+----
+
+## Quando palavra foi introduzida
+
+```sh
+git log -S searchTerm
+```
+
+---
+
+## Quando uma linha foi introduzida
+
+```sh
+git blame -L 2,2 test.txt
+```
+---
+
+## Últimas alterações em um arquivo
+
+git log -p --follow -2 Backend/module/Api/src/Api/Service/ErrorProcessor.php
+
+----
+
+## Procurar modificações em função
+
+```sh
+git log -L :try_merge_command:merge.c
+```
+
+---
+
+## Procurar modificações em função
+
+```sh
+git log -L '/function_name/',/\ \ \ \}/:fileName
 ```
 
 ---
 
 ## O que mais?
+
+1. Fluxos de trabalho
+2. Hooks
+2. Pumbling
 
 ---
 
