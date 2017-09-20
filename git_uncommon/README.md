@@ -25,3 +25,17 @@ Mencionar que muitos desenvolvedores temem reescrever histórico
 mas não tem problema.
 
 Procurar por mudanças de lugar de um bloco de código.
+
+Como mostrar que se pode recuperar o histórico?
+
+# reescrevendo historico
+
+talvez eu possa criar uma branch na hora e totalmetne refazê-la.
+ - deletar um commit
+ - colocar arquivos em um commit
+ - juntar 2 commits
+
+# recuperando
+
+Talvez fazer um reset a mais, escrever algo em cima e depois
+colocar o commit no seu lugar.
