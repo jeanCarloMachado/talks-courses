@@ -14,32 +14,21 @@ headerEmphasis: \#fe7c00
 
 ---
 
+# Muito além do i,a,c,m,pl,ps
+
+```sh
+ls /usr/lib/git-core/ | wc -l
+173
+```
+
+---
 
 # Patches
 
----
-
-## Movendo commits
-
-```sh
-git format-patch -2 6b93a -o ../
-git checkout milton
-git reset --hard 96c8c
-git am < ../0001-milton.patch
-git apply ../0002-milton-2.patch
-ggit add .
-git commit --amend
-```
----
-
-## Customizando
-
-```sh
-git show c0bb3 > ../computers.patch
-git show 999bf >> ../computers.patch
-git show d2c08 >> ../computers.patch
-git apply ../computers.patch
-```
+- Extrair
+- Importar
+- Alterar
+- Usar para deploys
 
 ----
 
@@ -49,98 +38,60 @@ git apply ../computers.patch
 git show
 git diff
 git format-patch
+git log
 ```
 
 ---
 
+## Reescrevendo histórico
 
-# Procurando
-
-----
-
-## Quando palavra foi introduzida
-
-```sh
-git log -S searchTerm
-```
+Idealmente commits devem representar unidades de trabalho não um C+S.
 
 ---
 
-## Quando uma linha foi introduzida
 
-```sh
-git blame -L 2,2 test.txt
-```
----
-
-## Últimas alterações em um arquivo
-
-```sh
-git log -p --follow -2 foll
-```
-
-----
-
-## Procurar modificações em função
-
-```sh
-git log -L :try_merge_command:merge.c
-```
+![it](/home/jean/projects/talks-courses/git_uncommon/it_horror.jpg)
 
 ---
 
-## Procurar modificações em função
 
-```sh
-git log -L '/function_name/',/\ \ \ \}/:fileName
-```
+
+# Reescrita remota
 
 ---
 
-# Reescrevendo histórico
+# Bisect
 
 ---
 
-## Amend
+## Rerere
 
-```sh
-git commit --amend
-```
-
----
-
-## Rebase
-
-```sh
-git rebase -i  HEAD~3
-```
-
----
-
-## Removendo itens do histórico
-
-
-```sh
-git filter-branch --tree-filter 'rm -rf passwords.txt' HEAD.
-```
-
----
-
-# Recuperando Commits
+#### reuse recorded resolution
 
 ---
 
 ## O que mais?
 
-- Fluxos de trabalho
+- Procurando
+- Stash
+- Estratégias de merge
+- Comparação de branch
 - Hooks
-- Parcial add
+- Submodulos
 - Pumbling
-- Git rerere
 
 ---
 
-# Obrigado
+# Dúvidas?
 
-## Dúvidas?
+
+E-mail: contato@jeancarlomachado.com.br
+
+Twitter: https://twitter.com/JeanCarloMachad
+
+Github: https://github.com/jeanCarloMachado
+
+---
+
+![transport](/home/jean/projects/talks-courses/git_uncommon/git-transport.png)
 
