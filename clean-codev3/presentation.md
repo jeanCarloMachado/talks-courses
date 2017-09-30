@@ -14,7 +14,7 @@ headerEmphasis: \#fe7c00
 
 # Sobre
 
-[Compufácil compufacil.com.br](http://compufacil.com.br/)
+[CompuFácil](http://compufacil.com.br/)
 
 - php-src
 - Doctrine
@@ -38,19 +38,49 @@ Reader-focused development style
 
 Analogia das janelas quebradas
 
-"All the rest of this code is crap, I'll just follow suit."
+----
 
-Software entropy, software rot.
+## Bom design se paga
+
+![design stamina](/home/jean/projects/talks-courses/clean-codev3/designStaminaGraph.png)
 
 ----
 
-# Bom design se paga
+# Overengineering
 
+
+> Relatively simple things can tolerate a certain level of
+disorganization. However, as complexity increases, disorganization becomes suicidal.  Robert Martin
 
 ----
 
-# Questions?
-###  Contact info
+# Skills do Clean coder
+
+//mindmap
+
+----
+
+# Legibilidade
+
+----
+
+----
+
+# Ferramentas
+
+----
+
+# Bons mentores
+
+Bob Martin
+
+----
+
+# Referências
+
+----
+
+# Dúvidas?
 
 E-mail: contato@jeancarlomachado.com.br
 IRC: JeanCarloMachado

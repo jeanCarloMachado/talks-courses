@@ -10,7 +10,15 @@ headerEmphasis: \#fe7c00
 
 ---
 
-# /sobre
+## /sobre
+
+Programador a 7 anos
+
+Usuário de git a 7 anos, professor a 1
+
+Science Lover, Humanist
+
+Unix hacker
 
 ---
 
@@ -43,22 +51,19 @@ git log
 
 ---
 
-## Reescrevendo histórico
-
-Idealmente commits devem representar unidades de trabalho não um C+S.
+## Hackeando o histórico
 
 ---
-
-
-![it](/home/jean/projects/talks-courses/git_uncommon/it_horror.jpg)
-
----
-
 
 
 # Reescrita remota
 
 ---
+
+![it](/home/jean/projects/talks-courses/git_uncommon/it_horror.jpg)
+
+---
+
 
 # Bisect
 
@@ -73,9 +78,8 @@ Idealmente commits devem representar unidades de trabalho não um C+S.
 ## O que mais?
 
 - Procurando
-- Stash
 - Estratégias de merge
-- Comparação de branch
+- Comparação de branches
 - Hooks
 - Submodulos
 - Pumbling
@@ -90,6 +94,8 @@ E-mail: contato@jeancarlomachado.com.br
 Twitter: https://twitter.com/JeanCarloMachad
 
 Github: https://github.com/jeanCarloMachado
+
+Blog: jeancarlomachado.com.br
 
 ---
 
