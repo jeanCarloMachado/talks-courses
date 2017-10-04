@@ -29,6 +29,10 @@ headerEmphasis: \#fe7c00
 
 ----
 
+![](/home/jean/projects/talks-courses/clean-codev3/programming_like_sex.png)
+
+----
+
 ## Sintomas de apodrecimento
 
  - Rigidez -> difícil de resolver problemas simples
@@ -46,8 +50,6 @@ Software ruim implica em políticas ruins
 
 # O grande redesign
 
-Falhamos na profissão
-
 ---
 
 ## Clean code
@@ -62,7 +64,7 @@ Compartilha muitas características com bom texto em linguagem natural
 
 ----
 
-# Clean Code
+## Clean Code
 
 
 Ler código é a parte que mais consome tempo em manutenção
@@ -70,32 +72,29 @@ Ler código é a parte que mais consome tempo em manutenção
 Manutenção consome 70% do custo de um software
 
 
-Focar no 80% que não requer performance
-
 ----
 
 # Skills do Clean Coder
 
 ----
 
-![Skills](/home/jean/projects/talks-courses/clean-codev3/clean_coder_mindmap.png)
+![Skills](/home/jean/projects/talks-courses/clean-codev3/clean_coder_mindmap.jpg)
 
 ----
 
 
 ## Nomes
 
-nomes que comunicam intenção, não maiores
-
-se precisar olhar o código tem que trabalhar nos nomes
+Se precisar olhar o código tem que trabalhar nos nomes
 
 "And" ou "Or" comunicam múltiplas responsabilidades
 
-evite redundâncias AcessViolationExceptiion
+Evite redundâncias AcessViolationExceptiion
 
 ---
 
-## Evite
+
+## Evite nomes com
 
  - Object
  - Thing
@@ -106,7 +105,9 @@ evite redundâncias AcessViolationExceptiion
  - Item
  - Writer
 
+---
 
+![Nomes com sentido](/home/jean/projects/talks-courses/clean-codev3/homeopatic_naming.png)
 
 ----
 
@@ -115,8 +116,6 @@ evite redundâncias AcessViolationExceptiion
 <strike>Código largo é código belo</strike>
 
 100% de correlação inversa com quantidade de símbolos
-
-Nomes descritivos
 
 Quebre computação em múltiplas linhas
 
@@ -132,10 +131,6 @@ Mais de 3 argumentos é difícil justificar
 
 Funções puras são mais fáceis de testar e escalar
 
-Currying
-
-Monoids
-
 ----
 
 ## Comentários
@@ -150,7 +145,10 @@ Para expressar código
 
 ----
 
+## Comentários inúteis
+
 ```
+
 /**
  *
  * @param $title The title of the CD
@@ -179,20 +177,18 @@ Quanto mais o fundo mais detalhes
  - elses
  - código de erros
  - libs desconhecidas
- - getters e setters
+ - getters e setters (deméter)
  - dependências bidirecionais
 
 ---
 
-# Reúso
+## Reúso
 
 APIs bem planejadas são prazerosas de fazer
 
 componha ao invés de herdar
 
 editar modelagem e ditar diagramas? (DRY)
-
-não brinque com os brinquedos de seus brinquedos (Deméter)
 
 ---
 
@@ -241,6 +237,9 @@ Vai custar muito adicionar depois?
 
 Não inclui o custo de fazer o software mais fácil de modificar
 
+
+Ultimo momento responsável
+
 ----
 
 ![Yagni](/home/jean/projects/talks-courses/clean-codev3/yagni.png)
@@ -279,7 +278,6 @@ Se uma escolha de design torna algo mais difícil de testar está errado
 
 Arquitetura é sobre intenção
 
-Ultimo momento responsável
 
 ----
 
@@ -325,6 +323,8 @@ Release It!: Design and Deploy Production-Ready Software; Michael T. Nygard
 Clean code não é sobre perfeição é sobre honestidade
 
 Lei do escoteiro
+
+Focar no 80% que não requer performance
 
 Você é o especialista
 
