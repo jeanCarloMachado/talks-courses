@@ -44,39 +44,43 @@ Software ruim implica em políticas ruins
 
 ---
 
-# Clean code
+# O grande redesign
+
+Falhamos na profissão
+
+---
+
+## Clean code
 
 Estilo de desenvolvimento de software focado na leitura e manutenção
+
+Compartilha muitas características com bom texto em linguagem natural
+
+
 
 > Programming is the art of telling another human what one wants the computer to do Donald Knuth
 
 ----
 
-## Porque importa?
+# Clean Code
 
 
 Ler código é a parte que mais consome tempo em manutenção
 
 Manutenção consome 70% do custo de um software
 
-----
 
-## Bom design se paga
-
-![design stamina](/home/jean/projects/talks-courses/clean-codev3/designStaminaGraph.png)
+Focar no 80% que não requer performance
 
 ----
 
-
-# Skills do Clean coder
+# Skills do Clean Coder
 
 ----
 
 ![Skills](/home/jean/projects/talks-courses/clean-codev3/clean_coder_mindmap.png)
 
 ----
-
-
 
 
 ## Nomes
@@ -87,14 +91,32 @@ se precisar olhar o código tem que trabalhar nos nomes
 
 "And" ou "Or" comunicam múltiplas responsabilidades
 
+evite redundâncias AcessViolationExceptiion
+
+---
+
+## Evite
+
+ - Object
+ - Thing
+ - Manager
+ - Component
+ - Part
+ - Entity
+ - Item
+ - Writer
+
+
 
 ----
 
 ## Largura
 
-Código largo é código belo
+<strike>Código largo é código belo</strike>
 
 100% de correlação inversa com quantidade de símbolos
+
+Nomes descritivos
 
 Quebre computação em múltiplas linhas
 
@@ -108,6 +130,11 @@ Argumentos booleanos
 
 Mais de 3 argumentos é difícil justificar
 
+Funções puras são mais fáceis de testar e escalar
+
+Currying
+
+Monoids
 
 ----
 
@@ -120,6 +147,19 @@ Explicar tradeoffs
 Para expressar código
 
 33% correlação com legibilidade
+
+----
+
+```
+/**
+ *
+ * @param $title The title of the CD
+ * @param $author The author of the CD
+ * @param $tracks The number of tracks of the CD
+ *
+ */
+public addCd($title, $author, int $tracks);
+```
 
 ----
 
@@ -139,55 +179,20 @@ Quanto mais o fundo mais detalhes
  - elses
  - código de erros
  - libs desconhecidas
+ - getters e setters
+ - dependências bidirecionais
 
 ---
 
-## KISS
-
-Simples é diferente de fácil
-
-Se você usar todo seu intelecto pra criar como vai debugar?
-
-> Relatively simple things can tolerate a certain level of
-disorganization. However, as complexity increases, disorganization becomes suicidal.  
-> Robert Martin
-
-
-----
-
-## Yagni
-
- - Presumir adiciona complexidade desnecessária
- - Vai custar muito adicionar depois?
- - Não inclui o custo de fazer o software mais fácil de modificar
-
-----
-
-![Yagni](/home/jean/projects/talks-courses/clean-codev3/yagni.png)
-
-----
-
-## DRY
-
-
-Editar modelagem e ditar diagramas?
-
-----
-
-
-## Deméter
-
-Não brinque com os brinquedos de seus brinquedos
-
-Mantenha o mesmo nível de abstração
-
-----
-
 # Reúso
 
-Se você fizer API's adoráveis a programação se torna adorável
+APIs bem planejadas são prazerosas de fazer
 
-Componha ao invés de herdar
+componha ao invés de herdar
+
+editar modelagem e ditar diagramas? (DRY)
+
+não brinque com os brinquedos de seus brinquedos (Deméter)
 
 ---
 
@@ -215,11 +220,30 @@ Componha ao invés de herdar
 
 ---
 
-## Testes
+## KISS
 
-TDD é um processo de design
+Simples é diferente de fácil
 
-Se uma escolha de design torna algo mais difícil de testar está errado
+Se você usar todo seu intelecto pra criar como vai debugar?
+
+> Relatively simple things can tolerate a certain level of
+disorganization. However, as complexity increases, disorganization becomes suicidal.  
+> Robert Martin
+
+
+----
+
+## YAGNI
+
+Presumir adiciona complexidade desnecessária
+
+Vai custar muito adicionar depois?
+
+Não inclui o custo de fazer o software mais fácil de modificar
+
+----
+
+![Yagni](/home/jean/projects/talks-courses/clean-codev3/yagni.png)
 
 ----
 
@@ -227,12 +251,9 @@ Se uma escolha de design torna algo mais difícil de testar está errado
 
 Review de código
 
-Programaćão em pares
+Programação em pares
 
-Integracao contínua
-
-Testes automatizados
-
+Test driven development
 
 > One of our difficulties will  be the maintenance of an appropriate
 > discipline, so that we do not lose track of what we are doing.
@@ -241,11 +262,34 @@ Testes automatizados
 
 ----
 
+## Testes
+
+TDD é um processo de design
+
+Testes tem que ser rápidos
+
+Não se testa código se testa requisitos
+
+Se uma escolha de design torna algo mais difícil de testar está errado
+
+----
+
+
 # Arquitetura
+
+Arquitetura é sobre intenção
+
+Ultimo momento responsável
 
 ----
 
 ![Arquitetura clean](/home/jean/projects/talks-courses/clean-codev3/clean_coder_architecture.png)
+
+----
+
+## Mais fácil com o tempo
+
+![design stamina](/home/jean/projects/talks-courses/clean-codev3/designStaminaGraph.png)
 
 ----
 
@@ -255,8 +299,10 @@ Testes automatizados
 - phpmd
 - phpcs
 - codacy
-- calysthenics rules
-- psr's
+- object-calisthenics/phpcs-calisthenics-rules
+- PSR's
+- mamuz/php-dependency-analysis
+- pdepend
 
 ----
 
@@ -280,12 +326,12 @@ Clean code não é sobre perfeição é sobre honestidade
 
 Lei do escoteiro
 
-Focar no 80% que não requer performance
+Você é o especialista
 
-Os melhores engenheiros são 28 vezes melhores que os piores
+> Clean Code is a code that is written by someone who cares
+> Michael Feathers
 
 ----
-
 
 # Dúvidas?
 

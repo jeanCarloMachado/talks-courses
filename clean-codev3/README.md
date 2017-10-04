@@ -39,5 +39,10 @@ purely "accidental". Software engineers can only hope to control
 accidental difficulties: coincidental readability can be addressed
 fore more easily than intrinsic complexity.***
 
-
 They're maybe gonna kill ya. So like, if you give 'em a quick, short, sharp, shock, they don't do it again. Dig it? I mean he get off light, come to think. Of rationalising it, once. It's only a difference, but why go and ruin it? I mean good manners don't cost nothing, do they, eh?=Talvez possam matá-lo. Assim como, se você lhes dá um choque rápido, curto, afiado, eles não fazem isso de novo. Escavar Quero dizer, ele sai da luz, pensa. De racionalizá-lo, uma vez. É apenas uma diferença, mas por que ir e arruiná-lo? Quero dizer, bons costumes não custam nada, não é?
+
+----
+
+Colocar exemplos
+Colocar piadas
+

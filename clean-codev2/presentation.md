@@ -130,15 +130,18 @@ Don't Repeat Yourself
 
 ### DRY on comments
 ```php
+<code>
 /**
-*
-* @param $title The title of the CD
-* @param $author The author of the CD
-* @param $tracks The number of tracks of the CD
-*
-*/
+ *
+ * @param $title The title of the CD
+ * @param $author The author of the CD
+ * @param $tracks The number of tracks of the CD
+ */
 public addCd($title, $author, int $tracks);
-```
+</code>
+
+
+---
 
 DRY on documentation
 --------------------
