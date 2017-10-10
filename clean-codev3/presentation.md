@@ -25,20 +25,19 @@ headerEmphasis: \#fe7c00
 
 ----
 
-# É difícil de escrever bom software
-
-----
-
-![](/home/jean/projects/talks-courses/clean-codev3/programming_like_sex.png)
+![Programming like sex](/home/jean/projects/talks-courses/clean-codev3/programming_like_sex.png)
 
 ----
 
 ## Sintomas de apodrecimento
 
- - Rigidez -> difícil de resolver problemas simples
- - Fragilidade -> coisas não relacionadas quebram
- - Imobilidade -> mais fácil reescrever uma funcionalidade do que reusar
- - Viscosidade -> é mais fácil ir em modo hacking do que preservando o design
+Rigidez
+
+Fragilidade
+
+Imobilidade
+
+Viscosidade
 
 Software ruim implica em políticas ruins
 
@@ -52,20 +51,20 @@ Software ruim implica em políticas ruins
 
 ---
 
+
+![We failed](/home/jean/projects/talks-courses/clean-codev3/burn.jpg)
+
+---
+
 ## Clean code
 
 Estilo de desenvolvimento de software focado na leitura e manutenção
-
-Compartilha muitas características com bom texto em linguagem natural
-
-
 
 > Programming is the art of telling another human what one wants the computer to do Donald Knuth
 
 ----
 
-## Clean Code
-
+# Por que manutenção?
 
 Ler código é a parte que mais consome tempo em manutenção
 
@@ -82,17 +81,21 @@ Manutenção consome 70% do custo de um software
 
 ----
 
+# Readability !== Complexity {.fit}
 
-## Nomes
+----
+
+# Nomes
 
 Se precisar olhar o código tem que trabalhar nos nomes
 
 "And" ou "Or" comunicam múltiplas responsabilidades
 
-Evite redundâncias AcessViolationExceptiion
-
 ---
 
+![Nomes com sentido](/home/jean/projects/talks-courses/clean-codev3/homeopatic_naming.png)
+
+---
 
 ## Evite nomes com
 
@@ -103,11 +106,6 @@ Evite redundâncias AcessViolationExceptiion
  - Part
  - Entity
  - Item
- - Writer
-
----
-
-![Nomes com sentido](/home/jean/projects/talks-courses/clean-codev3/homeopatic_naming.png)
 
 ----
 
@@ -117,37 +115,38 @@ Evite redundâncias AcessViolationExceptiion
 
 100% de correlação inversa com quantidade de símbolos
 
-Quebre computação em múltiplas linhas
-
 80 caracteres é o suficiente
 
-----
-
-## Funções
-
-Argumentos booleanos
-
-Mais de 3 argumentos é difícil justificar
-
-Funções puras são mais fáceis de testar e escalar
+Quebre computação em múltiplas linhas
 
 ----
 
-## Comentários
+```php
+
+$mean = array_sum($dataSet) / count($dataSet);
+$varrianceSum = array_reduce($dataSet, function($accumulator, $entry) {
+    return $accumulator +  pow($entry - $mean, 2);
+}, 0);
+$variance =  $varianceSum / count($dataSet);
+$standardDeviation =  sqrt($variance);
+```
+
+----
+
+
+# Comentários
+
+Para expressar código
 
 Nomes dos autores
 
 Explicar tradeoffs
 
-Para expressar código
-
-33% correlação com legibilidade
-
 ----
 
 ## Comentários inúteis
 
-```
+```php
 
 /**
  *
@@ -161,44 +160,43 @@ public addCd($title, $author, int $tracks);
 
 ----
 
+## Funções
+
+Argumentos booleanos
+
+Mais de 3 argumentos é difícil justificar
+
 ## Classes
 
-Metáfora do jornal
-
-Cabeçalho com overview
-
-Quanto mais o fundo mais detalhes
+Metáfora do artigo
 
 ----
 
 ## Evite
 
- - nulls
- - elses
- - código de erros
- - libs desconhecidas
- - getters e setters (deméter)
- - dependências bidirecionais
-
----
-
-## Reúso
-
-APIs bem planejadas são prazerosas de fazer
-
-componha ao invés de herdar
-
-editar modelagem e ditar diagramas? (DRY)
+ - Elses
+ - Código de erros
+ - Libs desconhecidas
+ - Getters e setters (Deméter)
+ - Dependências bidirecionais
+ - Dados e comportamento
+ - Editar modelagem editar diagramas? (DRY)
 
 ---
 
 ## SOLID
 
- - single responsability principle (SRP)
- - open close principle (OC)
- - liskov substitution (LS)
- - interface segregation (ISP)
- - dependency inversion (DI)
+ - Single responsability principle (SRP)
+ - Open close principle (OC)
+ - Liskov substitution (LS)
+ - Interface segregation (ISP)
+ - Dependency inversion (DI)
+
+----
+
+[Shapes Bad](https://gist.github.com/jeanCarloMachado/7e0b0bb7719586494c9e65742f6367bc)
+
+[Shapes Good](https://gist.github.com/jeanCarloMachado/d2762883d9804b0688f1c12f5a6bb5a3)
 
 ----
 
@@ -211,23 +209,56 @@ editar modelagem e ditar diagramas? (DRY)
  - Um ponto por linha
  - Sem abreviação
  - 50 linhas por aquivo 10 arquivos por diretórios
- - nenhuma class com mais de 2 variáveis de instância
- - sem getters e setters
+ - Nenhuma classe com mais de 2 variáveis de instância
+ - Sem getters e setters
 
 ---
 
-## KISS
+![Turing](/home/jean/projects/talks-courses/clean-codev3/turing.jpg)
 
-Simples é diferente de fácil
+---
 
-Se você usar todo seu intelecto pra criar como vai debugar?
+# Disciplinas
 
-> Relatively simple things can tolerate a certain level of
-disorganization. However, as complexity increases, disorganization becomes suicidal.  
-> Robert Martin
+Review de código
 
+Programação em pares
+
+Test driven development
 
 ----
+
+## Testes
+
+TDD é um processo de design
+
+Não se testa código se testa requisitos
+
+Se uma escolha de design torna algo mais difícil de testar está errado
+
+Testes TEM que ser rápidos /  Testes ruins podem te atrasar
+
+----
+
+# Arquitetura === Intenção {.fit}
+
+----
+
+![Arquitetura clean](/home/jean/projects/talks-courses/clean-codev3/clean_coder_architecture.png)
+
+----
+
+# KISS
+
+> Relatively simple things can tolerate a certain level of
+disorganization. However, as complexity increases, disorganization becomes suicidal.
+> Robert Martin
+
+----
+
+![Overengineered](/home/jean/projects/talks-courses/clean-codev3/overengineered.jpg)
+
+---
 
 ## YAGNI
 
@@ -237,7 +268,6 @@ Vai custar muito adicionar depois?
 
 Não inclui o custo de fazer o software mais fácil de modificar
 
-
 Ultimo momento responsável
 
 ----
@@ -246,48 +276,25 @@ Ultimo momento responsável
 
 ----
 
-## Disciplinas
-
-Review de código
-
-Programação em pares
-
-Test driven development
-
-> One of our difficulties will  be the maintenance of an appropriate
-> discipline, so that we do not lose track of what we are doing.
-> Alan Turing
-
-
-----
-
-## Testes
-
-TDD é um processo de design
-
-Testes tem que ser rápidos
-
-Não se testa código se testa requisitos
-
-Se uma escolha de design torna algo mais difícil de testar está errado
-
-----
-
-
-# Arquitetura
-
-Arquitetura é sobre intenção
-
-
-----
-
-![Arquitetura clean](/home/jean/projects/talks-courses/clean-codev3/clean_coder_architecture.png)
-
-----
-
-## Mais fácil com o tempo
+### Mais fácil com o tempo
 
 ![design stamina](/home/jean/projects/talks-courses/clean-codev3/designStaminaGraph.png)
+
+----
+
+## Conclusão
+
+
+Focar no 80% que não requer performance
+
+Você é o especialista
+
+Clean code não é sobre perfeição é sobre honestidade
+
+Lei do escoteiro
+
+> Clean Code is a code that is written by someone who cares
+> Michael Feathers
 
 ----
 
@@ -298,43 +305,30 @@ Arquitetura é sobre intenção
 - phpcs
 - codacy
 - object-calisthenics/phpcs-calisthenics-rules
-- PSR's
 - mamuz/php-dependency-analysis
 - pdepend
+- phpstan
+- phan/phan
 
 ----
 
 ## Literatura
 
-Clean code: A hand book of Agile Software craftsmanship; Robert C. Martin
-
-The pragmatical programmer; Andrew Hunt
-
-Code Complete; Steve McConnell
-
-Refactoring: Improving the Design of Existing Code;
-
-Release It!: Design and Deploy Production-Ready Software; Michael T. Nygard
-
-----
-
-## Conclusão
-
-Clean code não é sobre perfeição é sobre honestidade
-
-Lei do escoteiro
-
-Focar no 80% que não requer performance
-
-Você é o especialista
-
-> Clean Code is a code that is written by someone who cares
-> Michael Feathers
+- Clean code: A hand book of Agile Software craftsmanship; Robert C. Martin
+- The pragmatical programmer; Andrew Hunt
+- Code Complete; Steve McConnell
+- Refactoring: Improving the Design of Existing Code;
+- Release It!: Design and Deploy Production-Ready Software; Michael T. Nygard
 
 ----
 
 # Dúvidas?
 
+Talk link:  https://goo.gl/FKzgqn
+
+Github: https://github.com/jeanCarloMachado
+
+Twitter: https://twitter.com/JeanCarloMachad
+
 E-mail: contato@jeancarlomachado.com.br
-IRC: JeanCarloMachado
 
