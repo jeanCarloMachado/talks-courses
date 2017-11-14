@@ -6,7 +6,6 @@ colors:
 headerEmphasis: \#fe7c00
 ---
 
-# 
 ## PHP funcional além do array_map
 #### Jean Carlo Machado
 
@@ -28,18 +27,22 @@ headerEmphasis: \#fe7c00
 
 ## O que é?
 
-
-Higher order functions and lazy evaluation.
-
-FP is so called because the fundamental operation is the application of functions to arguments.***
-
-----
-
-## Vantagens
-
-Facilita a modularização
+Programação sem mudança de estado
 
 ---
+
+## História 
+
+Before OO
+1957
+memoria era muito cara
+
+---
+## Transparência referencial
+
+```php
+$this->assertEquals(f(x), f(x))
+```
 
 ## Modularização é importante?
 
@@ -51,11 +54,25 @@ Proposta: tirar o goto
 
 ----
 
-# Programação funcional
+## Vantagens
 
-Proposta: tirar assigns
+Facilita a modularização
+Demora mais pra escrever
+o Programa fica menor
+concorrência
+
+---
+
+## Na prática 
+
 
 ----
+
+# PHP 7
+
+Short clujures
+
+---
 
 ## Reúso
 
@@ -65,6 +82,9 @@ sum = foldr (+) 0
 product = foldr (*) 1
 allTrue = foldr (&&) true
 
+---
+
+## Currying
 
 ---
 
@@ -72,7 +92,28 @@ allTrue = foldr (&&) true
 
 ---
 
-## Currying
+
+# Além
+
+
+ - Avalização preguiçosa
+ - Fold
+ - Closure
+ - Idempotent
+ - Point-free
+ - Predicate
+ - Category 
+ - Functor
+ - Lift
+ - Lambda
+ - Lazy Evaluation
+ - Monad
+ - Morphism
+ - lens
+ - Tipos algébricos
+ - Option
+
+A operação fundamental é a aplicação de funções a argumentos
 
 ----
 
