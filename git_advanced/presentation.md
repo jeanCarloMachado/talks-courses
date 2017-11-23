@@ -11,25 +11,26 @@ headerEmphasis: \#fe7c00
 
 ---
 
-## /sobre
+# Sobre
 
-Programador a 7 anos
+[CompuFácil](http://compufacil.com.br/)
 
-Usuário de git a 7 anos, professor a 1
-
-Science Lover, Humanist
-
-Unix hacker
+- php-src
+- git/git
+- torvald/linux
+- vim/vim
+- Doctrine
+- Zend Framework
+- phpunit
 
 ---
 
-# Muito além do i,a,c,m,pl,ps
+# Programador i,a,c,m,pl,ps
 
 ```sh
 ls /usr/lib/git-core/ | wc -l
 173
 ```
-
 ---
 
 # Patches
@@ -56,7 +57,6 @@ git log
 
 ---
 
-
 # Reescrita remota
 
 ---
@@ -78,6 +78,9 @@ git log
 
 ## Pumbling
 
+---
+
+Git can track the movement of things smaller than a file
 
 ---
 
@@ -91,18 +94,19 @@ git log
 
 ---
 
-# Dúvidas?
+## Referências
 
-
-E-mail: contato@jeancarlomachado.com.br
-
-Twitter: https://twitter.com/JeanCarloMachad
-
-Github: https://github.com/jeanCarloMachado
-
-Blog: jeancarlomachado.com.br
+https://arialdomartini.word
 
 ---
 
-![transport](/home/jean/projects/talks-courses/git_uncommon/git-transport.png)
+# Dúvidas?
+
+Talk link:  https://goo.gl/FKzgqn
+
+Github: https://github.com/jeanCarloMachado
+
+Twitter: https://twitter.com/JeanCarloMachad
+
+E-mail: contato@jeancarlomachado.com.br
 
