@@ -6,8 +6,14 @@ colors:
 headerEmphasis: \#fe7c00
 ---
 
-## PHP funcional além do array_map
+## Relevância da programação funcional
 #### Jean Carlo Machado
+
+----
+
+- Title: Why functional programming matters
+- Author:Jhon Hughes, Glasgow
+- Year: 1990
 
 ----
 
@@ -25,27 +31,71 @@ headerEmphasis: \#fe7c00
 
 ----
 
-## O que é?
+# 1930 - Lambda
 
-Programação sem mudança de estado
-
----
-
-## História 
-
-Before OO
-1957
-memoria era muito cara
-
----
-
-# Ganhamos mais poder tirando poder?
+ - Alonzo Church
+ - substituição de variáveis
+ - funções
+ - computação universal
 
 ----
 
-## Programação estruturada
+# 1936 - Imperativo
 
-Proposta: tirar o goto
+ - Alan Turing
+ - computação universal
+ - Receita
+ - assembly
+ - Goto
+ - side effects
+
+----
+
+## 1950 - Estruturado
+
+- imperativo
+- goto
+- while, for, if
+- reuso
+- Edsger W. Dijkstra 
+- Agol
+
+----
+
+## 1958 - Processamento de Listas
+
+- declarativo
+- lisp
+
+----
+
+## 1960 - Procedural 
+
+- imperativo
+- funções
+- C, Go
+
+----
+
+## 1970 - Orientação a objetos
+
+- imperativo
+- esconde estado e expõe comportamento
+- smalltalk, java
+
+----
+
+# Futuro ?
+
+---
+
+![Moore's law](/home/jean/projects/talks-courses/functional_php/moores_law.png)
+
+----
+
+## Programação Funcional
+
+#### <strike> mudança de estado </strike>
 
 ----
 
@@ -65,14 +115,12 @@ concorrência
 ## Funções de alta ordem
 
 ```php
-
 function(callable $foo) {
     return function() use ($foo) {
         return $foo();
     }
 }
 ```
-
 
 ---
 
@@ -118,7 +166,6 @@ function fold($callable, $init) {
 ## Preguiça
 
 
-
 ---
 
 # Além
@@ -146,11 +193,20 @@ A operação fundamental é a aplicação de funções a argumentos
 
 ----
 
+## Conclusão
+
+Program imperatively when needed, and functionally when possible
+
+
+----
+
 ## Referências
 
 - Why functional programming matters
 - https://www.youtube.com/watch?v=7Zlp9rKHGD4
 - https://www.youtube.com/watch?v=q0HRCEKAcas
+- https://medium.com/@jugoncalves/functional-programming-should-be-your-1-priority-for-2015-47dd4641d6b9
+- https://blog.inf.ed.ac.uk/sapm/2014/03/06/enemy-of-the-state-or-why-oop-is-not-suited-to-large-scale-software/
 
 ----
 
