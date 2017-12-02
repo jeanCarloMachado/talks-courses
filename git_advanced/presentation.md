@@ -4,9 +4,12 @@ width: 710px
 height: 460px
 colors:
 headerEmphasis: \#fe7c00
+highlight:
+    theme: solarized-dark
 ---
 
 ## Git Avançado
+
 #### Jean Carlo Machado
 
 ---
@@ -25,7 +28,20 @@ headerEmphasis: \#fe7c00
 
 ---
 
-# Programador i,a,c,m,pl,ps
+# Git básico
+
+```sh
+git pull
+git add .
+git commit -m ""
+git push
+
+```
+
+
+----
+
+## Além
 
 ```sh
 ls /usr/lib/git-core/ | wc -l
@@ -65,7 +81,6 @@ git log
 
 ---
 
-
 # Bisect
 
 ---
@@ -74,13 +89,17 @@ git log
 
 #### reuse recorded resolution
 
+----
+
+## Código movido
+
+
+
+
 ---
 
 ## Pumbling
 
----
-
-Git can track the movement of things smaller than a file
 
 ---
 

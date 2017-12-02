@@ -18,16 +18,30 @@ um expemplod e inversão de dependências
 O objetivo é fazer os desenvolvedores  abrirem a mente quanto a programação
 funcional
 
-Ententender a proposta
-
-Entender alguns conceitos mais profundo com bons argumentos de como usar
-
-Your role as a developer is not to solve problems. Your role is to define
-problems in a way that they become solved.
-
-Think in terms of what, not show
-
 ## Manter em mente
 
 Sam Harris
 
+----
+
+# Removed sections
+
+## Ferramentas
+
+- hlstrojny/functional-php
+- functional-php/pattern-matching
+
+# Além
+
+ - Point-free
+ - Category
+ - Functor
+ - Lift
+ - Lambda
+ - Monad
+ - Morphism
+ - lens
+ - Tipos algébricos
+ - Option
+
+A operação fundamental é a aplicação de funções a argumentos
