@@ -4,8 +4,6 @@ width: 710px
 height: 460px
 colors:
 headerEmphasis: \#fe7c00
-highlight:
-    theme: solarized-dark
 ---
 
 ## Git Avançado
@@ -32,12 +30,10 @@ highlight:
 
 ```sh
 git pull
-git add .
+kit add .
 git commit -m ""
 git push
-
 ```
-
 
 ----
 
@@ -69,15 +65,11 @@ git log
 
 ---
 
-## Hackeando o histórico
-
----
-
 # Reescrita remota
 
 ---
 
-![it](/home/jean/projects/talks-courses/git_uncommon/it_horror.jpg)
+![git-transport](/home/jean/projects/talks-courses/git_advanced/git-transport.png)
 
 ---
 
@@ -94,22 +86,17 @@ git log
 ## Código movido
 
 
-
-
 ---
 
 ## Pumbling
 
+---
+
+![](/home/jean/projects/talks-courses/git_advanced/direct-acyclic-graph.svg)
 
 ---
 
-## O que mais?
-
-- Procurando
-- Estratégias de merge
-- Comparação de branches
-- Hooks
-- Submodulos
+![](/home/jean/projects/talks-courses/git_advanced/internal-structure.svg)
 
 ---
 
@@ -120,8 +107,6 @@ https://arialdomartini.word
 ---
 
 # Dúvidas?
-
-Talk link:  https://goo.gl/FKzgqn
 
 Github: https://github.com/jeanCarloMachado
 

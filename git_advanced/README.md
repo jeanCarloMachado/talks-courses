@@ -5,8 +5,13 @@ Git/Github que os desenvolvedores geralmente desconhecem.
 
 Duração: 40 minutos
 
+
 ## Pontos para citar
 ```sh
 Mencionar que muitos desenvolvedores temem reescrever histórico mas não tem problema.
 
 Dar a dica que o gitstatus é seu aliado
+
+Criar um commit na unha em php
+
+Criar um histórico na hora e  mostrar que o objeto de dados é reusado
