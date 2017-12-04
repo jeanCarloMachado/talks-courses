@@ -6,15 +6,9 @@ colors:
 headerEmphasis: \#fe7c00
 ---
 
-## Why functional programming matters
+## PHP funcional além do array_map
 
 #### Jean Carlo Machado
-
-----
-
-- Title: Why functional programming matters
-- Author: Jhon Hughes, Glasgow
-- Year: 1990
 
 ----
 
@@ -32,7 +26,7 @@ headerEmphasis: \#fe7c00
 
 ----
 
-![](/home/jean/projects/talks-courses/functional_php/haskell.png)
+![Haskell](/home/jean/projects/talks-courses/functional_php/haskell.png)
 
 ----
 
@@ -56,7 +50,7 @@ headerEmphasis: \#fe7c00
 - Agol
 - while, for, if
 - reuso
-- sem goto
+- <strike>goto</strike>
 
 ---
 
@@ -68,17 +62,9 @@ headerEmphasis: \#fe7c00
 
 ## Vantagens
 
- - Facilita a modularização
  - Concorrência nativa
+ - Facilita a modularização
  - Desacelera o apodrecimento
-
-----
-
-## Modularização
-
- - Mais que módulos
- - Decompor os problemas em partes menores
- - Re-compor com avaliação tardia e funções de alta orem
 
 ----
 
@@ -86,21 +72,12 @@ headerEmphasis: \#fe7c00
 
 ----
 
-## <strike> Apodrecimento </strike>
-
- - Impossível adicionar efeitos sem quebrar as interfaces 
- - Quão maior a interface mais feio o código
- - Interfaces facilmente quebráveis com composicão
- - Quebrar encoraja reúso
- - Complexidade horizontal ao invés de vertical
-
-----
 
 # Prática
 
 ----
 
-### Impureza == Estado
+### Impureza === Estado
 
 ```php
 $inpureIncrement = function (&$count) {
@@ -174,22 +151,6 @@ $incrementTwo = function ($n, $sumOne) {
 
 ----
 
-## Aplicação parcial
-
-```php
-$append3 = function($a, $b, $c) {
-    return [$a, $b, $c];
-};
-$append1And2 = \f\partial($append3)(1)(2);
-$append1And2(5)
-//[1,2,5]
-$append1And2(9)
-//[1,2,9]
-
-```
-
-----
-
 # Fold
 
 ----
@@ -229,7 +190,6 @@ function fold(
 ## Componha
 
 ```php
-
 $sumList = fold('sum', 0);
 $sumList([1,2,3]);
 //6
@@ -293,7 +253,13 @@ $result  = mapTree($double, $tree);
 
 ----
 
-## Avaliação tardia
+## PHP functions
+
+ - array_map
+ - array_filter
+ - array_reduce
+ - array_sum
+ - array_unique
 
 ----
 
@@ -340,7 +306,142 @@ print_r(\f\takefrom(primes(), 10));
 //[1, 3, 5, 7, 11, 13, 17, 19, 23, 29]
 ```
 
+----
+
+## Aplicação parcial
+
+```php
+$append3 = function($a, $b, $c) {
+    return [$a, $b, $c];
+};
+$append1And2 = \f\partial($append3)(1)(2);
+$append1And2(5)
+//[1,2,5]
+$append1And2(9)
+//[1,2,9]
+
+```
+
+----
+
+
+## Real: get-profile
+
 ---
+
+
+```php
+class Database {
+    public function query($query, $id) {
+        echo "DATABASE_CALL";
+        $data = [
+            ['id' => 666, 'name' => 'Gandalf' ],
+            ['id' => 777, 'name' => 'Saruman' ]
+        ];
+        return array_filter($data,
+            function($candidate) use ($id) {
+                return $candidate['id'] == $id;
+            }
+        );
+    }
+}
+```
+
+----
+
+
+
+```php
+function getProfile($database, $userId) {
+    return $database->query("
+        Select * from User where id = %id",
+        $userId
+    );
+}
+$getProfileConcrete = \f\partial('getProfile')(new Database);
+```
+
+----
+
+
+```php
+$memoize = function($func) {
+    static $results = [];
+    return function ($a) use ($func, &$results) {
+        $key = serialize($a);
+        if (empty($results[$key])) {
+            $results[$key] = call_user_func($func, $a);
+            return $results[$key];
+        }
+
+        return $results[$key];
+    };
+};
+$memoizedProfile = $memoize($getProfileConcrete);
+```
+---
+
+
+```php
+$logger = function($str) {
+    echo $str;
+};
+
+function logService($logger, $serviceName, callable $service, $arg) {
+    $logger("Service called ".$serviceName." with params ".serialize($arg));
+    return call_user_func($service, $arg);
+};
+
+$loggedGetProfile = \f\partial('logService')($logger)('getProfile')($memoizedProfile); 
+```
+
+---
+
+
+```php
+$loggedGetProfile(666);
+$loggedGetProfile(666);
+//Service called getProfile with params i:666;
+//DATABASE_CALL
+//Array
+//(
+//    [0] => Array
+//        (
+//            [id] => 666
+//            [name] => Gandalf
+//        )
+//
+//)
+//Service called getProfile with params i:666;Array
+//(
+//    [0] => Array
+//        (
+//            [id] => 666
+//            [name] => Gandalf
+//        )
+//
+//)
+```
+
+---
+
+## Modularização
+
+ - Mais que módulos
+ - Decompor os problemas em partes menores
+ - Re-compor com avaliação tardia e funções de alta orem
+
+----
+
+## <strike> Apodrecimento </strike>
+
+ - Impossível adicionar efeitos sem quebrar as interfaces 
+ - Quão maior a interface mais feio o código
+ - Interfaces facilmente quebráveis com composicão
+ - Quebrar encoraja reúso
+ - Complexidade horizontal ao invés de vertical
+
+----
 
 ## Conclusão
  -  Imperativo quando necessário
@@ -350,6 +451,16 @@ print_r(\f\takefrom(primes(), 10));
     - junte funções
  -  Seu trabalho não é resolver problemas
  -  Definir problemas de uma forma que eles se resolvam
+
+---
+
+## Ferramentas
+
+
+- hlstrojny/functional-php
+- functional-php/pattern-matching
+- jeanCarloMachado/f
+- pimple/pimple
 
 
 ----

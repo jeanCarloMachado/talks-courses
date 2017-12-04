@@ -18,30 +18,3 @@ um expemplod e inversão de dependências
 O objetivo é fazer os desenvolvedores  abrirem a mente quanto a programação
 funcional
 
-## Manter em mente
-
-Sam Harris
-
-----
-
-# Removed sections
-
-## Ferramentas
-
-- hlstrojny/functional-php
-- functional-php/pattern-matching
-
-# Além
-
- - Point-free
- - Category
- - Functor
- - Lift
- - Lambda
- - Monad
- - Morphism
- - lens
- - Tipos algébricos
- - Option
-
-A operação fundamental é a aplicação de funções a argumentos

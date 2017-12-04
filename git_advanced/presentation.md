@@ -92,6 +92,27 @@ git log
 
 ---
 
+#### Blob
+
+
+
+```php
+$content = "hi there";
+$header = "blob ".strlen($content)."\0";
+$store =  $header.$content;
+$sha1 = sha1($store);
+$path = '.git/objects/'
+    .substr($sha1, 0, 2)
+    .'/'.substr($sha1, 2);
+$compressedContent = gzcompress($store);
+if (!file_exists(dirname($path))) {
+    mkdir(dirname($path));
+}
+file_put_contents($path, $compressedContent);
+```
+
+---
+
 ![](/home/jean/projects/talks-courses/git_advanced/direct-acyclic-graph.svg)
 
 ---
