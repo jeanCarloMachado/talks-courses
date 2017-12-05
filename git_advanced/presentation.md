@@ -65,11 +65,7 @@ git log
 
 ---
 
-# Reescrita remota
-
----
-
-![git-transport](/home/jean/projects/talks-courses/git_advanced/git-transport.png)
+# Reescrita
 
 ---
 
@@ -121,11 +117,6 @@ file_put_contents($path, $compressedContent);
 
 ---
 
-## Referências
-
-https://arialdomartini.word
-
----
 
 # Dúvidas?
 
