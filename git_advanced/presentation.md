@@ -81,16 +81,21 @@ git log
 
 ## Código movido
 
-
 ---
 
 ## Pumbling
 
 ---
 
+![](/home/jean/projects/talks-courses/git_advanced/direct-acyclic-graph.svg)
+
+---
+
+![](/home/jean/projects/talks-courses/git_advanced/pumbling.jpg)
+
+---
+
 #### Blob
-
-
 
 ```php
 $content = "hi there";
@@ -107,16 +112,7 @@ if (!file_exists(dirname($path))) {
 file_put_contents($path, $compressedContent);
 ```
 
----
-
-![](/home/jean/projects/talks-courses/git_advanced/direct-acyclic-graph.svg)
-
----
-
-![](/home/jean/projects/talks-courses/git_advanced/internal-structure.svg)
-
----
-
+----
 
 # Dúvidas?
 
@@ -125,4 +121,3 @@ Github: https://github.com/jeanCarloMachado
 Twitter: https://twitter.com/JeanCarloMachad
 
 E-mail: contato@jeancarlomachado.com.br
-
