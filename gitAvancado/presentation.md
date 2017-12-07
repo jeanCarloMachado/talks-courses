@@ -16,6 +16,8 @@ headerEmphasis: \#fe7c00
 
 [CompuFácil](http://compufacil.com.br/)
 
+Unix fag
+
 - php-src
 - git/git
 - torvald/linux
@@ -30,7 +32,7 @@ headerEmphasis: \#fe7c00
 
 ```sh
 git pull
-kit add .
+git add .
 git commit -m ""
 git push
 ```
@@ -87,11 +89,11 @@ git log
 
 ---
 
-![](/home/jean/projects/talks-courses/git_advanced/direct-acyclic-graph.svg)
+![](/home/jean/projects/talks-courses/gitAvancado/direct-acyclic-graph.svg)
 
 ---
 
-![](/home/jean/projects/talks-courses/git_advanced/pumbling.jpg)
+![](/home/jean/projects/talks-courses/gitAvancado/pumbling.jpg)
 
 ---
 
