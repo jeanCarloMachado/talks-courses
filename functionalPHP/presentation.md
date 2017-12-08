@@ -442,7 +442,6 @@ return function($args) use (
 
 ----
 
-
 ```php
 $loggedMemoizedGetProfile =
     \f\partial('logService')
@@ -469,6 +468,10 @@ $loggedMemoizedGetProfile =
  - Interfaces facilmente quebráveis com composicão
  - Quebrar encoraja reúso
  - Complexidade horizontal ao invés de vertical
+
+----
+
+![](/home/jean/projects/talks-courses/functionalPHP/banana_gorilla.jpg)
 
 ----
 
