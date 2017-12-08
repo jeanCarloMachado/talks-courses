@@ -458,7 +458,7 @@ $loggedMemoizedGetProfile =
 
 #### Mais que módulos
 #### Decompor os problemas em partes menores
-#### Re-compor com avaliação tardia e funções de alta orem
+#### Re-compor com avaliação tardia e funções de alta ordem
 
 ----
 
@@ -518,6 +518,8 @@ $loggedMemoizedGetProfile =
 ----
 
 # Dúvidas?
+
+Link: goo.gl/cwJr8y
 
 Github: https://github.com/jeanCarloMachado
 

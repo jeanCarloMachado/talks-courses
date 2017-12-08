@@ -16,7 +16,7 @@ headerEmphasis: \#fe7c00
 
 [CompuFácil](http://compufacil.com.br/)
 
-Unix fag
+Unix fag*
 
 - php-src
 - git/git
@@ -117,6 +117,8 @@ file_put_contents($path, $compressedContent);
 ----
 
 # Dúvidas?
+
+Link: goo.gl/U8KPFj
 
 Github: https://github.com/jeanCarloMachado
 
