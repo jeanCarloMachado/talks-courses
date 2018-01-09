@@ -329,9 +329,8 @@ function partial(
         $callable
     ))
     ->getNumberOfRequiredParameters();
-    return $args[$arity - 1] ?? false
-    ? $callable(...$args)
-    : function (...$passedArgs)use($callable, $args) {
+    return $args[$arity - 1] ?? false ? $callable(...$args) :
+    function (...$passedArgs)use($callable, $args) {
         return partial($callable,
             ...array_merge($args, $passedArgs)
         );
