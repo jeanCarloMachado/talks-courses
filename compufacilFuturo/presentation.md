@@ -189,8 +189,6 @@ Focando em Customer Success grande parte da receita vem depois da venda (CLV)
 
 ---
 
---- 
-
 
 # Links
 
