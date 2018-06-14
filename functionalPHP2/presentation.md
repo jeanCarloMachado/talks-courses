@@ -1,4 +1,8 @@
-# Functional PHP
+build-lists: true
+autoscale: true
+slidenumbers: true
+
+# Getting practical with FP in PHP
 
 #### Jean Carlo Machado
 
@@ -20,31 +24,27 @@
 ## ~~state change~~
 ## higher order functions, lazy evaluation
 
----
+----
 
-### Time
-
-The art of not overriding variables.
+## Why state is bad ?
 
 ----
 
-## Advantages
+## Why OO is not the answer
 
-1. Ultimate Composability
-2. Implicit concurrency
+Emulating the real world is limiting (in objects).
 
+Software is much more flexible (and cool) than the real wold.
+
+^Every behavior can be re-contextualized by swapping around the subject, verb, and objects. Senders can send messages to Recipients; Messages can send themselves to Recipients; and Recipients can receive messages.
 
 ----
 
-## Composing
-
-Software is much more flexible (cool) than the real wold.
-This is the conundrum at the heart of object decomposition. Every behavior can be re-contextualized by swapping around the subject, verb, and objects. Senders can send messages to Recipients; Messages can send themselves to Recipients; and Recipients can receive messages. - 
+![inline](ooworldview.png)
 
 ----
 
 ## Abstraction
-
 
 When you hide your data behind a class you are force to re implement
 basic things that are already available to the language.
@@ -58,25 +58,101 @@ We only know what's sure in the local level in the real world
 
 ----
 
-![inline](ooworldview.png)
-
-----
-
 ## Higher order - Functions that take functions
+
+```php
+class Uuid {
+    public function generate(callable $alreadyExists) : string {
+        do {
+            $generatedCode = $this->generateRandomId()
+        } while ($alreadyExists($generatedCode));
+
+        return $generatedCode;
+    }
+    private function generateRandomId() : string;
+}
+```
 
 ---
 
 ## Higher order - Functions that return functions
 
 
+```php
+private function memoizedDisplaySettings() : string {
+    return function () {
+        $cacheHandler = getGYGDIContainer()
+            ->getCache()
+            ->getHandle(
+                __CLASS__,
+                [\GYG\Caching\CacheInterface::MEMCACHED],
+                $ttl = 3600
+            );
+
+        $cacheKey = $cacheHandler->createKey('collections_display_configuration');
+        $result = $cacheHandler->get($cacheKey);
+
+        if (!$result) {
+            $result = $this->getDisplaySettings();
+            $cacheHandler->set($cacheKey, $result);
+        }
+
+        return $result;
+    };
+}
+```
 ---
 
 ## Lazy Evaluation - currying
+
+No native way of doing in PHP
+
+Makes functions behave classy.
+
+```php
+function partial(callable $callable, ...$args)
+{
+    $arity = (new \ReflectionFunction($callable))->getNumberOfRequiredParameters();
+
+    return $args[$arity - 1] ?? false
+        ? $callable(...$args)
+        : function (...$passedArgs) use ($callable, $args) {
+            return partial($callable, ...array_merge($args, $passedArgs));
+        };
+}
+```
+
 
 
 ---
 
 ## Lazy Evaluation - generators
+
+Never more mix infrastructure with domain:
+
+```php
+class MyRepository {
+
+    public function getEntities() {
+        for ($i = 0 ; $i < BATCH_SIZE; $i++) {
+            $result  = $this->query('SELECT ... LIMIT 100');
+            foreach ($result as $entry) {
+                yield $entry;
+            }
+        }
+
+    }
+}
+
+class MyBusinessLogic() {
+
+    public function doX() {
+        foreach($this->repository->getEnties() as $entry) {
+            $this->process($entry);
+        }
+    }
+}
+```
 
 ---
 
@@ -85,8 +161,8 @@ We only know what's sure in the local level in the real world
 ```php
 function myfunc() : string?;
 
-//usage
 $result = myfunc();
+//sprintf's argument accepts null and fails silently
 echo sprintf("this value: %s should not be empty", $result);
 ```
 
@@ -141,6 +217,13 @@ function test(Bar ...$values)
 test(...[new Bar,new Bar]);
 ```
 
+
+---
+
+PIPE method
+
+psr
+
 ---
 
 ## Wrapping up:
@@ -161,6 +244,14 @@ Imperative when necessary
 
 ---
 
+## Serves well with
+
+* command bus
+* cqrs
+
+
+---
+[.build-lists: false]
 ## References / Recommended reading
 
 - Why functional programming matters
