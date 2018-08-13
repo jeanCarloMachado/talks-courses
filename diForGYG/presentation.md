@@ -115,6 +115,12 @@ class UpdateRecommendations
 - thephpleague/container
 - phpdi/phpdi
 
+---
+
+## PSR11
+
+^ being PSR11 compabile it actually does not matter much
+
 ----
 
 # PHP-DI
@@ -158,6 +164,7 @@ class UpdateRecommendations
 - Even easier to change parts
 
 ^ layered architecture
+^ a non-corruption layer
 ^ Show the microservice again
 ^ gateway simplifies complex api's, talk the language of the service and do a single simple thing
 ^ the service contains business rules

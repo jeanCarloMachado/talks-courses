@@ -1,6 +1,9 @@
-What should I propose?
+# Todo
 
-Just the container inversion.
+ - define Next steps
+ - consider using symphony di
+ - using one of them
+ - growing dependencies files configs
+ - clarity if it makes sense to use symphony instead
 
-And suggest that it might be used to extend the architecture to a layered thing
 
