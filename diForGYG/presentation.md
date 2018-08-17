@@ -1,4 +1,4 @@
-## A progressive 
+## A pragmatic
 # [fit] Dependency Injection
 ## Proposal for GYG
 
