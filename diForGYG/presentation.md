@@ -99,15 +99,6 @@ class UpdateRecommendations {
 
 ----
 
-## Which Lib?
-
-----
-
-## [Is possible to do with none](https://github.com/getyourguide/fishfarm/pull/11029/files#diff-e4a1d123347a52b3c4110af23cba461c)
-
-^ Show only the DI boundry of the microservice
-
-----
 
 ## Which Lib?
 
@@ -119,6 +110,11 @@ class UpdateRecommendations {
 
 ----
 
+## [Is possible to do with none](https://github.com/getyourguide/fishfarm/pull/11029/files#diff-e4a1d123347a52b3c4110af23cba461c)
+
+^ Show only the DI boundry of the microservice
+
+----
 
 ## Why not symphony's?
 
@@ -130,34 +126,10 @@ Binds you to it
 
 ----
 
-## Symfony 's way
+## A suggestion: [PHP-DI](https://github.com/getyourguide/fishfarm/pull/10867/commits/2567835a7a511fe4b43fefe15e81d7c61e209863)
 
-```sh
-$container->register(NewsletterManager::class)
-->addArgument(new Reference('templating'))
-->setFactory(array(
-    new Reference(NewsletterManagerFactory::class),
-    'createNewsletterManager',
-));
-```
-----
-
-## Sanity's way
-
-```sh
-NewsletterManager::class => function($c) {
-    return new Reference($c->get('templating'), $c->get('previous_user_count') + 1 );
-}
-```
-
-
-
-----
-
-## A suggestion: PHP-DI
-
- - PSR'11 compatible
- - Support inference
+ - [PSR'11 compatible](https://github.com/getyourguide/fishfarm/pull/10867/commits/a9ae2e17d2a7ede7b14528aa739fdd50aeadc147)
+ - [Support inference](https://github.com/getyourguide/fishfarm/pull/10867/commits/1a54b2cf25e04797b165b8c06caad3f92d4cd524)
  - Support annotation
  - Support composing SL
  - Support caching of closures
