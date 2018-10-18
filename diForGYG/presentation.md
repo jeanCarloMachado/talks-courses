@@ -1,13 +1,10 @@
+![150% original](bg.jpg)
 ## A Pragmatic
 # [fit] Dependency Injection
 ## Proposal for GYG
 
 
-#### by Jean Machado
-
-
-^ collect feedback at this point
-^ a way of moving forward without redoing everything
+#### by Jean Carlo Machado
 
 ---
 
@@ -15,9 +12,7 @@
 
 A form of inversion of control
 
-The code receives dependencies, does not define or find them
-
-Composition to the next level
+Components receive subparts, don't define them
 
 ----
 
@@ -64,9 +59,13 @@ class UpdateRecommendations implements ServiceLocatorAware
 
 ```php
 return [
-    UpdateRecommendations::class => function($di) { //build recommendations here }
+    UpdateRecommendations::class => function ($diComponent) {
+        return new UpdateRecommendations($diComponent->get('s3'))
+    }
+    's3' => function($diComponent) {
+        return new S3Client('my secret', 'my region');
+    }
 ];
-
 class UpdateRecommendations {
     public function __construct($db, $s3Client) {
         $this->db = $db;
@@ -75,9 +74,6 @@ class UpdateRecommendations {
 
     public function process() {
         $files = $this->s3Client->getFiles();
-        foreach($files as $file) {
-            $this->db->import($file);
-        }
     }
 }
 ```
@@ -86,57 +82,47 @@ class UpdateRecommendations {
 
 ## Benefits
 
+- Massive improve in reuse
+
+- Reduces the refactoring cascade
+
+- Better testability, much faster tests
+
 - Single entry point for complexity
 
-- Is obvious when something needs to be refactored
+---
 
-- Better testability
+## Drawbacks
 
-- Easy to change software parts
-
-^ Is a gateway for other practices
-^ it's is also obvious when some class cannot accept more behavior
+- Loose typing on the DI layer
+- Layer outside unit test
 
 ----
 
 
-## Which Lib?
+## How to? Which lib?
 
-- zend/service-locator
-- pimple/pimple
-- thephpleague/container
-- phpdi/phpdi
 - symfony/dependency-injection
+- pimple/pimple
+- phpdi/phpdi
+- thephpleague/container
+- zend/service-locator
 
 ----
 
-## [Is possible to do with none](https://github.com/getyourguide/fishfarm/pull/11029/files#diff-e4a1d123347a52b3c4110af23cba461c)
-
-^ Show only the DI boundry of the microservice
+### [Is possible to do with none](https://github.com/getyourguide/fishfarm/blob/ae59dad2a342a81d4746f6e253ebfd35dbf01fac/gyg/customer/src/DesktopBundle/Activity/Recommendations/Recommendations.php#L15)
 
 ----
 
-## Why not symphony's?
+## How to? Which Lib?
 
-Too verbose
+[Follow the principle](https://github.com/getyourguide/fishfarm/pull/11884/commits/88cdccd6e5a55346f7d3f60f7c8e55309434bcab), stick  with [PSR11](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-11-container.md)
 
-Hard to add simple callable's
+[PHP-Di works well below the surface](https://github.com/getyourguide/fishfarm/pull/11880/commits/c0cf0b91e1cd7d787461b25995bfb2d353b6c7dd)
 
-Binds you to it
+Possibly extending to other modules [1](https://github.com/getyourguide/fishfarm/pull/11880/commits/cc335f0f10cf885741c824568d8019f6e02f95ac), [2](https://github.com/getyourguide/fishfarm/pull/11884/commits/1b2c07912295330edc921b16eb49b23a077d67f2)
 
-----
-
-## A suggestion: [PHP-DI](https://github.com/getyourguide/fishfarm/pull/10867/commits/2567835a7a511fe4b43fefe15e81d7c61e209863)
-
- - [PSR'11 compatible](https://github.com/getyourguide/fishfarm/pull/10867/commits/a9ae2e17d2a7ede7b14528aa739fdd50aeadc147)
- - [Support inference](https://github.com/getyourguide/fishfarm/pull/10867/commits/1a54b2cf25e04797b165b8c06caad3f92d4cd524)
- - Support annotation
- - Support composing SL
- - Support caching of closures
-
-^ Show the first pr commit with the setup
-^ Then show the usage examples (last commit)
-^ Then show the real example (last commit)
+Go [crazy](https://github.com/getyourguide/fishfarm/pull/11884/commits/1ea17ec00a2a6daf2e5937e9bc9ac5297227ee2f) with DI
 
 ----
 
@@ -150,42 +136,28 @@ Binds you to it
 
 ### Even better with
 
-
-## A little architecture
-
-
-^ Emphasize that this is optional
+## [A little architecture](http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html)
 
 ---
 
-## ([Service](https://github.com/getyourguide/fishfarm/pull/11029/files#diff-e4a1d123347a52b3c4110af23cba461c), [Gateway](https://github.com/getyourguide/fishfarm/pull/11029/files#diff-d2287a4a507015ac44fc1244c93b4bd1))
+## [(Service, Gateway)](https://github.com/getyourguide/fishfarm/tree/master/gyg/customer/src/DesktopBundle/Activity/Recommendations)
 
+- Layered architecture
+- Smaller API's (ISP)
+- [Test business rules not code!](https://github.com/getyourguide/fishfarm/blob/ae59dad2a342a81d4746f6e253ebfd35dbf01fac/gyg/customer/tests/Unit/DesktopBundle/Activity/Recommendations/RecommendationsTest.php#L33)
 
-- Interface oriented software development
-- Smaller API's ISP
-- [Test business rules not code!](https://github.com/getyourguide/fishfarm/pull/11029/files#diff-1699622f112e4a5ae27328916cf8b027)
-- Even easier to change parts
-
-^ layered architecture
-^ a non-corruption layer
-^ Show the microservice again
-^ gateway simplifies complex api's, talk the language of the service and do a single simple thing
-^ the service contains business rules
-^ behind the gateway could be anything
-^ this allows true TDD
 
 ----
 
 ## Next Steps
 
- - Merge my PR
- - A training?
- - Start playing
+ - Add your thoughts to the [PR](https://github.com/getyourguide/fishfarm/pull/11880/files)
+ - Merge it
 
 ---
 
-# References
 
-- [PSR11](https://www.php-fig.org/psr/psr-11/meta/)
-- [A little architecture](http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html)
+![150% original](bg.jpg)
+# Questions?
+
 
