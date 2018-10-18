@@ -8,11 +8,39 @@
 
 ---
 
-# What DI is?
+## The big question: How to manage our systems complexity?
 
-A form of inversion of control
+---
+
+## One answer: Break down the problem
+
+![](Components.pdf)
+
+---
+
+## But they depend on one another
+
+![](ComponentsRelations.pdf)
+
+---
+
+# What Dependency Injection is?
+
+A type of dependency inversion
+
+
+![](ComponentsInverted.pdf)
+
+
+----
+
+# What Dependency Injection is?
 
 Components receive subparts, don't define them
+
+
+![](ComponentsInjected.pdf)
+
 
 ----
 
@@ -94,8 +122,8 @@ class UpdateRecommendations {
 
 ## Drawbacks
 
-- Loose typing on the DI layer
 - Layer outside unit test
+- Possibly a looser typed
 
 ----
 
