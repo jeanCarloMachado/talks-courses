@@ -28,9 +28,11 @@
 
 A type of dependency inversion
 
+Who is the user?
+
+"Do you want your high level policy polluted with low level details?" Bot Martin
 
 ![](ComponentsInverted.pdf)
-
 
 ----
 
@@ -123,7 +125,7 @@ class UpdateRecommendations {
 ## Drawbacks
 
 - Layer outside unit test
-- Possibly a looser typed
+- Possibly loosely typed layer
 
 ----
 
@@ -172,8 +174,8 @@ Go [crazy](https://github.com/getyourguide/fishfarm/pull/11884/commits/1ea17ec00
 
 - Layered architecture
 - Smaller API's (ISP)
+- Anti-corruption layer
 - [Test business rules not code!](https://github.com/getyourguide/fishfarm/blob/ae59dad2a342a81d4746f6e253ebfd35dbf01fac/gyg/customer/tests/Unit/DesktopBundle/Activity/Recommendations/RecommendationsTest.php#L33)
-
 
 ----
 
